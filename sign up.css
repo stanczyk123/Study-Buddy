@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(24, 24, 24);
+}
+
+#signup{
+    margin: auto;
+    text-align: center;
+    border: 2px grey solid;
+    width: 350px;
+    height: 500px;
+    margin-top: 200px;
+    border-radius: 20px;
+    color: white;
+}
+
+#username{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;
+}
+
+#password{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+#confirmpass{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+#date{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;
+    margin-top: 65px; 
+}
+
