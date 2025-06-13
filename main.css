@@ -11,10 +11,27 @@ header{
     border-radius: 12px;
 }
 
+#studybuddy{
+    width: 100px;
+}
+
+#studybuddyimg{
+    width: 60px;
+}
+
+#studybuddyText{
+    position: relative;
+    top: -80px;
+    left: 60px;
+    color: white;
+    font-family: "press start 2p";
+}
+
 .headerbtn{
     margin: auto;
-    margin-top: 69px;
+    margin-top: -10px;
     margin-left: 20px;
+    position: relative;
     width: 70px;
     height: 30px;
     background-color:rgb(18, 18, 18);
@@ -25,6 +42,17 @@ header{
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    bottom: 80px;
+}
+
+.homeworkbtn{
+    position: relative;
+    bottom: 80px;
+}
+
+.shopbtn{
+     position: relative;
+    bottom: 80px;
 }
 
 .headerbtn:hover{
@@ -73,7 +101,6 @@ header{
     right: 250px;
     padding: 10px;
     display: flex;
-    cursor: pointer;
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
@@ -85,10 +112,19 @@ header{
     text-decoration: none;
     text-transform: none;
     text-decoration-line: none;
+    margin-top:-3px;
 }
 
-#pastpapperDescription{
-    margin-top: 80px;
+#pastpapperdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -85px;
+    font-size: medium;    
 }
 
 #notes{
@@ -100,7 +136,6 @@ header{
     position: relative;
     padding: 10px;
     display: flex;
-    cursor: pointer;
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
@@ -117,6 +152,18 @@ header{
     margin-left: 30px;    
 }
 
+#notesdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -70px;
+    font-size: medium;
+}
+
 #quiz{
     width: 320px;
     height: 120px;
@@ -126,7 +173,6 @@ header{
     position: relative;
     padding: 10px;
     display: flex;
-    cursor: pointer;
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
@@ -139,6 +185,54 @@ header{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
     text-transform: none;
+    text-decoration-line: none;     
+}
+
+#quizdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
     text-decoration-line: none;
-    margin-left: 30px;     
+    margin-top: 60px;
+    position: relative;
+    left: -50px;
+    font-size: medium;    
+}
+
+#timer{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    margin-right: 910px;
+    top: -44px;
+}
+
+#timerText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    
+}
+
+#timerdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -70px;
+    font-size: medium;
 }
