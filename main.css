@@ -90,6 +90,67 @@ header{
     background-color:rgb(35, 35, 35) ;    
 }
 
+.dropdown{
+    display: inline-block;
+    position: relative;
+    bottom: 80px;
+}
+
+.dropdown button{
+    background-color:rgb(18, 18, 18);
+    color: white;
+    border: none;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown a{
+    display: block;
+    color:rgb(35, 35, 35)  ;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.dropdown .content{
+    display: none;
+    background-color: white;
+    position: absolute;
+    min-width: 100px;
+}
+
+.dropdown :hover .content{
+    display: block;
+}
+
+.dropdown:hover{
+    color: black;
+}
+
+
+#coins{
+    width: 85px;
+    height: 30px;
+    border: 2px rgb(154, 154, 154) solid;
+    border-radius: 10px;
+    margin-left: 1580px;
+    position: relative;
+    bottom: 121px;
+}
+
+#coinsimg{
+    width: 30px;
+}
+
+#coinsamount{
+    color: white;
+    position:relative ;
+    bottom: 49px;
+    left:30px;
+    font-family: "press start 2p";
+}
+
 #pastpapper{
     width: 320px;
     height: 120px;
