@@ -32,6 +32,7 @@ body{
     border: 2px solid black;
     border-radius: 5px;
     font-size: larger;
+    cursor: pointer;
 }
 
 #stripbtn{
@@ -55,17 +56,38 @@ body{
     background-color: rgba(93, 189, 245, 0.877);
 }
 
+#cloud1{
+    width: 90px;
+}
+
+#cloud2{
+   width: 100px; 
+   position: relative;
+   bottom: 10px;
+   left: 100px;
+}
+
+#cloud3{
+    width: 80px;
+    top: 100px;
+    right: 100px;
+}
+
 #display{
     font-family: "press start 2p";
     color: black;
     font-size: xx-large;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     margin-top: 100px;
+    position: relative;
+    bottom: 270px;
 }
 
 #controls button{
     cursor: pointer;
     transition: background-color 0.5s ease;
+    position: relative;
+    bottom: 250px;
 }
 
 #startbtn{
