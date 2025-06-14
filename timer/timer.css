@@ -63,20 +63,39 @@ body{
     margin-top: 100px;
 }
 
+#controls button{
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
 #startbtn{
     font-family: "press start 2p";
     border-radius: 5px;
     height: 30px;
+    background-color: rgb(0, 223, 0);
+}
+
+#startbtn:hover{
+background-color: rgb(0, 187, 0);
 }
 
 #stopbtn{
     font-family: "press start 2p";
     border-radius: 5px;
     height: 30px;   
+    background-color: rgb(235, 0, 0);
+}
+
+#stopbtn:hover{
+   background-color: rgb(193, 0, 0); 
 }
 
 #resetbtn{
     font-family: "press start 2p";
     border-radius: 5px;
     height: 30px;     
+}
+
+#resetbtn:hover{
+    background-color: rgb(224, 224, 224);
 }
