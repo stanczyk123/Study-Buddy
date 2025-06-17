@@ -2,14 +2,15 @@ const dailyTarget = 2 * 60 * 60 * 1000; // 2 hours in ms
 const progressBar = document.querySelector('.progressBar');
 const reward = document.getElementById('reward');
 const dailyReward = 100;
+const coinsDisplay = document.getElementById('coinsamount');
 
 
 function updateProgressBar() {
     const storedMs = parseInt(localStorage.getItem("timer-progress") || "0", 10);
     const percent = Math.min((storedMs / dailyTarget) * 100, 100);
     progressBar.style.width = percent + "%";
-    
-    questsReward(storedMs);
+
+    questsReward(storedMs)
 }
 updateProgressBar();
 
@@ -34,3 +35,7 @@ reward.addEventListener('click', () => {
     reward.style.display = 'none';
 })
 
+reward.onclick = function(){
+    coinsamount = coinsamount + dailyReward
+    coinsamount.textContent = `${coinsamount}`
+}
