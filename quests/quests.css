@@ -181,3 +181,18 @@ header{
     75%{width: 75%;}
     100% {width: 100%;}
 }
+
+#reward{
+    height: 25px;
+    width: 80px;
+    position: relative;
+    left: 309px;
+    bottom: 28px;
+    border-radius: 6px;
+    background-color:rgb(24, 24, 24) ;
+    border: 2px solid black;
+    font-family: "press start 2p";
+    display: none;
+    background-color: gold;
+    color: white;
+}
