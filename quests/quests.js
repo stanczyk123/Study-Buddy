@@ -4,38 +4,46 @@ const reward = document.getElementById('reward');
 const dailyReward = 100;
 const coinsDisplay = document.getElementById('coinsamount');
 
+// Load coins from localStorage
+let coins = parseInt(localStorage.getItem("coins") || "0", 10);
+coinsDisplay.textContent = coins;
+
+//Reset reward claim daily
+const today = new Date().toLocaleDateString();
+if (localStorage.getItem("last-claim-date") !== today) {
+    localStorage.setItem("daily-reward-claimed", "false");
+    localStorage.setItem("last-claim-date", today);
+}
 
 function updateProgressBar() {
     const storedMs = parseInt(localStorage.getItem("timer-progress") || "0", 10);
     const percent = Math.min((storedMs / dailyTarget) * 100, 100);
     progressBar.style.width = percent + "%";
-
-    questsReward(storedMs)
+    questsReward(storedMs);
 }
-updateProgressBar();
 
-
-setInterval(updateProgressBar, 1000);
-
-
-function questsReward(currentMs){
-    if(currentMs >= dailyTarget){
+function questsReward(currentMs) {
+    const rewardClaimed = localStorage.getItem("daily-reward-claimed") === "true";
+    if (currentMs >= dailyTarget && !rewardClaimed) {
         reward.style.display = 'inline-block';
-        reward.textContent = `${dailyReward}`
-    
-    }
-
-    else{
-        reward.style.display = 'none'
+        reward.innerHTML = `
+            <img src="/favicons/coin.png" style="width: 20px; position: relative; top: 5px; margin-right: 5px;">
+            +${dailyReward}
+        `;
+    } else {
+        reward.style.display = 'none';
     }
 }
 
+// Handle reward button click
 reward.addEventListener('click', () => {
-    alert(`You've claimed the daily quests coins!`)
+    alert("You've claimed the daily quests coins!");
+    coins += dailyReward;
+    coinsDisplay.textContent = coins;
+    localStorage.setItem("coins", coins);
+    localStorage.setItem("daily-reward-claimed", "true");
     reward.style.display = 'none';
-})
+});
 
-reward.onclick = function(){
-    coinsamount = coinsamount + dailyReward
-    coinsamount.textContent = `${coinsamount}`
-}
+updateProgressBar();
+setInterval(updateProgressBar, 1000);
