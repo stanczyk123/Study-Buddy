@@ -9,17 +9,14 @@
 </head>
 <header>
     
-    <div id="studybuddy">
+    <div id="studybuddy" onclick="main()">
         <a>
             <img src="favicons/logo.png" id="studybuddyimg">
-            <h2 id="studybuddyText">Study Buddy</h2>
+            <h2 id="studybuddyText"><a href="main.html">Study Buddy</a></h2>
         </a>
+        
     </div>
 
-
-    <a href="/home/main.html">
-        <button class="headerbtn">Home</button>
-    </a>
     <a href="homework/homework.html">
         <button class="homeworkbtn">Homework</button>
     </a>
@@ -33,10 +30,13 @@
     </a>
     
 
+
     <div id="coins">
         <img src="favicons/coin.png" id="coinsimg">
         <h4 id="coinsamount">0</h4>
     </div>
+
+    <a id="profilename"></a>
 </header>
 <body>
     <a href="/past papper/past papper.html">
@@ -78,6 +78,7 @@
             <img id="quests" src="favicons/quests.png">
         </a>
     </div>
+    <script src="/sign up/sign up.js"></script>
     <script src="quests/quests.js"></script>
 </body>
 </html>
