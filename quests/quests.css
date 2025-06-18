@@ -224,3 +224,20 @@ a, a * {
     text-decoration: none;
     color: white;
 }
+
+#profilepic{
+    width: 40px;
+    border-radius: 70px;
+    margin-left: 1450px;
+    position: relative;
+    bottom: 200px;
+}
+
+#profilename{
+    margin-left: 90%;
+    position: relative;
+    bottom: 250px;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}

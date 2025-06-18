@@ -34,6 +34,9 @@
         <img src="/favicons/coin.png" id="coinsimg">
         <h4 id="coinsamount">0</h4>
     </div>
+
+    <img src="/favicons/profile pic deffault.png" id="profilepic">
+    <a id="profilename" href="/profile/profile.html"></a>    
 </header>
 <body>
 
@@ -52,6 +55,16 @@
 
 
     <script src="quests.js"></script>
+    <script>
+  // Load username from localStorage
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
 
 </body>
 </html>

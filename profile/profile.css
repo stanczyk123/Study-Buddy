@@ -219,3 +219,16 @@ a, a * {
     position: relative;
     bottom: 300px;
 }
+
+#dailystudytime{
+    margin-left: 700px;
+    position: relative;
+    bottom: 250px;
+    font-family: "press start 2p";
+    color: white;
+    border: 2px solid white;
+    width: 600px;
+    border-radius: 20px;
+    height: inherit;
+    
+}
