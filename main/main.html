@@ -36,7 +36,7 @@
         <h4 id="coinsamount">0</h4>
     </div>
 
-    <a id="profilename"></a>
+    <a id="profilename" href="/profile/profile.html"></a>
 </header>
 <body>
     <a href="/past papper/past papper.html">
@@ -80,5 +80,15 @@
     </div>
     <script src="/sign up/sign up.js"></script>
     <script src="/quests/quests.js"></script>
+    <script>
+  // Load username from localStorage
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
 </body>
 </html>

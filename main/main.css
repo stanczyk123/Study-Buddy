@@ -159,8 +159,10 @@ header{
 #profilename{
     margin-left: 1500px;
     position: relative;
-    bottom: 200px;
+    bottom: 210px;
     font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 #pastpapper{

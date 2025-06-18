@@ -17,17 +17,18 @@ body{
     box-shadow: 2px 2px 5px black;
 }
 
-#username{
+
+#usernameid{
     color: white;
     margin: auto;
     width: 230px;
     height: 30px;
     background-color: rgb(24, 24, 24);
     border: 1px white solid;
-    border-radius: 7px;
+    border-radius: 7px;    
 }
 
-#password{
+#passwordid{
     color: white;
     margin: auto;
     width: 230px;
@@ -35,8 +36,9 @@ body{
     background-color: rgb(24, 24, 24);
     border: 1px white solid;
     border-radius: 7px;
-    margin-top: 20px;
+    margin-top: 20px;    
 }
+
 
 #confirmpass{
     color: white;
@@ -49,7 +51,7 @@ body{
     margin-top: 20px;
 }
 
-#date{
+#dateid{
     color: white;
     margin: auto;
     width: 230px;

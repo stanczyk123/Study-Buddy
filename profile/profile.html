@@ -49,5 +49,22 @@
     <h1 id="history">Study History</h1>
     <script src="/sign up/sign up.js"></script>
     <script src="/quests/quests.js"></script>
+    <script>
+        const username = localStorage.getItem("username");
+        const password = localStorage.getItem("password")
+
+        if (username) {
+        document.getElementById("profilename").textContent = username;
+        } else {
+         document.getElementById("profilename").textContent = "Guest";
+        }
+
+        if(password){
+            document.getElementById("passwordname").textContent = password;
+        } else{
+            document.getElementById("passwordname").textContent = "You dont have any password how?"
+        }
+        
+    </script>
 </body>
 </html>
