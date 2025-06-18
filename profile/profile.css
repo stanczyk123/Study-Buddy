@@ -220,15 +220,63 @@ a, a * {
     bottom: 300px;
 }
 
-#dailystudytime{
-    margin-left: 700px;
+
+
+#studyhistory{
+    display: flex;
+    flex-direction: column;
+    margin-left: 740px;
+    color: white;
+    font-family: "press start 2p";
+    font-size: medium;
     position: relative;
     bottom: 250px;
-    font-family: "press start 2p";
-    color: white;
+}
+
+#dailystudytime{
+    margin-bottom: 100px;
     border: 2px solid white;
-    width: 600px;
+    width: 570px;
     border-radius: 20px;
-    height: inherit;
-    
+    height: 150px;
+}
+
+#weeklystudytime{
+    margin-bottom: 100px;
+    border: 2px solid white;
+    width: 570px;
+    border-radius: 20px;
+    height: 150px;    
+}
+
+#montlystudy time{
+    margin-bottom: 100px;
+    border: 2px solid white;
+    width: 570px;
+    border-radius: 20px;
+    height: 150px;     
+}
+
+#monthlystudytime{
+    margin-bottom: 100px;
+    border: 2px solid white;
+    width: 570px;
+    border-radius: 20px;
+    height: 150px; 
+}
+
+#yearlystudytime{
+    margin-bottom: 100px;
+    border: 2px solid white;
+    width: 570px;
+    border-radius: 20px;
+    height: 150px; 
+}
+
+#totalstudytime{
+    margin-bottom: 100px;
+    border: 2px solid white;
+    width: 570px;
+    border-radius: 20px;
+    height: 150px;    
 }
