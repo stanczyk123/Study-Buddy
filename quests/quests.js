@@ -24,12 +24,39 @@ function updateProgressBar() {
 
 function questsReward(currentMs) {
     const rewardClaimed = localStorage.getItem("daily-reward-claimed") === "true";
+    const notificationShown = localStorage.getItem("quest-notification-shown") === "true";
+
     if (currentMs >= dailyTarget && !rewardClaimed) {
         reward.style.display = 'inline-block';
+        reward.innerHTML = `
+            <img src="/favicons/coin.png" style="width: 20px; position: relative; top: 5px; margin-right: 5px;">
+            +${dailyReward}
+        `;
+
+        if (!notificationShown) {
+            showQuestNotification();
+            localStorage.setItem("quest-notification-shown", "true");
+        }
     } else {
         reward.style.display = 'none';
     }
 }
+
+function showQuestNotification() {
+    const notification = document.getElementById("quest-notification");
+    notification.style.display = "block";
+
+    setTimeout(() => {
+        notification.style.display = "none";
+    }, 8000); 
+}
+
+if (localStorage.getItem("last-claim-date") !== today) {
+    localStorage.setItem("daily-reward-claimed", "false");
+    localStorage.setItem("last-claim-date", today);
+    localStorage.setItem("quest-notification-shown", "false"); // reset notification
+}
+
 
 // Handle reward button click
 reward.addEventListener('click', () => {

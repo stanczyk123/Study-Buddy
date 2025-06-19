@@ -1,16 +1,7 @@
-a, a * {
-    text-decoration: none;
-    color: white;
-}
-
 body{
     background-color: rgb(24, 24, 24);
     text-decoration: none;
     text-decoration-line: none;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    
 }
 
 header{
@@ -182,113 +173,7 @@ header{
     bottom: 200px;
 }
 
-#selectgrade{
-    font-family: "press start 2p";
+a, a * {
+    text-decoration: none;
     color: white;
-    margin-top: 100px;
-}
-
-#highschool{
-    font-family:"press start 2p" ;
-    margin-bottom: 100px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 160px;
-    border-radius: 20px;
-}
-
-#highschoolText{
-    margin-top: 10px;
-    color: white;
-}
-
-#middleschool{
-    font-family:"press start 2p" ;
-    margin-bottom: 100px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 160px;
-    border-radius: 20px;    
-}
-
-#middleschoolText{
-    margin-top: 10px;    
-    color: white;
-}
-
-#Elementaryschool{
-    font-family:"press start 2p" ;
-    margin-bottom: 100px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 270px;
-    border-radius: 20px;      
-}
-
-#elementaryschoolText{
-    margin-top: 10px;
-    color: white;
-}
-
-#seniorText{
-    margin-bottom: 20px;
-}
-
-#seniorText:hover{
-    border: 2px solid white;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-#juniorText{
-    margin-bottom: 20px;
-}
-
-#juniorText:hover{
-    border: 2px solid white;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-
-#sophomoreText{
-    margin-bottom: 20px;
-}
-
-#sophomoreText:hover{
-    border: 2px solid white;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.grade{
-    margin-bottom: 20px;
-}
-
-.grade:hover{
-    border: 2px solid white;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 6px;
-    cursor: pointer;    
 }

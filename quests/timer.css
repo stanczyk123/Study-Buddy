@@ -126,3 +126,28 @@ a, a * {
     text-decoration: none;
     color:black;
 }
+
+#questsNotif{
+    color: black;
+    margin-left: 1260px;
+    position: relative;
+    bottom: 100px;
+    font-family: "press start 2p";
+    width: 400px;
+    border: 2px solid black;
+    height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    display: none;
+}
+
+#gotoquestsbtn{
+    color: white;
+    margin-left: 300px;
+    background-color:rgb(24, 24, 24) ;
+    border: 1px solid white;
+    border-radius: 10px;
+    position:relative ;
+    top: 20px;
+    cursor: pointer;
+}
