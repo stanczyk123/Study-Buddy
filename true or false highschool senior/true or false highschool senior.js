@@ -115,25 +115,48 @@ const quiz = [
         question: "The domain of √x is all real numbers.", 
         answer: false 
     }, 
-  { question: "A function can have two outputs for one input.", answer: false },
-  { question: "If two lines are perpendicular, their slopes are negative reciprocals.", answer: true },
-  { question: "In the unit circle, the radius is 1.", answer: true },
-  { question: "logₐ(1) = 1 for all a > 0.", answer: false }, 
-  { question: "A function is even if f(x) = f(-x).", answer: true },
-  { question: "An identity matrix has all 1's.", answer: false }, 
-  { question: "The cube root of 8 is 2.", answer: true },
-  { question: "The mean and median of a data set are always equal.", answer: false },
-  { question: "A linear equation in two variables can be graphed as a straight line.", answer: true }
+    { 
+        question: "A function can have two outputs for one input.", 
+        answer: false 
+    },
+    { 
+        question: "If two lines are perpendicular, their slopes are negative reciprocals.", 
+        answer: true 
+    },
+    { 
+        question: "In the unit circle, the radius is 1.", 
+        answer: true 
+    },
+    {  
+        question: "logₐ(1) = 1 for all a > 0.", 
+        answer: false 
+    }, 
+    { 
+        question: "A function is even if f(x) = f(-x).", 
+        answer: true 
+    },
+    { 
+        question: "An identity matrix has all 1's.", 
+        answer: false 
+    }, 
+    { 
+        question: "The cube root of 8 is 2.", 
+        answer: true 
+    },
+    { 
+        question: "The mean and median of a data set are always equal.", 
+        answer: false 
+    },
+    { 
+        question: "A linear equation in two variables can be graphed as a straight line.", 
+        answer: true 
+    },
     {
         question: "The function f(x) = x² is decreasing for all x.",
         answer: false
     },
     {
         question: "The limit of sin(x)/x as x approaches 0 is 1.",
-        answer: true
-    },
-    {
-        question: "The logarithm of 1 is 0.",
         answer: true
     }
 ];

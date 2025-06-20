@@ -116,9 +116,9 @@ const quiz = [
         answer: 1 // vertex: x = -b/2a = -4/2 = -2 → f(-2) = 0
     },
     {
-    question: "What is the derivative of f(x) = ln(x² + 1)?",
-    options: ["1/(x² + 1)", "2x/(x² + 1)", "ln(x²)", "x/(x² + 1)"],
-    answer: 1
+        question: "What is the derivative of f(x) = ln(x² + 1)?",
+        options: ["1/(x² + 1)", "2x/(x² + 1)", "ln(x²)", "x/(x² + 1)"],
+        answer: 1
     },
     {
         question: "What is the inverse of the function f(x) = 2x + 3?",
@@ -229,23 +229,38 @@ function showQuestion() {
 
 function submitAnswer() {
     const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
     if (!selected) {
         alert("Please select an answer!");
         return;
     }
 
     const answerIndex = parseInt(selected.value);
-    if (answerIndex === quiz[currentQuestion].answer) {
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
         score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
     }
 
-    currentQuestion++;
-    if (currentQuestion < quiz.length) {
-        showQuestion();
-    } else {
-        showResult();
-    }
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
 }
+
 
 function showResult() {
     document.getElementById("question-container").style.display = "none";

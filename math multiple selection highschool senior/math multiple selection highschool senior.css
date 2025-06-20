@@ -12,10 +12,12 @@ body{
 #question{
     color: black;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large
 }
 
 #submitbtn{
-    margin-top: 360px;
+    position: relative;
+    top: 300px;
     margin-left: 1400px;
     width: 200px;
     height: 60px;
@@ -65,60 +67,9 @@ input[type="radio"] {
     font-size: x-large;
 }
 
-#cloud1{
-    width: 200px;
-    position: relative;
-    bottom: 700px;
-}
-#cloud2{
-    width: 200px;
-    position: relative;
-    bottom: 1200px;
-}
-#cloud3{
-    width: 200px;
-    position: relative;
-    bottom: 860px;
-}
-
-#cloud4{
-    width: 200px;
-    position: relative;
-    bottom: 1400px;
-}
-#cloud5{
-    width: 200px;
-    position: relative;
-    bottom: 1300px;
-}
-#cloud6{
-    width: 200px;
-    position: relative;
-    bottom: 840px;
-}
-#cloud7{
-    width: 200px;
-    position: relative;
-    bottom: 1160px;
-}
-
-#cloud8{
-    width: 200px;
-    position: relative;
-    bottom: 760px;
-}
-
-#right-or-wrong{
-    font-family: "press start 2p";
-    font-size: large;
-    position: relative;
-    bottom: 300px;
-    text-align: center;
-}
-
 #homebtn{
     position: relative;
-    bottom: 60px;
+    top: 230px;
     right: 700px;
     width: 200px;
     height: 60px;
@@ -132,4 +83,54 @@ input[type="radio"] {
 
 #homebtn:hover{
     background-color: rgb(22, 101, 158);
+}
+
+#right-or-wrong{
+    font-family: "press start 2p";
+    font-size: large;
+    position: relative;
+    bottom: 100px;
+}
+
+#cloud1{
+    width: 200px;
+    position: relative;
+    bottom: 400px;
+}
+#cloud2{
+    width: 200px;
+    position: relative;
+    bottom: 700px;
+}
+#cloud3{
+    width: 200px;
+    position: relative;
+    bottom: 960px;
+}
+
+#cloud4{
+    width: 200px;
+    position: relative;
+    bottom: 400px;
+}
+#cloud5{
+    width: 200px;
+    position: relative;
+    bottom: 370px;
+}
+#cloud6{
+    width: 200px;
+    position: relative;
+    bottom: 940px;
+}
+#cloud7{
+    width: 200px;
+    position: relative;
+    bottom: 360px;
+}
+
+#cloud8{
+    width: 200px;
+    position: relative;
+    bottom: 860px;
 }
