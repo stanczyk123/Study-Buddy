@@ -168,65 +168,47 @@ function showQuestion() {
     const q = quiz[currentQuestion];
     document.getElementById("question").innerText = q.question;
 
-    const optionsDiv = document.getElementById("options");
-    optionsDiv.innerHTML = "";
-
-    q.options.forEach((option, index) => {
-        const label = document.createElement("label");
-        label.style.display = "block";
-
-        const radio = document.createElement("input");
-        radio.type = "radio";
-        radio.name = "option";
-        radio.value = index;
-
-        label.appendChild(radio);
-        label.appendChild(document.createTextNode(option));
-        optionsDiv.appendChild(label);
-    });
+    // Clear selected radio buttons
+    const radios = document.querySelectorAll('input[name="answer"]');
+    radios.forEach(radio => radio.checked = false);
 }
 
 function submitAnswer() {
-    const selected = document.querySelector('input[name="option"]:checked');
-    const feedback = document.getElementById("right-or-wrong");
+    const selectedRadio = document.querySelector('input[name="answer"]:checked');
+    const feedbackDiv = document.getElementById("result");
+    feedbackDiv.style.display = "block";
 
-    if (!selected) {
-        alert("Please select an answer!");
+    if (!selectedRadio) {
+        alert("Please select True or False.");
         return;
     }
 
-    const answerIndex = parseInt(selected.value);
-    const correctIndex = quiz[currentQuestion].answer;
-    const correctText = quiz[currentQuestion].options[correctIndex];
+    const selectedValue = selectedRadio.value === "true";
+    const correctAnswer = quiz[currentQuestion].answer;
 
-    if (answerIndex === correctIndex) {
+    if (selectedValue === correctAnswer) {
         score++;
-        feedback.innerText = "✅ Correct!";
-        feedback.style.color = "green";
+        feedbackDiv.innerHTML = `<p style="color: green;">✅ Correct!</p>`;
     } else {
-        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
-        feedback.style.color = "red";
+        feedbackDiv.innerHTML = `<p style="color: red;">❌ Wrong!<br>The correct answer is: <strong>${correctAnswer ? "True" : "False"}</strong></p>`;
     }
 
-    // Move to next question after a short delay
     setTimeout(() => {
+        feedbackDiv.style.display = "none";
         currentQuestion++;
-        feedback.innerText = ""; // clear message
         if (currentQuestion < quiz.length) {
             showQuestion();
         } else {
-            showResult();
+            showFinalResult();
         }
-    }, 1500); // 1.5 seconds pause
+    }, 1500);
 }
 
-
-function showResult() {
+function showFinalResult() {
     document.getElementById("question-container").style.display = "none";
     const resultDiv = document.getElementById("result");
     resultDiv.style.display = "block";
-    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+    resultDiv.innerHTML = `<h2>You got ${score} out of ${quiz.length} questions right!</h2>`;
 }
 
-// Start quiz when page loads
 window.onload = showQuestion;

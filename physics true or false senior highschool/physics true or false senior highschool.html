@@ -10,19 +10,30 @@
 </head>
 <body>
         
-    <div id="question-container">
-        <h2 id="question"></h2>
-        <div id="options"></div>
-        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
-        <a href="/main/main.html"><button id="homebtn">Home</button></a>
-        <h4 id="right-or-wrong"></h4>
-    </div>
+<div id="question-container">
+    <h3 id="question"></h3>
+    <form id="quiz-form">
+        <div id="falsebtn">
+            <label>
+                <input type="radio" name="answer" value="false" id="falseText"> False
+            </label>
+        </div>
+        <br>
+        <div id="truebtn">
+            <label>
+                <input type="radio" name="answer" value="true" id="trueText"> True
+            </label>
+        </div>
+        <br>
+        <button type="button" onclick="submitAnswer()" id="submitbtn">Submit</button>
+    </form>
+    <a href="/main/main.html"><button id="homebtn">Home</button></a>
+</div>
 
     <div id="finalresult">
         <div id="result" style="display: none;"></div>
     </div>
 
-    
         <img src="/favicons/cloud.png" id="cloud1" />
         <img src="/favicons/cloud.png" id="cloud2" />
         <img src="/favicons/cloud.png" id="cloud3" />
