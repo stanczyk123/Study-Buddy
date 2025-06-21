@@ -1,0 +1,215 @@
+const quiz = [
+  {
+    question: "Force can change the shape of an object.",
+    answer: true
+  },
+  {
+    question: "Sound can travel through a vacuum.",
+    answer: false
+  },
+  {
+    question: "Weight is a force measured in newtons.",
+    answer: true
+  },
+  {
+    question: "The unit of energy is the watt.",
+    answer: false
+  },
+  {
+    question: "Objects float on water if their density is lower than water.",
+    answer: true
+  },
+  {
+    question: "Heat flows from hot objects to cold objects.",
+    answer: true
+  },
+  {
+    question: "Light travels slower in air than in glass.",
+    answer: false
+  },
+  {
+    question: "Mass depends on gravity.",
+    answer: false
+  },
+  {
+    question: "An object at rest will stay at rest unless acted upon by a force.",
+    answer: true
+  },
+  {
+    question: "Pressure is force divided by area.",
+    answer: true
+  },
+  {
+    question: "Electric current is measured in volts.",
+    answer: false
+  },
+  {
+    question: "A lever is a type of simple machine.",
+    answer: true
+  },
+  {
+    question: "Energy can be created and destroyed.",
+    answer: false
+  },
+  {
+    question: "The boiling point of water is 100°C at sea level.",
+    answer: true
+  },
+  {
+    question: "Friction always slows down motion.",
+    answer: true
+  },
+  {
+    question: "A convex mirror forms real images.",
+    answer: false
+  },
+  {
+    question: "Sound is faster in solids than in gases.",
+    answer: true
+  },
+  {
+    question: "Voltage is the flow of electric charge.",
+    answer: false
+  },
+  {
+    question: "All metals are magnetic.",
+    answer: false
+  },
+  {
+    question: "Work is done when a force moves an object.",
+    answer: true
+  },
+  {
+    question: "The Earth revolves around the Sun.",
+    answer: true
+  },
+  {
+    question: "Inertia is the resistance of an object to change its motion.",
+    answer: true
+  },
+  {
+    question: "Gases have a definite shape and volume.",
+    answer: false
+  },
+  {
+    question: "Gravity is weaker on the Moon than on Earth.",
+    answer: true
+  },
+  {
+    question: "An echo is caused by the reflection of sound.",
+    answer: true
+  },
+  {
+    question: "Water is a good conductor of electricity.",
+    answer: false
+  },
+  {
+    question: "The Sun is a source of light and heat energy.",
+    answer: true
+  },
+  {
+    question: "Simple machines reduce the amount of work needed.",
+    answer: false
+  },
+  {
+    question: "Magnets can attract plastic objects.",
+    answer: false
+  },
+  {
+    question: "The density of a substance is its mass divided by volume.",
+    answer: true
+  },
+  {
+    question: "Heat is a form of energy.",
+    answer: true
+  },
+  {
+    question: "A barometer measures temperature.",
+    answer: false
+  },
+  {
+    question: "Loudness of sound depends on amplitude.",
+    answer: true
+  },
+  {
+    question: "Refraction is the bending of light.",
+    answer: true
+  },
+  {
+    question: "The Moon produces its own light.",
+    answer: false
+  },
+  {
+    question: "The unit of power is the joule.",
+    answer: false
+  },
+  {
+    question: "Kinetic energy is energy of motion.",
+    answer: true
+  },
+  {
+    question: "Sound needs a medium to travel.",
+    answer: true
+  },
+  {
+    question: "A shadow is formed when light is absorbed.",
+    answer: false
+  },
+  {
+    question: "Switching off lights saves energy.",
+    answer: true
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    // Clear selected radio buttons
+    const radios = document.querySelectorAll('input[name="answer"]');
+    radios.forEach(radio => radio.checked = false);
+}
+
+function submitAnswer() {
+    const selectedRadio = document.querySelector('input[name="answer"]:checked');
+    const feedbackDiv = document.getElementById("result");
+    feedbackDiv.style.display = "block";
+
+    if (!selectedRadio) {
+        alert("Please select True or False.");
+        return;
+    }
+
+    const selectedValue = selectedRadio.value === "true";
+    const correctAnswer = quiz[currentQuestion].answer;
+
+    if (selectedValue === correctAnswer) {
+        score++;
+        feedbackDiv.innerHTML = `<p style="color: green;">✅ Correct!</p>`;
+    } else {
+        feedbackDiv.innerHTML = `<p style="color: red;">❌ Wrong!<br>The correct answer is: <strong>${correctAnswer ? "True" : "False"}</strong></p>`;
+    }
+
+    setTimeout(() => {
+        feedbackDiv.style.display = "none";
+        currentQuestion++;
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showFinalResult();
+        }
+    }, 1500);
+}
+
+function showFinalResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = `<h2>You got ${score} out of ${quiz.length} questions right!</h2>`;
+}
+
+window.onload = showQuestion;
