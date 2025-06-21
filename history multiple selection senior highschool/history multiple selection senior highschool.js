@@ -1,0 +1,271 @@
+const quiz = [
+  {
+    question: "Which events contributed to the fall of the Old Order in Indonesia?",
+    options: [
+      "G30S/PKI incident",
+      "Economic crisis and hyperinflation",
+      "The resignation of Suharto",
+      "Supersemar letter"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which kingdoms were part of the classical Hindu-Buddhist period in Indonesia?",
+    options: [
+      "Majapahit",
+      "Sriwijaya",
+      "Demak",
+      "Tarumanagara"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are impacts of colonialism in Indonesia?",
+    options: [
+      "Forced labor systems",
+      "Infrastructure development",
+      "Nationalism awakening",
+      "Increased literacy across all regions"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which Indonesian figures played significant roles during the independence era?",
+    options: [
+      "Soekarno",
+      "Mohammad Hatta",
+      "Cornelis de Houtman",
+      "Sutan Sjahrir"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which factors led to the rise of nationalism in Indonesia?",
+    options: [
+      "Western education",
+      "Political repression by Dutch",
+      "World War I",
+      "Traditional feudal systems"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which events occurred during the Japanese occupation of Indonesia?",
+    options: [
+      "Romusha (forced labor)",
+      "BPUPKI formation",
+      "VOC establishment",
+      "Banning of political parties"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which agreements were signed during the Indonesian struggle for independence?",
+    options: [
+      "Linggarjati Agreement",
+      "Renville Agreement",
+      "Giyanti Agreement",
+      "Roem-Royen Agreement"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which historical events were significant in the 20th-century world?",
+    options: [
+      "World War I",
+      "World War II",
+      "Cold War",
+      "Industrial Revolution"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these were early nationalist organizations in Indonesia?",
+    options: [
+      "Budi Utomo",
+      "Sarekat Islam",
+      "PETA",
+      "Indische Partij"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which consequences were caused by the Cultivation System (Tanam Paksa)?",
+    options: [
+      "Famine in many regions",
+      "Increase in Dutch profits",
+      "Improved farmers’ welfare",
+      "Massive exploitation of peasants"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which empires influenced Indonesian history?",
+    options: [
+      "Gupta Empire",
+      "Mongol Empire",
+      "Islamic Caliphate",
+      "British Empire"
+    ],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which social changes occurred during the Reform Era (Reformasi)?",
+    options: [
+      "Increased press freedom",
+      "Direct presidential elections",
+      "Abolishment of DPR",
+      "Decentralization (regional autonomy)"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which ancient Indonesian inscriptions are well known?",
+    options: [
+      "Ciaruteun Inscription",
+      "Yupa Inscription",
+      "Prasasti Peninggalan Islam",
+      "Kalasan Inscription"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following were major figures in Indonesian Islamic history?",
+    options: [
+      "Wali Songo",
+      "Sunan Kalijaga",
+      "Sunan Gunung Jati",
+      "Sultan Agung"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are elements of the Indonesian Constitution (UUD 1945)?",
+    options: [
+      "Preamble",
+      "Body",
+      "Transitional rules",
+      "Judiciary system structure"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which were the consequences of the Cold War for Indonesia?",
+    options: [
+      "Alignment pressure from USA and USSR",
+      "PKI rise and fall",
+      "Domino theory influence",
+      "World War III outbreak"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which countries colonized Indonesia at some point?",
+    options: [
+      "Portugal",
+      "Netherlands",
+      "Japan",
+      "Spain"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which events led to the formation of ASEAN?",
+    options: [
+      "Regional instability",
+      "Desire for cooperation",
+      "World War II",
+      "Bangkok Declaration"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which kingdoms existed during the Islamic period in Indonesia?",
+    options: [
+      "Demak",
+      "Aceh",
+      "Mataram Islam",
+      "Majapahit"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following were part of Indonesia’s 1945 independence proclamation process?",
+    options: [
+      "Rengasdengklok incident",
+      "PETA uprising",
+      "Text drafting by Soekarno-Hatta",
+      "Proclamation on August 17"
+    ],
+    correctAnswers: [0, 2, 3]
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;
