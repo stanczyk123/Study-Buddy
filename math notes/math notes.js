@@ -1,117 +1,106 @@
 let db;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const request = indexedDB.open("NoteDB", 1);
+window.onload = () => {
+  const request = indexedDB.open("NotesFileDB", 1);
 
   request.onerror = e => console.error("IndexedDB error:", e.target.error);
 
   request.onupgradeneeded = e => {
     db = e.target.result;
-    db.createObjectStore("notes", { keyPath: "id" });
+    db.createObjectStore("files", { keyPath: "id", autoIncrement: true });
   };
 
   request.onsuccess = e => {
     db = e.target.result;
+    loadFiles();
   };
-});
+};
 
-// Show image + filename when file is chosen
-function previewNote(noteId) {
-  const input = document.getElementById(`${noteId}Input`);
-  const file = input.files[0];
-  const number = noteId.replace("note", "");
-  const display = document.getElementById(`noteDisplay${number}`);
-  const filename = document.getElementById(`filename${number}`);
-
-  if (file) {
-    display.style.display = "block";
-    filename.textContent = file.name;
-  } else {
-    display.style.display = "none";
-    filename.textContent = "";
+function saveFile() {
+  const fileInput = document.getElementById("fileInput");
+  const file = fileInput.files[0];
+  if (!file) {
+    alert("Please choose a file.");
+    return;
   }
-}
-
-// Save file
-function saveNote(noteId) {
-  const input = document.getElementById(`${noteId}Input`);
-  const file = input.files[0];
-  if (!file) return;
 
   const reader = new FileReader();
   reader.onload = function (e) {
-    const transaction = db.transaction(["notes"], "readwrite");
-    const store = transaction.objectStore("notes");
-    const noteData = {
-      id: noteId,
+    const transaction = db.transaction(["files"], "readwrite");
+    const store = transaction.objectStore("files");
+    const data = {
       name: file.name,
       type: file.type,
       content: e.target.result
     };
-    store.put(noteData);
-    alert("Saved!");
+    store.add(data);
+    transaction.oncomplete = () => {
+      loadFiles();
+      fileInput.value = ""; // reset input
+    };
   };
   reader.readAsArrayBuffer(file);
 }
 
-// Load file
-function loadNote(noteId) {
-  const transaction = db.transaction(["notes"], "readonly");
-  const store = transaction.objectStore("notes");
-  const request = store.get(noteId);
+function loadFiles() {
+  const list = document.getElementById("fileList");
+  list.innerHTML = "";
 
-  request.onsuccess = event => {
-    const note = event.target.result;
-    const number = noteId.replace("note", "");
-    const display = document.getElementById(`noteDisplay${number}`);
-    const filename = document.getElementById(`filename${number}`);
-    const content = document.getElementById(`noteContent${number}`);
+  const transaction = db.transaction(["files"], "readonly");
+  const store = transaction.objectStore("files");
+  const request = store.openCursor();
 
-    if (!note) {
-      display.innerHTML = "No saved note.";
-      return;
-    }
+  request.onsuccess = e => {
+    const cursor = e.target.result;
+    if (cursor) {
+      const file = cursor.value;
+      const blob = new Blob([file.content], { type: file.type });
+      const url = URL.createObjectURL(blob);
 
-    display.style.display = "block";
-    filename.textContent = note.name;
-
-    const blob = new Blob([note.content], { type: note.type });
-    const url = URL.createObjectURL(blob);
-
-    content.innerHTML = ""; // clear previous content
-
-    if (note.type.startsWith("text")) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        content.innerHTML = `<pre>${reader.result}</pre>`;
-      };
-      reader.readAsText(blob);
-    } else if (note.type.includes("pdf")) {
-      content.innerHTML = `
-        <iframe src="${url}" style="width:100%; height:300px;" frameborder="0"></iframe>
-        <p><a href="${url}" target="_blank" download="${note.name}">📄 Open / Download PDF</a></p>
+      const item = document.createElement("div");
+      item.className = "file-item";
+      item.innerHTML = `
+        <p class="file-name"><strong>${file.name}</strong></p>
+        ${
+          file.type.startsWith("text")
+            ? `<button onclick="viewText(${cursor.key})" class="view-btn">📖 View Text</button>`
+            : file.type === "application/pdf"
+            ? `<iframe src="${url}" width="100%" height="700"></iframe>`
+            : `<a href="${url}" download="${file.name}" class="download-link">📄 Download</a>`
+        }
+        <br>
+        <button onclick="deleteFile(${cursor.key})" class="delete-btn">🗑 Remove File</button>
+        <div id="textContent-${cursor.key}"></div>
       `;
-    } else {
-      content.innerHTML = `
-        <p><a href="${url}" target="_blank" download="${note.name}">📄 Download ${note.name}</a></p>
-      `;
+      list.appendChild(item);
+
+      cursor.continue();
     }
   };
 }
 
 
+function viewText(id) {
+  const transaction = db.transaction(["files"], "readonly");
+  const store = transaction.objectStore("files");
+  const request = store.get(id);
 
+  request.onsuccess = e => {
+    const file = e.target.result;
+    const blob = new Blob([file.content], { type: file.type });
+    const reader = new FileReader();
+    reader.onload = () => {
+      document.getElementById(`textContent-${id}`).innerHTML = `<pre>${reader.result}</pre>`;
+    };
+    reader.readAsText(blob);
+  };
+}
 
-
-// Delete file
-function deleteNote(noteId) {
-  const number = noteId.replace("note", "");
-  const transaction = db.transaction(["notes"], "readwrite");
-  const store = transaction.objectStore("notes");
-  store.delete(noteId);
-
-  document.getElementById(`noteDisplay${number}`).style.display = "none";
-  document.getElementById(`filename${number}`).textContent = "";
-  document.getElementById(`noteContent${number}`).innerHTML = "";
-  alert("Deleted.");
+function deleteFile(id) {
+  const transaction = db.transaction(["files"], "readwrite");
+  const store = transaction.objectStore("files");
+  store.delete(id);
+  transaction.oncomplete = () => {
+    loadFiles();
+  };
 }
