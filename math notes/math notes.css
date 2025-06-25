@@ -407,7 +407,7 @@ a, a * {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 60px;
+  gap: 100px;
   margin-top: 50px;
   flex-wrap: wrap;
   margin-bottom: 250px;
@@ -418,7 +418,7 @@ a, a * {
     flex-direction: column;
     align-items: center;
     border: 1px solid white;
-    width: 700px;
+    width: 800px;
     border-radius: 20px;
 }
 
@@ -466,17 +466,59 @@ a, a * {
     
 }
 
-.delete-btn{
+.deleteFile{
     font-family: "press start 2p";
     background-color: rgb(164, 0, 0);
     border-radius: 15px;
-    position: relative;
-    left: 210px;
     margin-top: 30px;
     height: 40px;
     cursor: pointer;
 }
 
-.delete-btn:hover{
+.deleteFile:hover{
     background-color: red;
+}
+
+
+
+
+.notes, #fileList0,#fileList1, #fileList2,#fileList3 {
+  width: 600px;
+  max-width: 600px;
+  position: relative;
+  right: 3px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "press start 2p";
+}
+
+#savetitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "press start 2p";
+    color: white;
+}
+
+.file-name {
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  margin: 10px 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+
+.file-name-input {
+  font-family: 'Press Start 2P', monospace;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 6px;
+  width: 90%;
+  margin: 8px 0;
+  text-align: center;
 }

@@ -60,22 +60,40 @@ function loadFiles() {
       const item = document.createElement("div");
       item.className = "file-item";
       item.innerHTML = `
-        <p class="file-name"><strong>${file.name}</strong></p>
+        <input type="text" class="file-name-input" id="nameInput-${cursor.key}" value="${file.name}">
         ${
           file.type.startsWith("text")
             ? `<button onclick="viewText(${cursor.key})" class="view-btn">📖 View Text</button>`
             : file.type === "application/pdf"
-            ? `<iframe src="${url}" width="100%" height="700"></iframe>`
+            ? `<iframe src="${url}" width="500" height="1000"></iframe>`
             : `<a href="${url}" download="${file.name}" class="download-link">📄 Download</a>`
         }
         <br>
-        <button onclick="deleteFile(${cursor.key})" class="delete-btn">🗑 Remove File</button>
+        <button onclick="saveCustomName(${cursor.key})" class="save-name-btn">💾 Save Name</button>
+        <button onclick="deleteFile(${cursor.key})" class="delete-btn">🗑 Delete</button>
         <div id="textContent-${cursor.key}"></div>
       `;
       list.appendChild(item);
 
       cursor.continue();
     }
+  };
+}
+function saveCustomName(id) {
+  const newName = document.getElementById(`nameInput-${id}`).value;
+
+  const transaction = db.transaction(["files"], "readwrite");
+  const store = transaction.objectStore("files");
+  const getRequest = store.get(id);
+
+  getRequest.onsuccess = () => {
+    const data = getRequest.result;
+    data.name = newName;
+    const putRequest = store.put(data);
+
+    putRequest.onsuccess = () => {
+      loadFiles(); // refresh display
+    };
   };
 }
 
