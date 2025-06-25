@@ -44,7 +44,7 @@
 <body>
     <div id="saveyournotes">
         <h2 id="title">Save your Notes here</h2>
-        <h4 id="titledesc">Dont for get to save all of your notes</h4>
+        <h3 id="titledesc">After you choose your file press save</h3>
     </div>
 
     <div id="notesrow">
@@ -56,14 +56,14 @@
             <button onclick="saveFile()" class="saveFile">Save File</button>
         </div>
 
-
         <div class="notes">
-            <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx">
-
-            <h2>📂 Saved Files</h2>
+            <label for="fileInput" class="custom-file-button">Choose File</label>
+            <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx" style="display: none;">
+  
             <div id="fileList"></div>
             <button onclick="saveFile()" class="saveFile">Save File</button>
         </div>
+
     </div>
 
 
