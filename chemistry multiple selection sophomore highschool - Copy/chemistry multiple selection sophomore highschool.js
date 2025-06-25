@@ -1,0 +1,272 @@
+const quiz = [
+  {
+    question: "Which of the following are chemical changes?",
+    options: ["Burning paper", "Melting ice", "Rusting iron", "Boiling water"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are noble gases?",
+    options: ["Helium", "Neon", "Oxygen", "Argon"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which compounds are examples of acids?",
+    options: ["HCl", "NaOH", "H2SO4", "CH3COOH"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of the following are metals?",
+    options: ["Iron", "Copper", "Oxygen", "Aluminum"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are indicators?",
+    options: ["Litmus", "Phenolphthalein", "Water", "Methyl orange"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are characteristics of bases?",
+    options: ["Bitter taste", "Slippery feel", "pH < 7", "Turn red litmus blue"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are covalent compounds?",
+    options: ["H2O", "CO2", "NaCl", "CH4"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are exothermic processes?",
+    options: ["Combustion", "Freezing", "Condensation", "Melting"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are components of an atom?",
+    options: ["Proton", "Electron", "Neutron", "Ion"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which substances are pure substances?",
+    options: ["Water", "Oxygen", "Air", "Carbon dioxide"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are alkali metals?",
+    options: ["Sodium", "Potassium", "Magnesium", "Lithium"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are uses of hydrochloric acid?",
+    options: ["Cleaning metals", "Food digestion", "Battery acid", "Antiseptic"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are signs of a chemical reaction?",
+    options: ["Color change", "Gas formation", "Phase change", "Temperature change"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are examples of alloys?",
+    options: ["Brass", "Steel", "Bronze", "Copper"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following have covalent bonds?",
+    options: ["H2", "O2", "NaCl", "Cl2"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are examples of strong acids?",
+    options: ["HCl", "H2SO4", "CH3COOH", "HNO3"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following substances conduct electricity?",
+    options: ["Salt solution", "Sugar solution", "Tap water", "Distilled water"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which gases are diatomic under standard conditions?",
+    options: ["O2", "N2", "Cl2", "CO2"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following processes are physical changes?",
+    options: ["Melting", "Freezing", "Boiling", "Combustion"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are organic compounds?",
+    options: ["Methane", "Ethanol", "Carbon dioxide", "Glucose"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which compounds are salts?",
+    options: ["NaCl", "KNO3", "HCl", "CaSO4"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are units of concentration?",
+    options: ["mol/L", "ppm", "g/L", "Kelvin"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are chemical properties of matter?",
+    options: ["Flammability", "Reactivity", "Melting point", "pH"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are greenhouse gases?",
+    options: ["CO2", "CH4", "H2O vapor", "O2"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are noble gases?",
+    options: ["Neon", "Helium", "Argon", "Hydrogen"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which substances have a pH greater than 7?",
+    options: ["NaOH", "Ammonia", "HCl", "Soap"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are steps in the water treatment process?",
+    options: ["Filtration", "Chlorination", "Boiling", "Condensation"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which changes indicate a physical change?",
+    options: ["Melting ice", "Breaking glass", "Rusting iron", "Dissolving sugar"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which instruments are used in a chemistry lab?",
+    options: ["Bunsen burner", "Test tube", "Stethoscope", "Beaker"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are homogeneous mixtures?",
+    options: ["Salt solution", "Air", "Oil and water", "Alcohol and water"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which elements are halogens?",
+    options: ["Chlorine", "Fluorine", "Iodine", "Sodium"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which elements are liquids at room temperature?",
+    options: ["Mercury", "Bromine", "Water", "Gallium"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which statements are true about atoms?",
+    options: ["Atoms are mostly empty space", "Electrons orbit the nucleus", "Protons are positively charged", "Neutrons have a negative charge"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which factors affect reaction rate?",
+    options: ["Temperature", "Concentration", "Surface area", "Volume"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are amphoteric substances?",
+    options: ["Water", "Aluminum hydroxide", "NaOH", "H2SO4"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are properties of gases?",
+    options: ["Compressible", "Takes shape of container", "Definite volume", "Low density"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which examples involve oxidation reactions?",
+    options: ["Rusting", "Combustion", "Photosynthesis", "Electroplating"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following elements are nonmetals?",
+    options: ["Oxygen", "Nitrogen", "Chlorine", "Calcium"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following affect solubility?",
+    options: ["Temperature", "Stirring", "Particle size", "Color"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which substances are flammable?",
+    options: ["Alcohol", "Gasoline", "Water", "Wood"],
+    correctAnswers: [0, 1, 3]
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;

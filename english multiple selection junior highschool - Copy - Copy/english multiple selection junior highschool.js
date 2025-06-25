@@ -1,0 +1,267 @@
+const quiz = [
+  {
+    question: "Which of the following are pronouns?",
+    options: ["I", "run", "they", "book"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which sentences use the present continuous tense?",
+    options: ["She is eating lunch", "They play football", "He is sleeping", "We go to school"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which are verbs?",
+    options: ["Walk", "Happy", "Swim", "Chair"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of these words are adjectives?",
+    options: ["Beautiful", "Run", "Tall", "Sleep"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which expressions are used to offer help?",
+    options: ["Can I help you?", "Would you like some tea?", "Thank you", "Nice to meet you"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these are types of text?",
+    options: ["Descriptive", "Narrative", "Pronoun", "Recount"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are suitable greetings in the morning?",
+    options: ["Good morning", "Hello", "Good night", "Hi"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are interrogative sentences?",
+    options: ["What is your name?", "Do you like ice cream?", "I like cats.", "Are you happy?"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are examples of countable nouns?",
+    options: ["Apple", "Chair", "Water", "Book"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are expressions of sympathy?",
+    options: ["I’m sorry to hear that.", "That’s too bad.", "Congratulations!", "Oh no!"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are forms of past tense?",
+    options: ["Went", "Play", "Slept", "Eat"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of these can be used to express gratitude?",
+    options: ["Thank you", "Thanks", "Sorry", "You’re welcome"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are modal verbs?",
+    options: ["Can", "Will", "Must", "Very"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are polite expressions?",
+    options: ["Excuse me", "Please", "Move!", "Thank you"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are hobbies?",
+    options: ["Reading", "Swimming", "Eating", "Studying"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these are punctuation marks?",
+    options: [".", ",", "?", "And"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of prepositions?",
+    options: ["In", "Under", "Eat", "On"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are correct simple past verbs?",
+    options: ["Watched", "Go", "Ate", "Buyed"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of these are parts of speech?",
+    options: ["Verb", "Adjective", "Preposition", "Sentence"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are expressions of congratulations?",
+    options: ["Well done!", "I’m sorry", "Congratulations!", "That’s great!"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which are adjectives?",
+    options: ["Smart", "Beautiful", "Run", "Write"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are correct future tense sentences?",
+    options: ["I will go to school", "She is go", "They will eat", "He goes tomorrow"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which are greetings?",
+    options: ["Hi", "Good morning", "Goodbye", "Thank you"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which are nouns?",
+    options: ["Table", "Run", "Teacher", "Book"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of the following are expressions of asking for permission?",
+    options: ["Can I go to the toilet?", "May I borrow your pen?", "Thanks!", "Let me help you."],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which are correct subject pronouns?",
+    options: ["I", "You", "Me", "They"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which words express ability?",
+    options: ["Can", "Able", "Must", "Shall"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these words are verbs?",
+    options: ["Run", "Jump", "Beautiful", "Sit"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are places?",
+    options: ["School", "Market", "Run", "Hospital"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following can be used to introduce yourself?",
+    options: ["My name is...", "I am from...", "What is your name?", "Nice to meet you"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which expressions show preferences?",
+    options: ["I like...", "I prefer...", "I hate...", "I think..."],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of imperative sentences?",
+    options: ["Sit down!", "Don’t touch!", "Can you help me?", "Open the door."],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are correct forms of 'be' verb?",
+    options: ["Am", "Is", "Are", "Beed"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are informal greetings?",
+    options: ["Hey", "Yo", "Good morning", "Hi"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are adverbs?",
+    options: ["Quickly", "Slowly", "Happy", "Always"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are appropriate closings in a letter?",
+    options: ["Sincerely", "Best regards", "Bye bye", "Love"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are questions asking about time?",
+    options: ["What time is it?", "When do you sleep?", "Where is the clock?", "How old are you?"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these words are opposites of 'big'?",
+    options: ["Small", "Tiny", "Huge", "Little"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are transition words used in sequencing?",
+    options: ["First", "Then", "After that", "Jump"],
+    correctAnswers: [0, 1, 2]
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;

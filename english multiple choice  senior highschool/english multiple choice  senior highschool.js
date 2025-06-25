@@ -1,0 +1,332 @@
+const quiz = [
+  {
+    question: "What is the correct past tense of 'go'?",
+    options: ["goed", "goes", "went", "gone"],
+    answer: 2
+  },
+  {
+    question: "Choose the correct passive voice: 'She writes a letter.'",
+    options: [
+      "A letter writes by her.",
+      "A letter is written by her.",
+      "A letter is wrote by her.",
+      "A letter written by her."
+    ],
+    answer: 1
+  },
+  {
+    question: "Which sentence uses the correct form of 'there', 'their', or 'they're'?",
+    options: [
+      "There going to the market.",
+      "Their playing football.",
+      "They're my best friends.",
+      "There house is big."
+    ],
+    answer: 2
+  },
+  {
+    question: "Which one is a synonym of 'happy'?",
+    options: ["Sad", "Angry", "Joyful", "Tired"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a formal greeting?",
+    options: ["What's up?", "Hey!", "Good morning.", "Yo!"],
+    answer: 2
+  },
+  {
+    question: "What type of text is a biography?",
+    options: ["Narrative", "Recount", "Descriptive", "Procedural"],
+    answer: 1
+  },
+  {
+    question: "What is the antonym of 'success'?",
+    options: ["Win", "Gain", "Failure", "Achieve"],
+    answer: 2
+  },
+  {
+    question: "Which sentence is in the future perfect tense?",
+    options: [
+      "She will have finished her homework.",
+      "She finishes her homework.",
+      "She will finishing homework.",
+      "She has finish her homework."
+    ],
+    answer: 0
+  },
+  {
+    question: "Which sentence is correct?",
+    options: [
+      "He don't like cake.",
+      "She doesn't likes cake.",
+      "She doesn't like cake.",
+      "He doesn't likes cake."
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the purpose of a procedure text?",
+    options: ["To entertain", "To describe", "To instruct", "To retell"],
+    answer: 2
+  },
+  {
+    question: "Choose the correct reported speech: She said, 'I am tired.'",
+    options: [
+      "She said that she is tired.",
+      "She said that she was tired.",
+      "She said she tired.",
+      "She say she is tired."
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a compound sentence?",
+    options: [
+      "I was late, so I missed the bus.",
+      "Because I was late, I missed the bus.",
+      "Being late, I missed the bus.",
+      "I missed the bus due to late."
+    ],
+    answer: 0
+  },
+  {
+    question: "Which one is a modal verb?",
+    options: ["Goes", "Must", "Went", "Gone"],
+    answer: 1
+  },
+  {
+    question: "What is the function of a recount text?",
+    options: ["To describe something", "To tell past events", "To argue", "To instruct"],
+    answer: 1
+  },
+  {
+    question: "Which conjunction is used for contrast?",
+    options: ["Because", "So", "Although", "And"],
+    answer: 2
+  },
+  {
+    question: "Choose the correct sentence using comparative degree.",
+    options: [
+      "She is more tall than me.",
+      "She is taller than me.",
+      "She is tallest than me.",
+      "She is more taller than me."
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the correct conditional sentence type 1?",
+    options: [
+      "If it rains, we will stay inside.",
+      "If it rain, we stay inside.",
+      "If it rained, we would stay inside.",
+      "If it rains, we stay inside."
+    ],
+    answer: 0
+  },
+  {
+    question: "Which sentence uses the correct gerund?",
+    options: [
+      "She enjoys to dance.",
+      "She enjoys dancing.",
+      "She enjoy dancing.",
+      "She enjoy to dance."
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the main idea?",
+    options: [
+      "A detailed example",
+      "The main topic or point of a paragraph",
+      "A specific event",
+      "A supporting sentence"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which sentence is grammatically correct?",
+    options: [
+      "They goes to school.",
+      "She go to school.",
+      "We go to school.",
+      "He go to school."
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the past participle of 'write'?",
+    options: ["Writed", "Writing", "Wrote", "Written"],
+    answer: 3
+  },
+  {
+    question: "Which of the following is an example of a narrative text?",
+    options: ["A news report", "A fairy tale", "A manual", "A recipe"],
+    answer: 1
+  },
+  {
+    question: "What is the correct question tag: You are a student, ___?",
+    options: ["are you", "aren't you", "do you", "don't you"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is an imperative sentence?",
+    options: ["What are you doing?", "Do your homework!", "I love English.", "She is sleeping."],
+    answer: 1
+  },
+  {
+    question: "Which of these is NOT a part of a formal letter?",
+    options: ["Salutation", "Subject", "Introduction", "Dialogue"],
+    answer: 3
+  },
+  {
+    question: "Which preposition completes the sentence: 'He is interested ___ music.'",
+    options: ["on", "to", "with", "in"],
+    answer: 3
+  },
+  {
+    question: "Which one is a direct speech?",
+    options: [
+      "She said that she was tired.",
+      "She told me she was tired.",
+      "'I am tired,' she said.",
+      "She mentioned she was tired."
+    ],
+    answer: 2
+  },
+  {
+    question: "Which one is the correct use of an article?",
+    options: ["He is a honest man.", "He is an honest man.", "He is the honest man.", "He is honest man."],
+    answer: 1
+  },
+  {
+    question: "Choose the correct synonym for 'intelligent'.",
+    options: ["Stupid", "Clever", "Lazy", "Rude"],
+    answer: 1
+  },
+  {
+    question: "Which of these sentences shows present perfect tense?",
+    options: ["I eat lunch.", "I have eaten lunch.", "I ate lunch.", "I will eat lunch."],
+    answer: 1
+  },
+  {
+    question: "Which word is a noun?",
+    options: ["Quickly", "Beautiful", "Happiness", "Run"],
+    answer: 2
+  },
+  {
+    question: "Choose the correct expression for giving opinion.",
+    options: [
+      "I don't care.",
+      "In my opinion, it's great.",
+      "I know it.",
+      "You are wrong."
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of these is a correct infinitive verb form?",
+    options: ["To eat", "Eating", "Eated", "Eats"],
+    answer: 0
+  },
+  {
+    question: "What is the correct order of an analytical exposition text?",
+    options: ["Introduction, Argument, Reiteration", "Reiteration, Argument, Introduction", "Argument, Reiteration, Conclusion", "Introduction, Rebuttal, Reiteration"],
+    answer: 0
+  },
+  {
+    question: "Which of these is NOT a type of text in English studied in Indonesian curriculum?",
+    options: ["Descriptive", "Narrative", "Mathematical", "Recount"],
+    answer: 2
+  },
+  {
+    question: "Which phrase means ‘to be sick’?",
+    options: ["Catch a cold", "Catch a train", "Catch up", "Catch fire"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is a cause-effect connector?",
+    options: ["Because", "And", "But", "So that"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is a warning expression?",
+    options: [
+      "Be careful!",
+      "Congratulations!",
+      "Nice to meet you!",
+      "Thanks a lot!"
+    ],
+    answer: 0
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;

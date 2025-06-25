@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/sign up/sign up.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="moving-clouds">
+    <img src="/favicons/cloud.png" id="cloud1" />
+    <img src="/favicons/cloud.png" id="cloud2" />
+    <img src="/favicons/cloud.png" id="cloud3" />
+    <img src="/favicons/cloud.png" id="cloud4" />
+    <img src="/favicons/cloud.png" id="cloud5" />
+    <img src="/favicons/cloud.png" id="cloud6" />
+    <img src="/favicons/cloud.png" id="cloud7" />
+    <img src="/favicons/cloud.png" id="cloud8" />
+  </div>
+
+  <!-- ✅ Add a form wrapper -->
+  <form id="signupForm">
+    <div id="signup">
+      <h2 id="signupTitle">Sign up</h2>
+      <input type="text" placeholder="Username" required id="usernameid" />
+      <input type="password" placeholder="Password" required id="passwordid" />
+      <input type="date" required id="dateid" />
+      <br /><br />
+      <button type="submit" id="continuebtn">Continue</button>
+    </div>
+  </form>
+
+  <!-- ✅ Separate your JS properly -->
+  <script src="/sign up/signup.js">
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form from reloading the page
+
+      const username = document.getElementById('usernameid').value;
+      const password = document.getElementById('passwordid').value;
+      const date = document.getElementById('dateid').value;
+
+      document.getElementById('profilename').textContent = username
+      document.getElementById('passwordname').textContent = password
+
+      if (username && password && date) {
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+        localStorage.setItem("birthdate", date);
+        window.location.href = "/main/main.html";
+      } else {
+        alert("Please fill in all fields!");
+      }
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<header>
+    
+    <div id="studybuddy" onclick="main()">
+        <a>
+            <img src="/favicons/logo.png" id="studybuddyimg">
+            <h2 id="studybuddyText"><a href="main.html">Study Buddy</a></h2>
+        </a>
+        
+    </div>
+
+    <a href="homework/homework.html">
+        <button class="homeworkbtn">Homework</button>
+    </a>
+
+    <a href="shop/shop.html">
+        <button class="shopbtn">Shop</button>
+    </a>
+
+     <a href="buddies/buddies.html">
+        <button class="shopbtn">My library</button>
+    </a>
+    
+
+
+    <div id="coins">
+        <img src="/favicons/coin.png" id="coinsimg">
+        <h4 id="coinsamount">0</h4>
+    </div>
+
+    <img src="/favicons/profile pic deffault.png" id="profilepic">
+    <a id="profilename" href="/profile/profile.html"></a>
+    
+</header>
+<body>
+    <a href="/past papper/past papper.html">
+     <div id="pastpapper">
+        <img id="pastpapperimg" src="/favicons/past papper favicon.png">
+        <h2 id="pastpapperText">Past Papper</h2>
+        <h4 id="pastpapperdesc">Store your past exam</h4>
+     </div>
+    </a>
+
+    <a href="/notes/notes.html">
+        <div id="notes">
+            <img id="notesimg" src="/favicons/notes.png">
+            <h2 id="notesText">Notes</h2>
+            <h4 id="notesdesc">Store your notes</h4>
+        </div>
+    </a>
+
+    <a href="/quiz/quiz.html">
+        <div id="quiz">
+            <img id="quizimg" src="/favicons/quiz favicon.png">
+            <h2 id="quizText">Quiz</h2>
+            <h4 id="quizdesc">Test your understanding</h4>
+        </div>
+    </a> 
+
+    <a href="/quests/timer.html">
+        <div id="timer">
+            <img id="timerimg" src="/favicons/timer.png">
+            <h2 id="timerText">Timer</h2>
+            <h4 id="timerdesc">track how long you studied for</h4>
+        </div>
+    </a>
+
+
+
+     <div>
+        <a href="/quests/quests.html">
+            <img id="quests" src="/favicons/quests.png">
+        </a>
+    </div>
+
+    
+    <div id="quest-notification">✅ Daily Quest Completed!
+        <a href="/quests/quests.html">
+            <button id="gotoquestsbtn">Go to quests</button>
+        </a>
+    </div>
+    
+    <script src="/sign up/sign up.js"></script>
+    <script src="/quests/quests.js"></script>
+    <script>
+  // Load username from localStorage
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
+
+<script src="/quests/quests.js"></script>
+</body>
+</html>

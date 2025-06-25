@@ -1,0 +1,181 @@
+body{
+    background-color: rgb(24, 24, 24);
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+header{
+    background-color: rgb(18, 18, 18);
+    width: auto;
+    height: 100px;
+    border-radius: 12px;
+}
+
+#studybuddy{
+    width: 100px;
+}
+
+#studybuddyimg{
+    width: 60px;
+}
+
+#studybuddyText{
+    position: relative;
+    top: -80px;
+    left: 60px;
+    color: white;
+    font-family: "press start 2p";
+}
+
+.headerbtn{
+    margin: auto;
+    margin-top: -10px;
+    margin-left: 20px;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    background-color:rgb(18, 18, 18);
+    border: none;
+    font-size: larger;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    bottom: 80px;
+}
+
+.homeworkbtn{
+    position: relative;
+    bottom: 80px;
+}
+
+.shopbtn{
+     position: relative;
+    bottom: 80px;
+}
+
+.headerbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+
+}
+
+.homeworkbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.homeworkbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+}
+
+.shopbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;  
+}
+
+.shopbtn:hover{
+    background-color:rgb(35, 35, 35) ;    
+}
+
+
+#coins{
+    width: 85px;
+    height: 30px;
+    border: 2px rgb(154, 154, 154) solid;
+    border-radius: 10px;
+    margin-left: 1580px;
+    position: relative;
+    bottom: 121px;
+}
+
+#coinsimg{
+    width: 30px;
+}
+
+#coinsamount{
+    color: white;
+    position:relative ;
+    bottom: 49px;
+    left:30px;
+    font-family: "press start 2p";
+}
+
+#quests1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#dailyquestscontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+#dailyquestsTitle{
+    font-family: "press start 2p";
+    
+}
+
+#dailyquestsText{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#weeklyquestsTitle{
+    font-family: "press start 2p";
+}
+
+#weeklyquestscontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+#weeklyquestsText{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    height: 20px;
+    background-color: antiquewhite;
+    position: relative;
+    width: 500px;
+    border-radius: 100px;
+    border: 2px solid black;
+}
+
+.container .progressBar{
+    position: absolute;
+    height: 100%;
+    background-color: rgb(0, 211, 0);
+    border-radius: 100px;
+}
+
+#play-animation{
+    animation:progress-animation 5s forwards;    
+}
+
+@keyframes progress-animation{
+    0% {width: 0%}
+    12% {width: 12%}
+    25% {width: 25%;}
+    50% {width: 50%}
+    75%{width: 75%;}
+    100% {width: 100%;}
+}

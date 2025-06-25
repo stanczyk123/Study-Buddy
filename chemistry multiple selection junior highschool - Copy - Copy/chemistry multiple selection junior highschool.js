@@ -1,0 +1,267 @@
+const quiz = [
+  {
+    question: "Which of the following are states of matter?",
+    options: ["Solid", "Liquid", "Gas", "Steam"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are elements?",
+    options: ["Oxygen", "Carbon", "Water", "Gold"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are physical changes?",
+    options: ["Melting ice", "Boiling water", "Burning wood", "Condensation"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which substances are mixtures?",
+    options: ["Saltwater", "Air", "Carbon dioxide", "Oil and water"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are properties of acids?",
+    options: ["Sour taste", "Turns blue litmus red", "Feels slippery", "pH below 7"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are examples of bases?",
+    options: ["NaOH", "Ammonia", "Vinegar", "Soap"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which tools are used in a chemistry lab?",
+    options: ["Beaker", "Bunsen burner", "Ruler", "Test tube"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are chemical changes?",
+    options: ["Burning paper", "Rusting iron", "Boiling water", "Rotting food"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are types of chemical reactions?",
+    options: ["Combination", "Decomposition", "Evaporation", "Displacement"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are uses of water in daily life?",
+    options: ["Drinking", "Cooking", "Cleaning", "Fuel for cars"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are indicators of a chemical reaction?",
+    options: ["Color change", "Gas formation", "New substance", "Dissolving"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of compounds?",
+    options: ["H2O", "CO2", "NaCl", "O2"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are physical properties of substances?",
+    options: ["Color", "Odor", "Density", "Rusting"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are noble gases?",
+    options: ["Helium", "Neon", "Oxygen", "Argon"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are metals?",
+    options: ["Iron", "Aluminum", "Sulfur", "Copper"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are nonmetals?",
+    options: ["Carbon", "Oxygen", "Nitrogen", "Sodium"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which changes involve heat absorption?",
+    options: ["Melting", "Boiling", "Freezing", "Evaporation"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are examples of homogeneous mixtures?",
+    options: ["Saltwater", "Air", "Oil and water", "Vinegar"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are units of volume?",
+    options: ["Liter", "Milliliter", "Celsius", "Cubic centimeter"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are acids found in food?",
+    options: ["Citric acid", "Acetic acid", "Sulfuric acid", "Lactic acid"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which methods separate mixtures?",
+    options: ["Filtration", "Distillation", "Freezing", "Evaporation"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are atoms?",
+    options: ["Na", "O", "Cl", "H2O"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are molecules?",
+    options: ["O2", "H2O", "CO2", "Na"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are periodic table groups?",
+    options: ["Alkali metals", "Noble gases", "Halogens", "Lanthanides"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which are signs of an endothermic reaction?",
+    options: ["Takes in heat", "Feels cold", "Releases light", "Melting"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are signs of an exothermic reaction?",
+    options: ["Releases heat", "Feels warm", "Explosion", "Absorbs light"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these can be dissolved in water?",
+    options: ["Salt", "Sugar", "Sand", "Oxygen"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are factors affecting solubility?",
+    options: ["Temperature", "Stirring", "Volume", "Particle size"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are chemical formulas?",
+    options: ["H2O", "CO2", "Table", "NaCl"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which equipment are used for heating substances?",
+    options: ["Bunsen burner", "Test tube", "Beaker", "Hot plate"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of the following are properties of metals?",
+    options: ["Shiny", "Conductive", "Brittle", "Malleable"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are ways to prevent rust?",
+    options: ["Painting", "Galvanizing", "Leaving wet", "Oiling"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which substances are used as fertilizers?",
+    options: ["Urea", "NPK", "Water", "Ammonium nitrate"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are greenhouse gases?",
+    options: ["Carbon dioxide", "Methane", "Nitrogen", "Water vapor"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which items contain plastic?",
+    options: ["Bottles", "Chairs", "Apples", "Bags"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are good conductors of heat?",
+    options: ["Copper", "Aluminum", "Wood", "Steel"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which changes are reversible?",
+    options: ["Melting", "Boiling", "Burning", "Freezing"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are properties of a gas?",
+    options: ["No fixed shape", "Compressible", "Fixed volume", "Fills container"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are types of mixtures?",
+    options: ["Solution", "Suspension", "Element", "Colloid"],
+    correctAnswers: [0, 1, 3]
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;

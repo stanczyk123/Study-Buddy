@@ -1,0 +1,452 @@
+const quiz = [
+  {
+    question: "Which of the following were causes of the Diponegoro War?",
+    options: [
+      "Dutch interference in Javanese palace affairs",
+      "Construction of roads through sacred land",
+      "High taxation on farmers",
+      "Dutch banning Islam in Java"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which kingdoms are considered Hindu-Buddhist kingdoms in Indonesia?",
+    options: [
+      "Majapahit",
+      "Sriwijaya",
+      "Samudera Pasai",
+      "Tarumanegara"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "What were impacts of the Cultivation System (Tanam Paksa)?",
+    options: [
+      "Increased export of cash crops",
+      "Improved local farmer welfare",
+      "Starvation in some regions",
+      "Construction of railways for transport"
+    ],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which organizations played a role in early Indonesian nationalism?",
+    options: [
+      "Budi Utomo",
+      "Sarekat Islam",
+      "Indische Partij",
+      "VOC"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these were factors that contributed to the fall of Majapahit?",
+    options: [
+      "Internal conflict",
+      "Islamic expansion",
+      "Colonial invasion",
+      "Eruption of Mount Merapi"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which figures were national heroes during the colonial resistance?",
+    options: [
+      "Tuanku Imam Bonjol",
+      "Prince Diponegoro",
+      "Cut Nyak Dien",
+      "R.A. Kartini"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "What are the contents of the Youth Pledge (Sumpah Pemuda)?",
+    options: [
+      "One motherland",
+      "One nation",
+      "One language",
+      "One religion"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which events occurred during the Japanese occupation in Indonesia?",
+    options: [
+      "Romusha labor program",
+      "Use of Indonesian language in administration",
+      "Formation of PETA",
+      "Opening of Dutch schools"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which agreements were made during the Indonesian revolution?",
+    options: [
+      "Linggadjati Agreement",
+      "Renville Agreement",
+      "Roem-Royen Agreement",
+      "Yogyakarta Agreement"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which kingdoms developed in Sumatra?",
+    options: [
+      "Sriwijaya",
+      "Samudera Pasai",
+      "Mataram",
+      "Aceh"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which rights were limited under Dutch colonialism?",
+    options: [
+      "Freedom of speech",
+      "Freedom of religion",
+      "Land ownership for natives",
+      "Right to vote"
+    ],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "What were roles of BPUPKI?",
+    options: [
+      "Drafting Indonesia’s constitution",
+      "Forming military resistance",
+      "Discussing state ideology",
+      "Proclaiming independence"
+    ],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are results of Dutch Ethical Policy?",
+    options: [
+      "Improved irrigation",
+      "Education for natives",
+      "Transmigration",
+      "Expansion of plantations"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which kingdoms were Islamic in nature?",
+    options: [
+      "Demak",
+      "Aceh",
+      "Majapahit",
+      "Banten"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "What caused the end of VOC in 1799?",
+    options: [
+      "Corruption",
+      "Debt",
+      "Military defeat",
+      "Leadership crisis"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which heroes fought in Aceh against the Dutch?",
+    options: [
+      "Cut Nyak Dien",
+      "Teuku Umar",
+      "Sisingamangaraja XII",
+      "Pattimura"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which are functions of PPKI?",
+    options: [
+      "Ratifying the constitution",
+      "Appointing the president and vice president",
+      "Forming ministries",
+      "Creating the flag"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "What actions were taken by Soekarno and Hatta on August 17, 1945?",
+    options: [
+      "Proclaiming independence",
+      "Appointing cabinet",
+      "Drafting economic plan",
+      "Broadcasting the proclamation"
+    ],
+    correctAnswers: [0, 3]
+  },
+  {
+    question: "What strategies did Indonesia use to gain international support?",
+    options: [
+      "Diplomacy",
+      "Joining UN early",
+      "Sending delegations abroad",
+      "Armed resistance in foreign countries"
+    ],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which kingdoms existed during the Hindu-Buddhist period?",
+    options: [
+      "Sriwijaya",
+      "Majapahit",
+      "Tarumanegara",
+      "Mataram (Islamic)"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which social movements occurred in early 20th century Indonesia?",
+    options: [
+      "Women’s education movement",
+      "Youth movement",
+      "Religious reform",
+      "Sports movement"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Who were key figures during the Indonesian independence era?",
+    options: [
+      "Soekarno",
+      "Mohammad Hatta",
+      "Sutan Sjahrir",
+      "R.A. Kartini"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are characteristics of the Majapahit Kingdom?",
+    options: [
+      "Strong maritime trade",
+      "Hindu religion",
+      "Controlled most of Southeast Asia",
+      "Founded by Hayam Wuruk"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which documents are related to Indonesian independence?",
+    options: [
+      "Proclamation of Independence",
+      "Constitution (UUD 1945)",
+      "Supersemar",
+      "Sumpah Pemuda"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which challenges did Indonesia face after independence?",
+    options: [
+      "Dutch aggression",
+      "Separatist movements",
+      "Economic crisis",
+      "NATO intervention"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which colonial systems were implemented in Indonesia?",
+    options: [
+      "Culture system",
+      "Forced labor",
+      "Rodi",
+      "Democracy system"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "What were results of the Proclamation of Independence?",
+    options: [
+      "Sovereign state",
+      "War against Dutch",
+      "International recognition",
+      "Immediate peace"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which regions were involved in early Islamic spread?",
+    options: [
+      "Aceh",
+      "Gresik",
+      "Cirebon",
+      "Bali"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "What were main characteristics of colonial education?",
+    options: [
+      "Limited to elites",
+      "Used Dutch language",
+      "Promoted nationalism",
+      "Equal access for all"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which organizations emerged in the nationalist movement?",
+    options: [
+      "Perhimpunan Indonesia",
+      "Indische Partij",
+      "Partai Komunis Indonesia",
+      "Partai Buruh"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Who were key Dutch colonial figures?",
+    options: [
+      "Van Den Bosch",
+      "Daendels",
+      "Cornelis de Houtman",
+      "Patimura"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which events happened in 1945?",
+    options: [
+      "Japan surrendered",
+      "Indonesian independence",
+      "Formation of PPKI",
+      "G30S/PKI"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which kingdoms were in Java island?",
+    options: [
+      "Mataram",
+      "Majapahit",
+      "Demak",
+      "Sriwijaya"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which movements opposed Dutch colonial rule?",
+    options: [
+      "Socialist movement",
+      "Islamic movement",
+      "Communist movement",
+      "Buddhist movement"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which cities were key centers during colonial times?",
+    options: [
+      "Batavia",
+      "Surabaya",
+      "Semarang",
+      "Jayapura"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which were parts of the Trias Van Deventer?",
+    options: [
+      "Irrigation",
+      "Education",
+      "Health",
+      "Transmigration"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "What institutions were created by Japan in Indonesia?",
+    options: [
+      "PETA",
+      "Keibodan",
+      "Heiho",
+      "Volksraad"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which colonial legacies still influence Indonesia today?",
+    options: [
+      "Railway system",
+      "Legal system",
+      "Language use in law",
+      "Monarchy government"
+    ],
+    correctAnswers: [0, 1, 2]
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;
