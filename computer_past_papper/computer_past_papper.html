@@ -6,6 +6,9 @@
   <title>Computer Past Paper</title>
   <link rel="stylesheet" href="computer_past_papper.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicons/logo.png" type="image/png">
+  <link rel="icon" href="favicons/coin.png" type="image/png">
+  <link rel="icon" href="favicons/profile_pic_deffault.png" type="image/png">
 
 </head>
 
@@ -333,7 +336,7 @@
         <script src="/sign_up/sign_up.js"></script>
     <script src="/quests/quests.js"></script>
     <script>
-  // Load username from localStorage
+
   const username = localStorage.getItem("username");
 
   if (username) {
@@ -346,7 +349,7 @@
 <script src="/quests/quests.js"></script>
 <script>
 let db;
-let dbReady = false; // Add flag to track DB readiness
+let dbReady = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   const request = indexedDB.open("ExamImageDB", 1);
@@ -360,12 +363,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   request.onsuccess = e => {
     db = e.target.result;
-    dbReady = true; // Mark DB as ready
+    dbReady = true;
 
     document.querySelectorAll("button").forEach(btn => btn.disabled = false);
     
     for (let i = 1; i <= 30; i++) {
-        loadImage(`comp-img${i}`); //GANTI INI JADI {SUBJECT}-IMG
+        loadImage(`comp-img${i}`);
     }
   };
 

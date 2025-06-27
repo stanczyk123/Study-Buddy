@@ -6,6 +6,9 @@
     <title>Notes</title>
     <link rel="stylesheet" href="/computer_notes/computer_notes.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicons/logo.png" type="image/png">
+    <link rel="icon" href="favicons/coin.png" type="image/png">
+    <link rel="icon" href="favicons/profile_pic_deffault.png" type="image/png">
 
 </head>
 <header>
@@ -398,15 +401,16 @@
 
 
 
-  <!-- Add noteBox1, noteBox2, ..., noteBox39 similarly -->
+
 </div>
 
-<!-- JS -->
+    <script src="/sign_up/sign_up.js"></script>
+
 <script>
 let db;
 
 window.onload = () => {
-  const request = indexedDB.open("ComputerNotesDB", 1); // Dedicated DB for Computer
+  const request = indexedDB.open("ComputerNotesDB", 1); 
 
   request.onerror = e => console.error("IndexedDB error:", e.target.error);
 
@@ -505,9 +509,9 @@ function loadAllFiles() {
 
 <script src="/quests/quests.js"></script>
 
-<script src="math notes.js"></script>
+<script src="math_notes.js"></script>
 
-<script src="/sign_up/sign_up.js"></script>
+
 
 
 </body>
