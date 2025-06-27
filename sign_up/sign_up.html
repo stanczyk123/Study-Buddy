@@ -6,6 +6,9 @@
   <title>Sign Up</title>
   <link rel="stylesheet" href="/sign up/sign up.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicons/cloud.png" type="image/png">
+
+
 </head>
 <body>
   <div class="moving-clouds">
@@ -19,7 +22,6 @@
     <img src="/favicons/cloud.png" id="cloud8" />
   </div>
 
-  <!-- ✅ Add a form wrapper -->
   <form id="signupForm">
     <div id="signup">
       <h2 id="signupTitle">Sign up</h2>
@@ -31,7 +33,7 @@
     </div>
   </form>
 
-  <!-- ✅ Separate your JS properly -->
+
   <script src="/sign_up/sign_up.js">
     document.getElementById('signupForm').addEventListener('submit', function (e) {
       e.preventDefault(); // Prevent form from reloading the page
