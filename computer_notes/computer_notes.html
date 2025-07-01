@@ -512,7 +512,15 @@ function loadAllFiles() {
 <script src="math_notes.js"></script>
     <script src="/sign_up/sign_up.js"></script>
 
+    <script>
+        const username = localStorage.getItem("username");
 
+        if (username) {
+            document.getElementById("profilename").textContent = username;
+        } else {
+            document.getElementById("profilename").textContent = "Guest";
+        }
+    </script>
 
 
 </body>
