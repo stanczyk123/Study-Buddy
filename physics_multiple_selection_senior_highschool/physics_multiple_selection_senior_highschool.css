@@ -48,8 +48,8 @@ label {
 
 input[type="radio"] {
     margin-right: 10px;
-    transform: scale(1.5); /* Makes it larger */
-    accent-color: #00ffcc; /* Color of the radio button */
+    transform: scale(1.5); 
+    accent-color: #00ffcc; 
 }
 
 #result{
