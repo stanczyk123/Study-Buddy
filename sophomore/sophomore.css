@@ -170,7 +170,7 @@ header{
     border-radius: 70px;
     margin-left: 1450px;
     position: relative;
-    bottom: 179px;
+    top: -180px;
 }
 
 a, a * {
