@@ -1,4 +1,4 @@
-// Sample questions - replace or expand as needed
+
 const quiz = [
   {
     question: "Which of the following quantities are vectors?",
