@@ -44,6 +44,7 @@
   <div id="saveimg1">
     <input type="file" id="imageInput1" accept="image/*" style="display: none;">
     <label for="imageInput1" class="custom-file-button">Choose your file</label>
+    <div id="fileList1"></div>
     <button onclick="saveImage('bio-img1')" id="saveimgbtn1">Save Image</button>
     <button onclick="deleteImage('bio-img1')" id="deleteimgbtn1">Delete Image</button>
     <img id="display1" onclick="openImageInNewTab('bio-img1')" alt="exam preview">
@@ -305,6 +306,7 @@
 
         <script src="/sign_up/sign_up.js"></script>
     <script src="/quests/quests.js"></script>
+
     <script >
   // Load username from localStorage
   const username = localStorage.getItem("username");
@@ -356,6 +358,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function previewFile(index) {
+  const input = document.getElementById(`imageInput${index}`);
+  const file = input.files[0];
+  const list = document.getElementById(`fileList${index}`);
+  list.innerHTML = "";
+
+  if (file) {
+    list.innerHTML = `
+      <p><strong>${file.name}</strong></p>
+    `;
+  }
+}
 
 function saveImage(id) {
   if (!dbReady) return alert("Database not ready yet. Try again in a moment.");
