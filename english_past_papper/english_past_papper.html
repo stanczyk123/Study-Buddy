@@ -420,7 +420,7 @@ function openImageInNewTab(id) {
     if (!result) return alert("No saved image found.");
     const tab = window.open();
     tab.document.write(`
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: black">
         <img src="${result.image}" style="width:55%;">
       </div>
     `);
