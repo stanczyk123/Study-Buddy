@@ -422,7 +422,8 @@ function openImageInNewTab(id) {
   req.onsuccess = e => {
     const result = e.target.result;
     if (!result) return alert("No saved image found.");
-    const num = id.match(/\d+/)[0];
+    const tab = window.open();
+    tab.document.write(`<img src="${result.image}" style="width:60%;">`);
   };
 }
 </script>
