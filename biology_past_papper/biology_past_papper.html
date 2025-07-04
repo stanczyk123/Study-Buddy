@@ -45,6 +45,9 @@
     <input type="file" id="imageInput1" accept="image/*" style="display: none;">
     <label for="imageInput1" class="custom-file-button">Choose your file</label>
     <button onclick="saveImage('bio-img1')" id="saveimgbtn1">Save Image</button>
+    <div id="pdfDiv">
+      <p id="pdfName"></p>
+    </div>
     <button onclick="deleteImage('bio-img1')" id="deleteimgbtn1">Delete Image</button>
     <img id="display1" onclick="openImageInNewTab('bio-img1')" alt="exam preview">
   </div>
@@ -321,6 +324,7 @@
 <script>
 let db;
 let dbReady = false; // Add flag to track DB readiness
+let name = document.getElementById('pdfName')
 
 document.addEventListener("DOMContentLoaded", () => {
   const request = indexedDB.open("ExamImageDB", 1);
@@ -392,6 +396,8 @@ function loadImage(id) {
     if (result) {
       img.src = result.image;
       img.style.display = "block";
+      name = document.getElementById('pdfName' + num);
+      name.textContent = result.name; //kasih nama buat file pdfnya
     }
   };
 }
