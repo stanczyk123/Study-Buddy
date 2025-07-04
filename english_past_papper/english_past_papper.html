@@ -388,6 +388,8 @@ function loadImage(id) {
     if (result) {
       img.src = result.image;
       img.style.display = "block";
+      name = document.getElementById('pdfName' + num);
+      name.textContent = result.name; //kasih nama buat file pdfnya
     }
   };
 }
