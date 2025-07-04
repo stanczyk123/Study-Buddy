@@ -1002,10 +1002,11 @@ a, a * {
   margin-top: 30px;
 }
 
-#pdfName1{
+#pdfName1,#pdfName2,#pdfName3,#pdfName4,#pdfName5,#pdfName6,#pdfName7,#pdfName8,#pdfName9,#pdfName10,#pdfName11,#pdfName12,#pdfName13,#pdfName14,#pdfName15,#pdfName16,#pdfName17,#pdfName18,#pdfName19,#pdfName20,#pdfName21,#pdfName22,#pdfName23,#pdfName24,#pdfName25,#pdfName26,#pdfName27,#pdfName28,#pdfName29,#pdfName30{
     color: white;
     font-size: large;
     font-family: "press start 2p";
+    display: none;
 }
 
 #pdfDiv{
