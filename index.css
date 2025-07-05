@@ -127,12 +127,11 @@ header{
     border: 2px white solid;
     border-radius: 20px;
     margin: auto;
-    position: relative;
+    position: fixed;
     top: 150px;
-    right: 250px;
+    left: 100px;
     padding: 10px;
     display: flex;
-    text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
     color: white;
