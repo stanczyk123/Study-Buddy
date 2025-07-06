@@ -128,8 +128,8 @@ header{
     border-radius: 20px;
     margin: auto;
     position: fixed;
-    top: 150px;
-    left: 300px;
+    top: 350px;
+    left: 400px;
     padding: 10px;
     display: flex;
     text-decoration: none;
@@ -242,13 +242,13 @@ a, a * {
     border: 2px white solid;
     border-radius: 20px;
     margin: auto;
-    position: relative;
+    position: fixed;
     padding: 10px;
     display: flex;
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
-    margin-right: 910px;
+    left: 400px;
     top: -44px;
 }
 
