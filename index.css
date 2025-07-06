@@ -129,7 +129,7 @@ header{
     margin: auto;
     position: fixed;
     top: 350px;
-    left: 400px;
+    left: 420px;
     padding: 10px;
     display: flex;
     text-decoration: none;
@@ -246,9 +246,8 @@ a, a * {
     padding: 10px;
     display: flex;
     text-decoration: none;
-    text-decoration: none;
     text-decoration-line: none;
-    left: 400px;
+    left: 420px;
     top: -44px;
 }
 
