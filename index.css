@@ -129,7 +129,7 @@ header{
     margin: auto;
     position: fixed;
     margin-top: 350px;
-    left: 420px;
+    left: 920px;
     padding: 10px;
     display: flex;
     text-decoration: none;
@@ -175,7 +175,7 @@ a, a * {
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
-    left: 250px;
+    left: 450px;
     margin-top: 200px;
 }
 
@@ -212,7 +212,7 @@ a, a * {
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
-    left: 250px;
+    left: 450px;
     margin-top: 350px;
 }
 
@@ -247,7 +247,7 @@ a, a * {
     display: flex;
     text-decoration: none;
     text-decoration-line: none;
-    left: 420px;
+    left: 920px;
     margin-top: 200px;
 }
 
