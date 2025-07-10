@@ -128,7 +128,7 @@ header{
     border-radius: 20px;
     margin: auto;
     position: fixed;
-    top: 350px;
+    margin-top: 350px;
     left: 420px;
     padding: 10px;
     display: flex;
@@ -169,14 +169,14 @@ a, a * {
     border: 2px white solid;
     border-radius: 20px;
     margin: auto;
-    position: relative;
+    position: fixed;
     padding: 10px;
     display: flex;
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
     left: 250px;
-    top: 7px;
+    margin-top: 200px;
 }
 
 #notesText{
@@ -206,14 +206,14 @@ a, a * {
     border: 2px white solid;
     border-radius: 20px;
     margin: auto;
-    position: relative;
+    position: fixed;
     padding: 10px;
     display: flex;
     text-decoration: none;
     text-decoration: none;
     text-decoration-line: none;
     left: 250px;
-    top: 100px;
+    margin-top: 350px;
 }
 
 #quizText{
@@ -248,7 +248,7 @@ a, a * {
     text-decoration: none;
     text-decoration-line: none;
     left: 420px;
-    top: -44px;
+    margin-top: 200px;
 }
 
 #timerText{
