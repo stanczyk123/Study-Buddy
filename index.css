@@ -89,15 +89,14 @@ header{
     color: black;
 }
 
-
 #coins{
     width: 85px;
     height: 30px;
     border: 2px rgb(154, 154, 154) solid;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 1550px;
+    position: fixed;
+    top: 80px;
 }
 
 #coinsimg{
@@ -121,7 +120,7 @@ header{
 #profileContainer{
     position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
     display: flex;
     align-items: center;
     gap: 100px;
