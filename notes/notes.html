@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/logo.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/coin.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/profile_pic_deffault.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/math1.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/physics.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/biology.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/chemistry.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/komputer.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/history.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/english.png" type="image/png">
+</head>
+<header>
+    
+    <div id="studybuddy" onclick="main()">
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html">
+            <img src="https://stanczyk123.github.io/Study-Buddy//favicons/logo.png" id="studybuddyimg">
+            <h2 id="studybuddyText">Study Buddy</h2>
+        </a>
+        
+    </div>
+
+    <div id="coins">
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/coin.png" id="coinsimg">
+        <h4 id="coinsamount">0</h4>
+    </div>
+
+    <div id="profileContainer">
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/profile_pic_deffault.png" id="profilepic">
+        <a id="profilename" href="https://stanczyk123.github.io/Study-Buddy//profile/profile.html"></a>
+    </div>
+    
+</header>
+<body>
+    <div id="subject">
+        <div id="math">
+            <a id="mathText" href="https://stanczyk123.github.io/Study-Buddy//math_notes/math_notes.html">
+                <img id="mathimg" src="https://stanczyk123.github.io/Study-Buddy//favicons/math1.png">
+                Math
+            </a>
+        </div>
+
+        <div id="physics">
+            <a id="physicsText" href="https://stanczyk123.github.io/Study-Buddy//physics_notes/physics_notes.html">
+                <img id="physicsimg" src="https://stanczyk123.github.io/Study-Buddy//favicons/physics.png">
+                Physics
+            </a>
+        </div>
+
+        <div id="biology">
+            <a id="biologyText" href="https://stanczyk123.github.io/Study-Buddy//biology_notes/biology_notes.html">
+                <img id="biologyimg" src="https://stanczyk123.github.io/Study-Buddy//favicons/biology.png">
+                Biology
+            </a>
+        </div>
+
+        <div id="chemistry">
+            <a id="chemistryText" href="https://stanczyk123.github.io/Study-Buddy//chemistry_notes/chemistry_notes.html">
+                <img id="chemistryimg" src="https://stanczyk123.github.io/Study-Buddy//favicons/chemistry.png">
+                Chemistry
+            </a>
+        </div>
+
+        <div id="computer">
+            <a id="computerText" href="https://stanczyk123.github.io/Study-Buddy//computer_notes/computer_notes.html">
+                <img id="computerimg" src="https://stanczyk123.github.io/Study-Buddy//favicons/komputer.png">
+                Computer
+            </a>
+        </div>
+
+        <div id="history">
+            <a id="historyText" href="https://stanczyk123.github.io/Study-Buddy//history_notes/history_notes.html">
+                <img id="historyimg" src="https://stanczyk123.github.io/Study-Buddy//favicons/history.png">
+                History
+            </a>
+        </div>
+
+        <div id="english">
+            <a id="englishText" href="https://stanczyk123.github.io/Study-Buddy//english_notes/english_notes.html">
+                <img id="englishimg" src="https://stanczyk123.github.io/Study-Buddy//favicons/english.png">
+                English
+            </a>
+        </div>
+    </div>
+
+    <script src="/sign_up/sign_up.js"></script>
+    <script src="/quests/quests.js"></script>
+    <script>
+
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
+
+<script src="/quests/quests.js"></script>
+</body>
+</html>

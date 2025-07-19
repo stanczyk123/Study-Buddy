@@ -1,0 +1,272 @@
+const quiz = [
+  {
+    question: "Which of the following are examples of simple machines?",
+    options: ["Lever", "Pulley", "Screwdriver", "Ruler"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which quantities are scalar?",
+    options: ["Speed", "Mass", "Velocity", "Distance"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which materials are conductors of electricity?",
+    options: ["Copper", "Plastic", "Iron", "Glass"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are effects of force?",
+    options: ["Change in shape", "Change in speed", "Change in color", "Change in direction"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which devices use reflection of sound?",
+    options: ["Sonar", "Ultrasound", "Microscope", "Radar"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which tools measure length?",
+    options: ["Ruler", "Meter stick", "Stopwatch", "Caliper"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are renewable energy sources?",
+    options: ["Wind", "Coal", "Solar", "Hydro"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which are units of force?",
+    options: ["Newton", "Joule", "Kilogram", "Dyne"],
+    correctAnswers: [0, 3]
+  },
+  {
+    question: "Which of the following can produce sound?",
+    options: ["Tuning fork", "Drum", "Mirror", "Bell"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which instruments measure temperature?",
+    options: ["Thermometer", "Barometer", "Hygrometer", "Thermocouple"],
+    correctAnswers: [0, 3]
+  },
+  {
+    question: "Which are characteristics of light?",
+    options: ["It travels in a straight line", "It reflects", "It bends", "It has mass"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are forms of energy?",
+    options: ["Heat", "Light", "Speed", "Sound"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following have potential energy?",
+    options: ["Stretched spring", "Lifted rock", "Rolling ball", "Compressed gas"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which actions produce friction?",
+    options: ["Rubbing hands", "Sliding a book", "Lifting a box", "Walking"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which substances allow light to pass through easily?",
+    options: ["Glass", "Water", "Wood", "Plastic wrap"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which tools are used in an electrical circuit?",
+    options: ["Switch", "Battery", "Mirror", "Resistor"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are magnetic materials?",
+    options: ["Iron", "Cobalt", "Wood", "Nickel"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which changes are physical?",
+    options: ["Melting ice", "Boiling water", "Burning paper", "Cutting paper"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which devices are used to measure time?",
+    options: ["Clock", "Thermometer", "Stopwatch", "Calendar"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which are non-renewable energy sources?",
+    options: ["Petroleum", "Coal", "Natural gas", "Wind"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which objects can float in water?",
+    options: ["Plastic", "Wood", "Metal ball", "Ice"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which waves need a medium to travel?",
+    options: ["Sound", "Light", "Water", "Seismic"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which are advantages of solar energy?",
+    options: ["Renewable", "Non-polluting", "Expensive fuel", "Free sunlight"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are examples of heat transfer by conduction?",
+    options: ["Touching a hot pan", "Heating a metal rod", "Boiling water", "Melting ice in hand"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are units of mass?",
+    options: ["Gram", "Kilogram", "Newton", "Ton"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following can affect motion?",
+    options: ["Force", "Friction", "Gravity", "Color"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are luminous objects?",
+    options: ["Sun", "Lamp", "Mirror", "Candle"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which examples involve reflection of light?",
+    options: ["Looking in a mirror", "Shiny surface", "Lenses", "Still water"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which statements about magnets are true?",
+    options: ["Opposite poles attract", "Like poles repel", "Magnets attract all metals", "Magnets have two poles"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are parts of a simple electric circuit?",
+    options: ["Bulb", "Switch", "Battery", "Spoon"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which factors affect the size of a shadow?",
+    options: ["Distance from light", "Size of object", "Color of object", "Angle of light"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which actions reduce friction?",
+    options: ["Using oil", "Polishing surfaces", "Adding sand", "Using wheels"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are effects of heat?",
+    options: ["Expansion", "Melting", "Freezing", "Burning"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following materials are insulators?",
+    options: ["Plastic", "Glass", "Rubber", "Copper"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which units are used to measure area?",
+    options: ["m²", "cm²", "Litre", "Hectare"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following changes are irreversible?",
+    options: ["Burning wood", "Rusting iron", "Melting butter", "Boiling water"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these are greenhouse gases?",
+    options: ["CO₂", "CH₄", "O₂", "N₂O"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which statements about sound are correct?",
+    options: ["It needs a medium", "It travels as waves", "It travels faster in solids", "It cannot reflect"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are uses of concave mirrors?",
+    options: ["Torch", "Solar cooker", "Rear view mirror", "Makeup mirror"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are characteristics of solids?",
+    options: ["Fixed shape", "Fixed volume", "Flow easily", "Hard to compress"],
+    correctAnswers: [0, 1, 3]
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;

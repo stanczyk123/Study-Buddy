@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Multiple Choice Sophomore Highschool</title>
+    <link rel="stylesheet" href="biology_multiple_choice_sophomore_highschool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+        <div id="question-container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h4 id="right-or-wrong"></h4>
+    </div>
+
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+    
+
+    <script src="/biology_multiple_choice_sophomore_highschool/biology_multiple_choice_sophomore_highschool.js"></script>
+
+    <script>
+       const quiz = [
+  {
+    question: "What is the basic unit of life?",
+    options: ["Tissue", "Organ", "Cell", "Organism"],
+    answer: 2
+  },
+  {
+    question: "Which part of the plant carries out photosynthesis?",
+    options: ["Root", "Stem", "Leaf", "Flower"],
+    answer: 2
+  },
+  {
+    question: "What is the function of mitochondria?",
+    options: ["Protein synthesis", "Photosynthesis", "Energy production", "Digestion"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is not a kingdom in classification?",
+    options: ["Plantae", "Fungi", "Vertebrata", "Animalia"],
+    answer: 2
+  },
+  {
+    question: "Which macromolecule is used for genetic information?",
+    options: ["Protein", "DNA", "Lipid", "Carbohydrate"],
+    answer: 1
+  },
+  {
+    question: "Which structure controls all cell activities?",
+    options: ["Nucleus", "Ribosome", "Chloroplast", "Cell wall"],
+    answer: 0
+  },
+  {
+    question: "The process of making energy from glucose is called:",
+    options: ["Photosynthesis", "Glycolysis", "Cellular respiration", "Fermentation"],
+    answer: 2
+  },
+  {
+    question: "Which of these is an autotroph?",
+    options: ["Human", "Lion", "Mushroom", "Green plant"],
+    answer: 3
+  },
+  {
+    question: "Which tissue transports water in plants?",
+    options: ["Xylem", "Phloem", "Cambium", "Epidermis"],
+    answer: 0
+  },
+  {
+    question: "Which part of the human brain controls balance?",
+    options: ["Cerebrum", "Cerebellum", "Medulla", "Spinal cord"],
+    answer: 1
+  },
+  {
+    question: "What is the function of red blood cells?",
+    options: ["Clotting", "Immunity", "Oxygen transport", "Digestion"],
+    answer: 2
+  },
+  {
+    question: "Which hormone regulates blood sugar?",
+    options: ["Adrenaline", "Estrogen", "Insulin", "Thyroxine"],
+    answer: 2
+  },
+  {
+    question: "The smallest blood vessels are called:",
+    options: ["Veins", "Arteries", "Capillaries", "Venules"],
+    answer: 2
+  },
+  {
+    question: "Which system is responsible for transporting oxygen and nutrients?",
+    options: ["Respiratory", "Excretory", "Circulatory", "Digestive"],
+    answer: 2
+  },
+  {
+    question: "Photosynthesis occurs in:",
+    options: ["Nucleus", "Mitochondria", "Chloroplast", "Vacuole"],
+    answer: 2
+  },
+  {
+    question: "Which vitamin helps in blood clotting?",
+    options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin K"],
+    answer: 3
+  },
+  {
+    question: "Which organ filters blood in humans?",
+    options: ["Heart", "Liver", "Kidney", "Lungs"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a function of the skin?",
+    options: ["Breathing", "Digestion", "Protection", "Circulation"],
+    answer: 2
+  },
+  {
+    question: "Which part of the digestive system absorbs most nutrients?",
+    options: ["Stomach", "Small intestine", "Large intestine", "Esophagus"],
+    answer: 1
+  },
+  {
+    question: "Which part of the flower produces pollen?",
+    options: ["Pistil", "Sepal", "Stigma", "Anther"],
+    answer: 3
+  },
+  {
+    question: "Which of the following reproduces by spores?",
+    options: ["Mosses", "Mammals", "Birds", "Fish"],
+    answer: 0
+  },
+  {
+    question: "Which of these is a respiratory organ in fish?",
+    options: ["Lungs", "Skin", "Gills", "Nostrils"],
+    answer: 2
+  },
+  {
+    question: "What causes malaria?",
+    options: ["Virus", "Bacteria", "Protozoa", "Fungus"],
+    answer: 2
+  },
+  {
+    question: "Which disease is caused by insulin deficiency?",
+    options: ["Asthma", "Diabetes", "Tuberculosis", "Anemia"],
+    answer: 1
+  },
+  {
+    question: "The female reproductive cell is called:",
+    options: ["Sperm", "Zygote", "Ovum", "Embryo"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a communicable disease?",
+    options: ["Cancer", "Hypertension", "Flu", "Diabetes"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is not a vertebrate?",
+    options: ["Bird", "Frog", "Insect", "Fish"],
+    answer: 2
+  },
+  {
+    question: "What is the function of white blood cells?",
+    options: ["Oxygen transport", "Digestion", "Immunity", "Energy production"],
+    answer: 2
+  },
+  {
+    question: "Which gas do humans exhale?",
+    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"],
+    answer: 2
+  },
+  {
+    question: "Which of the following are parts of the excretory system?",
+    options: ["Kidneys", "Lungs", "Skin", "All of the above"],
+    answer: 3
+  },
+  {
+    question: "Which structure carries oxygenated blood from lungs to heart?",
+    options: ["Aorta", "Pulmonary artery", "Pulmonary vein", "Vena cava"],
+    answer: 2
+  },
+  {
+    question: "Where does fertilization occur in humans?",
+    options: ["Uterus", "Ovary", "Fallopian tube", "Vagina"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is inherited from parents?",
+    options: ["Language", "Height", "Favorite food", "Accent"],
+    answer: 1
+  },
+  {
+    question: "Which nutrient is most important for growth?",
+    options: ["Vitamins", "Fats", "Proteins", "Carbohydrates"],
+    answer: 2
+  },
+  {
+    question: "Which plant organ absorbs water and minerals?",
+    options: ["Leaf", "Stem", "Root", "Flower"],
+    answer: 2
+  },
+  {
+    question: "Which of the following processes release oxygen?",
+    options: ["Respiration", "Digestion", "Photosynthesis", "Transpiration"],
+    answer: 2
+  },
+  {
+    question: "The process of removing waste products from the body is called:",
+    options: ["Reproduction", "Excretion", "Digestion", "Assimilation"],
+    answer: 1
+  },
+  {
+    question: "Which structure protects the brain?",
+    options: ["Rib cage", "Pelvis", "Skull", "Vertebrae"],
+    answer: 2
+  },
+  {
+    question: "Which is a characteristic of mammals?",
+    options: ["Lays eggs", "Has scales", "Feeds young with milk", "Has feathers"],
+    answer: 2
+  },
+  {
+    question: "Which organ is part of the nervous system?",
+    options: ["Brain", "Heart", "Kidney", "Liver"],
+    answer: 0
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion; 
+    </script>
+</body>
+</html>

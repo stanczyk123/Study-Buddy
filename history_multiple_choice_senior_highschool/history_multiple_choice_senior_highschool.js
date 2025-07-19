@@ -1,0 +1,285 @@
+const quiz = [
+  {
+    question: "Who was the first President of Indonesia?",
+    options: ["Mohammad Hatta", "Soekarno", "Soeharto", "B.J. Habibie"],
+    answer: 1
+  },
+  {
+    question: "In what year did Indonesia proclaim its independence?",
+    options: ["1945", "1947", "1950", "1955"],
+    answer: 0
+  },
+  {
+    question: "Which kingdom is known for building Borobudur Temple?",
+    options: ["Majapahit", "Sriwijaya", "Mataram Kuno", "Singhasari"],
+    answer: 2
+  },
+  {
+    question: "What was the purpose of BPUPKI?",
+    options: [
+      "To prepare for Dutch re-colonization",
+      "To draft Indonesia’s constitution",
+      "To elect the first president",
+      "To lead the independence war"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which agreement transferred sovereignty from the Dutch to Indonesia?",
+    options: ["Linggadjati Agreement", "Renville Agreement", "Roem-Roijen Agreement", "RTC (Round Table Conference)"],
+    answer: 3
+  },
+  {
+    question: "Which figure led the resistance during the Diponegoro War?",
+    options: ["Teuku Umar", "Pattimura", "Pangeran Diponegoro", "Sisingamangaraja XII"],
+    answer: 2
+  },
+  {
+    question: "What is the significance of the Youth Pledge (Sumpah Pemuda)?",
+    options: [
+      "Declared independence",
+      "United youth in one nation, one language, one homeland",
+      "Formed a youth government",
+      "Created the first school for independence"
+    ],
+    answer: 1
+  },
+  {
+    question: "When was the Youth Pledge declared?",
+    options: ["1908", "1928", "1945", "1955"],
+    answer: 1
+  },
+  {
+    question: "Which kingdom had strong maritime power in Southeast Asia?",
+    options: ["Sriwijaya", "Majapahit", "Mataram", "Kutai"],
+    answer: 0
+  },
+  {
+    question: "What was the capital city of Majapahit Kingdom?",
+    options: ["Palembang", "Trowulan", "Yogyakarta", "Surabaya"],
+    answer: 1
+  },
+  {
+    question: "Which colonial power first arrived in Indonesia?",
+    options: ["British", "Dutch", "Portuguese", "Japanese"],
+    answer: 2
+  },
+  {
+    question: "Who led the independence proclamation on August 17, 1945?",
+    options: ["Mohammad Hatta", "Soekarno", "Sutan Sjahrir", "Tan Malaka"],
+    answer: 1
+  },
+  {
+    question: "Who designed the Indonesian national flag?",
+    options: ["Fatmawati", "Kartini", "Soekarno", "Mohammad Yamin"],
+    answer: 0
+  },
+  {
+    question: "Where was the Proclamation of Independence declared?",
+    options: ["Bandung", "Jakarta", "Surabaya", "Yogyakarta"],
+    answer: 1
+  },
+  {
+    question: "Which organization was formed in 1908 as the first modern Indonesian movement?",
+    options: ["Sarekat Islam", "Budi Utomo", "PETA", "Indische Partij"],
+    answer: 1
+  },
+  {
+    question: "Which Indonesian hero fought against the Dutch in Maluku?",
+    options: ["Pattimura", "Teuku Umar", "Diponegoro", "Sisingamangaraja XII"],
+    answer: 0
+  },
+  {
+    question: "Which kingdom was the first Hindu kingdom in Indonesia?",
+    options: ["Sriwijaya", "Tarumanegara", "Kutai", "Mataram"],
+    answer: 2
+  },
+  {
+    question: "What was the political system during the New Order era?",
+    options: ["Parliamentary", "Presidential", "Democracy with restrictions", "Absolute monarchy"],
+    answer: 2
+  },
+  {
+    question: "Which city became the center of Indonesian struggle in the independence war?",
+    options: ["Bandung", "Jakarta", "Surabaya", "Medan"],
+    answer: 2
+  },
+  {
+    question: "Which ideology is the foundation of the Indonesian state?",
+    options: ["Communism", "Democracy", "Pancasila", "Islamic law"],
+    answer: 2
+  },
+  {
+    question: "When did the G30S/PKI incident occur?",
+    options: ["1960", "1965", "1970", "1980"],
+    answer: 1
+  },
+  {
+    question: "Which group was blamed for the G30S movement?",
+    options: ["Islamic parties", "Nationalists", "PKI (Communist Party)", "Youth organizations"],
+    answer: 2
+  },
+  {
+    question: "Who became president after Soekarno?",
+    options: ["B.J. Habibie", "Soeharto", "Megawati", "Gus Dur"],
+    answer: 1
+  },
+  {
+    question: "What caused the fall of the New Order regime?",
+    options: ["Military coup", "Student protests", "Foreign invasion", "Judicial decision"],
+    answer: 1
+  },
+  {
+    question: "Which era came after the New Order?",
+    options: ["Old Order", "Democratic Transition", "Reformasi", "Guided Democracy"],
+    answer: 2
+  },
+  {
+    question: "Which movement supported education for women?",
+    options: ["Boedi Oetomo", "Sarekat Dagang Islam", "Kartini movement", "PETA"],
+    answer: 2
+  },
+  {
+    question: "Who was the last Dutch Governor-General in Indonesia?",
+    options: ["Van Mook", "Stamford Raffles", "Daendels", "Van der Capellen"],
+    answer: 0
+  },
+  {
+    question: "Which city was formerly known as Batavia?",
+    options: ["Jakarta", "Bandung", "Surabaya", "Semarang"],
+    answer: 0
+  },
+  {
+    question: "What is the meaning of 'Dwifungsi ABRI'?",
+    options: ["Military only for defense", "Military involved in politics and defense", "Only police involved in politics", "Civil supremacy"],
+    answer: 1
+  },
+  {
+    question: "Which war was fought against the British in Java?",
+    options: ["Padri War", "Diponegoro War", "Java War", "Aceh War"],
+    answer: 2
+  },
+  {
+    question: "Which province was formerly part of East Timor?",
+    options: ["NTT", "Papua", "Timor Timur", "Sulawesi"],
+    answer: 2
+  },
+  {
+    question: "Which leader played a key role in ASEAN formation?",
+    options: ["Soekarno", "Ali Alatas", "Adam Malik", "Hatta"],
+    answer: 2
+  },
+  {
+    question: "Who is known as the father of Indonesian cooperatives?",
+    options: ["Soekarno", "Soeharto", "Mohammad Hatta", "Tan Malaka"],
+    answer: 2
+  },
+  {
+    question: "Which ancient inscription marks early Indonesian history?",
+    options: ["Prasasti Yupa", "Prasasti Kedukan Bukit", "Prasasti Ciaruteun", "All of the above"],
+    answer: 3
+  },
+  {
+    question: "When was the first general election held in Indonesia?",
+    options: ["1945", "1955", "1965", "1998"],
+    answer: 1
+  },
+  {
+    question: "What was the official name of Indonesia before full independence?",
+    options: ["Dutch East Indies", "Republic of Indonesia", "United States of Indonesia", "Java Nation"],
+    answer: 2
+  },
+  {
+    question: "Which country helped train Indonesian PETA troops?",
+    options: ["Japan", "Netherlands", "Germany", "USA"],
+    answer: 0
+  },
+  {
+    question: "Who was the founder of Sarekat Islam?",
+    options: ["HOS Cokroaminoto", "Tjokroaminoto", "Douwes Dekker", "Semaun"],
+    answer: 0
+  },
+  {
+    question: "Which figure is associated with the idea of 'Marhaenism'?",
+    options: ["Tan Malaka", "Soekarno", "Hatta", "Sjahrir"],
+    answer: 1
+  },
+  {
+    question: "What was the ideology of the Indische Partij?",
+    options: ["Islamic state", "Monarchy", "Nationalism", "Colonialism"],
+    answer: 2
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;
+
+
+

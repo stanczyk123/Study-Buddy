@@ -1,0 +1,266 @@
+const quiz = [
+  {
+    question: "Which of the following are input devices?",
+    options: ["Mouse", "Keyboard", "Monitor", "Scanner"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are operating systems?",
+    options: ["Windows", "Linux", "Google Chrome", "macOS"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are examples of programming languages?",
+    options: ["Python", "JavaScript", "Microsoft Word", "C++"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are used for storing data?",
+    options: ["Hard disk", "SSD", "RAM", "Monitor"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are examples of output devices?",
+    options: ["Monitor", "Printer", "Speaker", "Mouse"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are characteristics of a good password?",
+    options: ["Includes numbers", "Short and easy", "Includes symbols", "Hard to guess"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of these are uses of a spreadsheet program?",
+    options: ["Data analysis", "Creating tables", "Photo editing", "Calculations"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which software can be used for presentations?",
+    options: ["Microsoft PowerPoint", "Google Slides", "Excel", "Canva"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are browsers?",
+    options: ["Mozilla Firefox", "Google Chrome", "Microsoft Edge", "WhatsApp"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are types of malware?",
+    options: ["Virus", "Worm", "Trojan", "Excel"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which devices are used in a network?",
+    options: ["Router", "Switch", "Modem", "Keyboard"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are common file extensions?",
+    options: [".docx", ".jpg", ".mp3", ".html"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which of the following are web-based email services?",
+    options: ["Gmail", "Yahoo Mail", "Outlook", "Photoshop"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are common uses of the internet?",
+    options: ["Online shopping", "Watching videos", "Data backup", "Programming"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which of the following are social media platforms?",
+    options: ["Instagram", "Facebook", "YouTube", "Excel"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of hardware?",
+    options: ["CPU", "RAM", "Monitor", "Windows"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are cloud storage services?",
+    options: ["Google Drive", "Dropbox", "OneDrive", "Notepad"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are parts of a computer?",
+    options: ["Motherboard", "CPU", "RAM", "Pen drive"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are office applications?",
+    options: ["Word", "Excel", "PowerPoint", "Firefox"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are internet safety rules?",
+    options: ["Do not share passwords", "Avoid suspicious links", "Update antivirus", "Download everything"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of file management operations?",
+    options: ["Copy", "Paste", "Rename", "Sing"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are programming concepts?",
+    options: ["Variables", "Loops", "Photoshop", "Functions"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following can be connected to a computer?",
+    options: ["Mouse", "Printer", "Projector", "Spoon"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are types of network topologies?",
+    options: ["Bus", "Star", "Ring", "Cube"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of search engines?",
+    options: ["Google", "Bing", "Yahoo", "Gmail"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these can be used for coding?",
+    options: ["Scratch", "Python", "HTML", "Photoshop"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are input and output devices together (I/O)?",
+    options: ["Touchscreen", "Modem", "Printer", "Scanner"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which are examples of data types in programming?",
+    options: ["String", "Integer", "Boolean", "Picture"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are file formats for images?",
+    options: [".jpg", ".png", ".gif", ".exe"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are components of a URL?",
+    options: ["Protocol", "Domain", "Path", "Wallpaper"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are types of memory?",
+    options: ["RAM", "ROM", "SSD", "Cloud"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are digital communication tools?",
+    options: ["Email", "Zoom", "WhatsApp", "MS Paint"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of spreadsheet functions?",
+    options: ["SUM", "AVERAGE", "IF", "STYLE"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are uses of word processors?",
+    options: ["Typing letters", "Editing text", "Inserting images", "Building houses"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are benefits of online learning?",
+    options: ["Flexible time", "Access to resources", "Requires no device", "Learn anywhere"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are mobile operating systems?",
+    options: ["Android", "iOS", "Windows", "Photoshop"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are correct safety precautions when using a computer?",
+    options: ["Take breaks", "Sit with straight posture", "Use antivirus", "Eat on keyboard"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are benefits of using a database?",
+    options: ["Easy data access", "Data security", "Data loss", "Efficient storage"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are examples of coding platforms for beginners?",
+    options: ["Scratch", "Blockly", "Unity", "Kodu"],
+    correctAnswers: [0, 1, 3]
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;

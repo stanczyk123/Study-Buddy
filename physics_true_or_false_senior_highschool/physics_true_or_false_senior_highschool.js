@@ -1,0 +1,214 @@
+const quiz = [
+  {
+    question: "Acceleration is the rate of change of velocity.",
+    answer: true
+  },
+  {
+    question: "Sound waves can travel through a vacuum.",
+    answer: false
+  },
+  {
+    question: "The unit of electric current is the ampere.",
+    answer: true
+  },
+  {
+    question: "The acceleration due to gravity on Earth is approximately 9.8 m/s².",
+    answer: true
+  },
+  {
+    question: "In a vacuum, heavier objects fall faster than lighter ones.",
+    answer: false
+  },
+  {
+    question: "Friction always opposes the motion of an object.",
+    answer: true
+  },
+  {
+    question: "Energy can be created and destroyed.",
+    answer: false
+  },
+  {
+    question: "Kinetic energy increases with the square of speed.",
+    answer: true
+  },
+  {
+    question: "A concave mirror can produce both real and virtual images.",
+    answer: true
+  },
+  {
+    question: "Ohm’s Law states that current equals voltage divided by resistance.",
+    answer: true
+  },
+  {
+    question: "The SI unit of work is the watt.",
+    answer: false
+  },
+  {
+    question: "The frequency of a wave is measured in hertz (Hz).",
+    answer: true
+  },
+  {
+    question: "A transformer works only with direct current (DC).",
+    answer: false
+  },
+  {
+    question: "The speed of light is slower in water than in air.",
+    answer: true
+  },
+  {
+    question: "The total momentum in a closed system is conserved.",
+    answer: true
+  },
+  {
+    question: "X-rays have lower energy than visible light.",
+    answer: false
+  },
+  {
+    question: "Voltage is the rate of flow of electric charge.",
+    answer: false
+  },
+  {
+    question: "A capacitor stores electrical energy.",
+    answer: true
+  },
+  {
+    question: "The force of gravity between two objects increases as their distance increases.",
+    answer: false
+  },
+  {
+    question: "Current is a scalar quantity.",
+    answer: true
+  },
+  {
+    question: "A plane mirror always produces a real image.",
+    answer: false
+  },
+  {
+    question: "Gamma rays have no mass and no charge.",
+    answer: true
+  },
+  {
+    question: "The unit of power is joule.",
+    answer: false
+  },
+  {
+    question: "The image formed by a convex lens can be real or virtual.",
+    answer: true
+  },
+  {
+    question: "Displacement is the same as distance.",
+    answer: false
+  },
+  {
+    question: "The magnetic field around a straight current-carrying wire is circular.",
+    answer: true
+  },
+  {
+    question: "The boiling point of pure water at sea level is 100°C.",
+    answer: true
+  },
+  {
+    question: "Temperature is a measure of the average kinetic energy of particles.",
+    answer: true
+  },
+  {
+    question: "An object moving with constant speed must be experiencing a net force.",
+    answer: false
+  },
+  {
+    question: "Work is done when a force is applied and displacement occurs.",
+    answer: true
+  },
+  {
+    question: "Pascal’s principle applies to gases only.",
+    answer: false
+  },
+  {
+    question: "A body in equilibrium has zero net force acting on it.",
+    answer: true
+  },
+  {
+    question: "Hooke’s law relates force and voltage in a resistor.",
+    answer: false
+  },
+  {
+    question: "Infrared radiation is invisible to the human eye.",
+    answer: true
+  },
+  {
+    question: "Electric field lines point away from positive charges.",
+    answer: true
+  },
+  {
+    question: "Momentum is conserved in inelastic collisions.",
+    answer: true
+  },
+  {
+    question: "A wave with high frequency has a long wavelength.",
+    answer: false
+  },
+  {
+    question: "A neutron has no electric charge.",
+    answer: true
+  },
+  {
+    question: "The total internal reflection occurs when light passes from air to water.",
+    answer: false
+  },
+  {
+    question: "Radio waves travel faster than gamma rays.",
+    answer: false
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    // Clear selected radio buttons
+    const radios = document.querySelectorAll('input[name="answer"]');
+    radios.forEach(radio => radio.checked = false);
+}
+
+function submitAnswer() {
+    const selectedRadio = document.querySelector('input[name="answer"]:checked');
+    const feedbackDiv = document.getElementById("result");
+    feedbackDiv.style.display = "block";
+
+    if (!selectedRadio) {
+        alert("Please select True or False.");
+        return;
+    }
+
+    const selectedValue = selectedRadio.value === "true";
+    const correctAnswer = quiz[currentQuestion].answer;
+
+    if (selectedValue === correctAnswer) {
+        score++;
+        feedbackDiv.innerHTML = `<p style="color: green;">✅ Correct!</p>`;
+    } else {
+        feedbackDiv.innerHTML = `<p style="color: red;">❌ Wrong!<br>The correct answer is: <strong>${correctAnswer ? "True" : "False"}</strong></p>`;
+    }
+
+    setTimeout(() => {
+        feedbackDiv.style.display = "none";
+        currentQuestion++;
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showFinalResult();
+        }
+    }, 1500);
+}
+
+function showFinalResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = `<h2>You got ${score} out of ${quiz.length} questions right!</h2>`;
+}
+
+window.onload = showQuestion;

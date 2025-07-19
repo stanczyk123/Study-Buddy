@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Multiple Selection Junior Highschool</title>
+    <link rel="stylesheet" href="history_multiple_selection_junior_highschool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+    <div id="question-container">
+        <h3 id="question"></h3>  
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h5 id="right-or-wrong"></h5>
+    </div>
+
+
+    
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+
+    <script src="/history_multiple_selection_junior_highschool/history_multiple_selection_junior_highschool.js"></script>
+
+    <script>
+        const quiz = [
+  {
+    question: "Which of the following were Indonesian national heroes?",
+    options: ["R.A. Kartini", "Ki Hajar Dewantara", "Lionel Messi", "Cut Nyak Dien"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which kingdoms were located in Indonesia?",
+    options: ["Majapahit", "Sriwijaya", "Gupta", "Mataram"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following were colonial powers in Indonesia?",
+    options: ["Portugal", "Spain", "Netherlands", "Japan"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which events are part of the National Awakening era?",
+    options: ["Budi Utomo founding", "Sumpah Pemuda", "Proclamation", "Formation of BPUPKI"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which figures were involved in the Youth Pledge?",
+    options: ["Muhammad Yamin", "Soegondo Djojopoespito", "Mohammad Hatta", "Ir. Soekarno"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which events occurred during Japanese occupation?",
+    options: ["Romusha", "Heiho", "Cultivation System", "PETA formation"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are contents of the Youth Pledge?",
+    options: ["One motherland", "One language", "One race", "One God"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which organizations were formed before independence?",
+    options: ["Budi Utomo", "Sarekat Islam", "Golkar", "Muhammadiyah"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which figures helped proclaim Indonesian independence?",
+    options: ["Soekarno", "Mohammad Hatta", "Ahmad Soebardjo", "Jenderal Sudirman"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which ancient temples are located in Central Java?",
+    options: ["Borobudur", "Prambanan", "Mendut", "Candi Muaro Jambi"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are the principles of Pancasila?",
+    options: ["Belief in God", "Social justice", "Individualism", "Unity"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which wars were against Dutch colonialism?",
+    options: ["Diponegoro War", "Padri War", "World War I", "Aceh War"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which cities are linked to early nationalist movements?",
+    options: ["Jakarta", "Yogyakarta", "Bandung", "Surabaya"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which political systems existed in ancient Indonesian kingdoms?",
+    options: ["Monarchy", "Democracy", "Theocracy", "Feudalism"],
+    correctAnswers: [0, 3]
+  },
+  {
+    question: "Which are products of the Majapahit kingdom?",
+    options: ["Negarakertagama", "Sutasoma", "Kitab Undang-undang", "Kamasutra"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which traditional ships were used by Indonesian ancestors?",
+    options: ["Phinisi", "Jong", "Sampan", "Titanic"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which events took place in 1945?",
+    options: ["Proclamation", "Japanese surrender", "Indonesian war of independence", "Youth Pledge"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which documents were important in independence preparation?",
+    options: ["Jakarta Charter", "Proclamation Text", "BPUPKI Minutes", "Rukun Negara"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are Indonesian cultural heritages?",
+    options: ["Batik", "Angklung", "Taj Mahal", "Wayang"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are Islamic kingdoms in Indonesia?",
+    options: ["Demak", "Aceh", "Samudera Pasai", "Tarumanegara"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which statements are true about Sriwijaya?",
+    options: ["A maritime kingdom", "Located in Sumatra", "Strong in trade", "Founded in Java"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which kingdoms adopted Hinduism-Buddhism?",
+    options: ["Majapahit", "Sriwijaya", "Mataram Kuno", "Samudera Pasai"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which goals were behind colonialism?",
+    options: ["Control of trade", "Spread of religion", "Science promotion", "Land expansion"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which events are celebrated nationally in Indonesia?",
+    options: ["Proclamation Day", "Youth Pledge Day", "Education Day", "Christmas"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which places were VOC centers?",
+    options: ["Batavia", "Malacca", "Ambon", "London"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which figures led resistance against colonialists?",
+    options: ["Diponegoro", "Pattimura", "Imam Bonjol", "Soekarno"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are traditional Indonesian weapons?",
+    options: ["Kris", "Rencong", "Katana", "Badik"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which statements describe the Ethical Policy?",
+    options: ["Introduced by the Dutch", "Included education", "Improved irrigation", "Empowered nobles"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which institutions exist in Indonesian governance?",
+    options: ["MPR", "DPR", "Senate", "Presidency"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which religions influenced Indonesia before Islam?",
+    options: ["Hinduism", "Buddhism", "Christianity", "Confucianism"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which forms of resistance occurred in colonial times?",
+    options: ["Armed struggle", "Cultural resistance", "Diplomacy", "Economic protests"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which slogans relate to independence?",
+    options: ["Freedom or death!", "Indonesia merdeka!", "Satu Nusa, Satu Bangsa", "Hidup Belanda!"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are impacts of colonialism?",
+    options: ["Economic exploitation", "Cultural loss", "Technological transfer", "Social reform"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which kingdoms were strong in agriculture?",
+    options: ["Mataram", "Majapahit", "Sriwijaya", "Tarumanegara"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which ideas are part of the nationalist movement?",
+    options: ["Freedom", "Democracy", "Slavery", "Unity"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which treaties involved Indonesian territory?",
+    options: ["Treaty of Surrender", "Linggarjati", "Renville", "New York Agreement"],
+    correctAnswers: [1, 2, 3]
+  },
+  {
+    question: "Which regions were centers of early civilization?",
+    options: ["Kalimantan", "Java", "Sumatra", "Papua"],
+    correctAnswers: [1, 2]
+  },
+  {
+    question: "Which roles were held by women heroes?",
+    options: ["Educator", "Freedom fighter", "Minister", "Soldier"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which empires had influence on Indonesian culture?",
+    options: ["Indian", "Chinese", "Arab", "British"],
+    correctAnswers: [0, 1, 2]
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;
+    </script>
+    
+</body>
+</html>

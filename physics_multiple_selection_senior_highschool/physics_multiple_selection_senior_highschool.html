@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Multiple Selection Senior Highschool</title>
+    <link rel="stylesheet" href="physics_multiple_selection_senior_highschool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+
+<body>
+    <div id="question-container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.htmll"><button id="homebtn">Home</button></a>
+        <h4 id="right-or-wrong"></h4>
+    </div>
+
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+    
+    <script src="/physics_multiple_selection_senior_highschool/physics_multiple_selection_senior_highschool.js"></script>
+
+    <script>
+        
+const quiz = [
+  {
+    question: "Which of the following quantities are vectors?",
+    options: ["Displacement", "Speed", "Velocity", "Acceleration"],
+    correctAnswers: [0, 2, 3]
+  },
+    {
+    question: "Which of the following are SI units?",
+    options: ["Meter", "Second", "Joule", "Calorie"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following can cause a change in motion?",
+    options: ["Force", "Inertia", "Friction", "Gravity"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of the following are forms of energy?",
+    options: ["Kinetic", "Potential", "Thermal", "Inertia"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following laws relate to Newton's laws of motion?",
+    options: [
+      "An object in motion stays in motion unless acted on by a net force",
+      "F = ma",
+      "For every action, there is an equal and opposite reaction",
+      "Energy cannot be created or destroyed"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are examples of scalar quantities?",
+    options: ["Mass", "Distance", "Time", "Displacement"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following affect gravitational potential energy?",
+    options: ["Mass", "Height", "Speed", "Gravitational field strength"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are valid equations for work?",
+    options: ["W = F × d", "W = m × g × h", "W = P × t", "W = m × a"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which waves are mechanical waves?",
+    options: ["Sound", "Water", "Light", "Seismic"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are properties of waves?",
+    options: ["Amplitude", "Wavelength", "Frequency", "Temperature"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which types of electromagnetic waves have higher frequencies than visible light?",
+    options: ["Ultraviolet", "X-rays", "Gamma rays", "Infrared"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following quantities are conserved in a closed system?",
+    options: ["Momentum", "Energy", "Mass", "Force"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these materials are good conductors of electricity?",
+    options: ["Copper", "Aluminum", "Plastic", "Iron"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following describe Ohm’s law?",
+    options: ["V = I × R", "I = V / R", "R = V / I", "P = I²R"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which components are typically found in a simple circuit?",
+    options: ["Resistor", "Battery", "Switch", "Magnet"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are types of friction?",
+    options: ["Static", "Kinetic", "Rolling", "Gravitational"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following statements are true about momentum?",
+    options: [
+      "It depends on mass and velocity",
+      "It is a vector",
+      "It is conserved in isolated systems",
+      "It is a scalar"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which forces are non-contact forces?",
+    options: ["Gravitational", "Magnetic", "Friction", "Electrostatic"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following increase pressure in a gas?",
+    options: ["Increasing temperature", "Decreasing volume", "Increasing number of particles", "Cooling the gas"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following describe characteristics of sound waves?",
+    options: ["Longitudinal", "Require a medium", "Travel fastest in solids", "Cannot be reflected"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which variables affect the period of a pendulum?",
+    options: ["Length", "Mass", "Gravitational acceleration", "Amplitude (small angles)"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are units of power?",
+    options: ["Watt", "Joule/second", "Horsepower", "Volt"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following can be lenses?",
+    options: ["Convex", "Concave", "Plane", "Spherical"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which situations are examples of Newton’s Third Law?",
+    options: [
+      "A person pushing a wall",
+      "A rocket launching upward",
+      "A fish swimming forward",
+      "An object at rest remaining at rest"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following increase the kinetic energy of an object?",
+    options: ["Increasing velocity", "Increasing mass", "Decreasing height", "Friction"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these phenomena involve reflection?",
+    options: ["Mirror image", "Echo", "Rainbow", "Shadow"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following materials are magnetic?",
+    options: ["Iron", "Nickel", "Cobalt", "Aluminum"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are characteristics of light?",
+    options: ["Transverse wave", "Travels in vacuum", "Has frequency", "Requires medium"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which statements are true about electric current?",
+    options: ["It is the flow of electrons", "Measured in amperes", "Flows from positive to negative in conventional current", "It is a scalar"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following situations show energy transformation?",
+    options: ["Battery powering a flashlight", "Burning fuel", "Electric motor running", "Ball rolling on flat ground"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these represent acceleration?",
+    options: ["Increasing speed", "Decreasing speed", "Changing direction", "Constant velocity"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are examples of uniform motion?",
+    options: ["Car moving at constant speed", "Object in free fall", "Object at rest", "Train moving without changing speed"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of the following apply to thermodynamics?",
+    options: ["Heat transfer", "Internal energy", "First law of thermodynamics", "Friction"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following affect resistance in a wire?",
+    options: ["Material", "Length", "Cross-sectional area", "Voltage"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which devices use lenses?",
+    options: ["Telescope", "Microscope", "Projector", "Loudspeaker"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are examples of simple harmonic motion?",
+    options: ["Pendulum", "Mass-spring system", "Satellite orbit", "Tuning fork vibration"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are ways to reduce energy loss in machines?",
+    options: ["Lubrication", "Streamlining", "Friction", "Using better materials"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are units of force?",
+    options: ["Newton", "kg·m/s²", "dyne", "Joule"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which forces act on a falling object (neglecting air resistance)?",
+    options: ["Gravitational force", "Friction", "Tension", "Normal force"],
+    correctAnswers: [0]
+  },
+  // Add more questions...
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value));
+
+  const correctAnswers = quiz[currentQuestion].correctAnswers;
+  const sortedCorrect = [...correctAnswers].sort().toString();
+  const sortedSelected = [...selectedValues].sort().toString();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  if (sortedCorrect === sortedSelected) {
+    score++;
+    feedback.innerText = "✅ Correct!";
+    feedback.style.color = "green";
+  } else {
+    const correctTexts = correctAnswers.map(i => quiz[currentQuestion].options[i]);
+    feedback.innerText = `❌ Wrong! Correct answers: ${correctTexts.join(", ")}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 2 seconds
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 2000);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+const quiz = [
+  {
+    question: "What was the primary cause of the Diponegoro War (1825–1830)?",
+    options: ["Tax policies", "Religious conflict", "Dutch interference in Javanese court", "Border dispute"],
+    answer: 2
+  },
+  {
+    question: "Who was the founder of the Budi Utomo organization?",
+    options: ["Soekarno", "Dr. Wahidin Sudirohusodo", "Haji Agus Salim", "Ki Hajar Dewantara"],
+    answer: 1
+  },
+  {
+    question: "What year did Indonesia declare its independence?",
+    options: ["1942", "1945", "1947", "1950"],
+    answer: 1
+  },
+  {
+    question: "Who proclaimed Indonesian independence on August 17, 1945?",
+    options: ["Mohammad Hatta", "Soekarno", "Sutan Sjahrir", "Soepomo"],
+    answer: 1
+  },
+  {
+    question: "Which organization was formed as the first youth movement in Indonesia?",
+    options: ["Budi Utomo", "Indische Partij", "Pemoeda Indonesia", "Perhimpunan Indonesia"],
+    answer: 0
+  },
+  {
+    question: "The Dutch ethical policy included the following, except:",
+    options: ["Irrigation", "Education", "Emigration", "Transmigration"],
+    answer: 3
+  },
+  {
+    question: "When was the Youth Pledge (Sumpah Pemuda) declared?",
+    options: ["1926", "1927", "1928", "1929"],
+    answer: 2
+  },
+  {
+    question: "What was the capital of the Islamic Mataram Kingdom?",
+    options: ["Surakarta", "Yogyakarta", "Kota Gede", "Demak"],
+    answer: 2
+  },
+  {
+    question: "Who was the leader of the Padri War?",
+    options: ["Pangeran Antasari", "Tuanku Imam Bonjol", "Sisingamangaraja XII", "Teuku Umar"],
+    answer: 1
+  },
+  {
+    question: "Which kingdom was the first Hindu kingdom in Indonesia?",
+    options: ["Majapahit", "Sriwijaya", "Tarumanegara", "Kutai"],
+    answer: 3
+  },
+  {
+    question: "Who led the resistance in Bali against the Dutch colonization?",
+    options: ["I Gusti Ngurah Rai", "Gusti Ketut Jelantik", "Raden Ajeng Kartini", "Raden Intan"],
+    answer: 1
+  },
+  {
+    question: "Which country colonized Indonesia before the Dutch?",
+    options: ["England", "Portugal", "Spain", "France"],
+    answer: 1
+  },
+  {
+    question: "The main trade commodity in the Maluku Islands was:",
+    options: ["Rice", "Gold", "Spices", "Textiles"],
+    answer: 2
+  },
+  {
+    question: "Which battle was considered a symbol of youth bravery after independence?",
+    options: ["Battle of Surabaya", "Battle of Bandung", "Battle of Medan", "Battle of Ambarawa"],
+    answer: 0
+  },
+  {
+    question: "What event marked the end of the Old Order and the beginning of the New Order?",
+    options: ["G30S/PKI", "Proclamation of Independence", "PRRI Rebellion", "Second Dutch Military Aggression"],
+    answer: 0
+  },
+  {
+    question: "What was the function of Volksraad during the Dutch East Indies era?",
+    options: ["Defense council", "Parliament for Dutch citizens only", "Advisory council with limited native participation", "Religious council"],
+    answer: 2
+  },
+  {
+    question: "The famous maritime kingdom in Sumatra was:",
+    options: ["Majapahit", "Sriwijaya", "Kutai", "Samudera Pasai"],
+    answer: 1
+  },
+  {
+    question: "R.A. Kartini is known for fighting for:",
+    options: ["Youth rights", "Women's education", "Political independence", "Peasants' land rights"],
+    answer: 1
+  },
+  {
+    question: "Pancasila was formulated during the session of:",
+    options: ["Budi Utomo", "Volksraad", "BPUPKI", "PKI"],
+    answer: 2
+  },
+  {
+    question: "Who was the first vice president of Indonesia?",
+    options: ["Mohammad Hatta", "Soekarno", "Sjahrir", "Suharto"],
+    answer: 0
+  },
+  {
+    question: "Which ancient Indonesian temple is a Buddhist temple?",
+    options: ["Borobudur", "Prambanan", "Mendut", "Sewu"],
+    answer: 0
+  },
+  {
+    question: "What system did the Dutch implement for forced planting?",
+    options: ["Autarky", "Culture System", "Zaman Orde", "Kompeni"],
+    answer: 1
+  },
+  {
+    question: "The main purpose of the Japanese occupation in Indonesia was to:",
+    options: ["Educate Indonesians", "Free Asia", "Exploit resources for war", "Spread Buddhism"],
+    answer: 2
+  },
+  {
+    question: "What is the name of the Indonesian independence preparation committee formed by Japan?",
+    options: ["BPUPKI", "PPKI", "KNIP", "Volksraad"],
+    answer: 1
+  },
+  {
+    question: "What was the outcome of the Linggadjati Agreement?",
+    options: ["Indonesia was recognized as a free country", "Indonesia became a federal state", "The war ended", "Dutch agreed to leave Indonesia"],
+    answer: 1
+  },
+  {
+    question: "What major kingdom existed in East Java in the 14th century?",
+    options: ["Demak", "Majapahit", "Mataram", "Sriwijaya"],
+    answer: 1
+  },
+  {
+    question: "Who was the last king of Majapahit?",
+    options: ["Hayam Wuruk", "Airlangga", "Kertanegara", "Brawijaya V"],
+    answer: 3
+  },
+  {
+    question: "The G30S/PKI event happened in which year?",
+    options: ["1963", "1965", "1967", "1969"],
+    answer: 1
+  },
+  {
+    question: "Which kingdom was the first Islamic kingdom in Indonesia?",
+    options: ["Demak", "Aceh", "Samudera Pasai", "Banten"],
+    answer: 2
+  },
+  {
+    question: "What was the capital city during the VOC era?",
+    options: ["Semarang", "Jakarta", "Batavia", "Surabaya"],
+    answer: 2
+  },
+  {
+    question: "Which of these is a result of the Dutch colonial education system?",
+    options: ["Taman Siswa", "Hollandsch-Inlandsche School", "Sekolah Rakyat", "Sekolah Agama"],
+    answer: 1
+  },
+  {
+    question: "What movement was declared on May 20, 1908?",
+    options: ["Sumpah Pemuda", "Independence Proclamation", "Budi Utomo", "Sarikat Islam"],
+    answer: 2
+  },
+  {
+    question: "What was the main goal of BPUPKI?",
+    options: ["Support the Dutch", "Fight the Japanese", "Prepare for independence", "Train the army"],
+    answer: 2
+  },
+  {
+    question: "What caused the eruption of the DI/TII rebellion?",
+    options: ["Communist ideology", "Economic crisis", "Islamic ideology", "Land conflict"],
+    answer: 2
+  },
+  {
+    question: "What event led to the Round Table Conference?",
+    options: ["First Dutch Aggression", "Indonesian Independence", "Second Dutch Aggression", "G30S Movement"],
+    answer: 2
+  },
+  {
+    question: "What was the first form of government after Indonesian independence?",
+    options: ["Presidential", "Monarchy", "Federal", "Parliamentary"],
+    answer: 0
+  },
+  {
+    question: "Which figure is known for the 1948 Madiun Affair?",
+    options: ["Soeharto", "Tan Malaka", "Musso", "Amir Sjarifuddin"],
+    answer: 2
+  },
+  {
+    question: "The main goal of the Non-Aligned Movement was to:",
+    options: ["Oppose capitalism", "Support communism", "Avoid Cold War conflict", "Join NATO"],
+    answer: 2
+  },
+  {
+    question: "In which year did Indonesia join the United Nations?",
+    options: ["1950", "1955", "1960", "1965"],
+    answer: 2
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;
+
+
+

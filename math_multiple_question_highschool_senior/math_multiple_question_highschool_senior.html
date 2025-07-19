@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Multiple Choice Senior Highschool</title>
+    <link rel="stylesheet" href="math_multiple_question_highschool_senior.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+    
+    <div id="question-container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h4 id="right-or-wrong"></h4>
+    </div>
+
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+
+
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+    
+
+    <script src="math_multiple_question_highschool_senior.js"></script>
+
+    <script>
+        // 12th-grade high school math quiz (in English)
+const quiz = [
+    {
+        question: "What is the limit of (x² - 1)/(x - 1) as x approaches 1?",
+        options: ["Infinity", "0", "1", "2"],
+        answer: 3 // 2
+    },
+    {
+        question: "What is the derivative of f(x) = 3x² + 2x - 5?",
+        options: ["6x + 2", "3x + 2", "6x - 2", "6x"],
+        answer: 0 // 6x + 2
+    },
+    {
+        question: "What is the integral of 2x dx?",
+        options: ["x² + C", "2x + C", "x²/2 + C", "2x² + C"],
+        answer: 0 // x² + C
+    },
+    {
+        question: "What is the derivative of sin(x)?",
+        options: ["cos(x)", "-cos(x)", "sin(x)", "-sin(x)"],
+        answer: 0
+    },
+    {
+        question: "If f(x) = x³, what is f'(2)?",
+        options: ["6", "12", "4", "8"],
+        answer: 3 // f'(x) = 3x² → f'(2) = 12
+    },
+    {
+        question: "What is the solution to the equation 2x - 5 = 9?",
+        options: ["x = 2", "x = 5", "x = 7", "x = 8"],
+        answer: 2
+    },
+    {
+        question: "What is the integral of cos(x) dx?",
+        options: ["sin(x) + C", "-cos(x) + C", "-sin(x) + C", "cos(x) + C"],
+        answer: 0
+    },
+    {
+        question: "What is the value of tan(45°)?",
+        options: ["0", "1", "√2", "∞"],
+        answer: 1
+    },
+    {
+        question: "If log₁₀(1000) = x, what is x?",
+        options: ["2", "3", "10", "100"],
+        answer: 1
+    },
+    {
+        question: "What is the limit of (1/x) as x approaches ∞?",
+        options: ["1", "0", "∞", "-∞"],
+        answer: 1
+    },
+    {
+        question: "The derivative of ln(x) is?",
+        options: ["1/x", "ln(x)", "x", "e^x"],
+        answer: 0
+    },
+    {
+        question: "Solve: (x + 3)(x - 2) = 0",
+        options: ["x = -3 or 2", "x = 3 or -2", "x = 3", "x = -3"],
+        answer: 0
+    },
+    {
+        question: "What is the domain of f(x) = √(x - 1)?",
+        options: ["x > 0", "x < 1", "x ≥ 1", "All real numbers"],
+        answer: 2
+    },
+    {
+    question: "What is the second derivative of f(x) = x³?",
+    options: ["3", "6x", "6", "3x²"],
+    answer: 1 // f''(x) = 6x
+    },
+    {
+        question: "Evaluate: limₓ→0 (sin x)/x",
+        options: ["0", "1", "Infinity", "Undefined"],
+        answer: 1
+    },
+    {
+        question: "Solve: 3^(x) = 81",
+        options: ["3", "4", "5", "6"],
+        answer: 1 // 3^4 = 81
+    },
+    {
+        question: "What is the derivative of e^(2x)?",
+        options: ["2e^(2x)", "e^(2x)", "2xe^(x)", "e^(x)"],
+        answer: 0
+    },
+    {
+        question: "Which of the following is the graph of a quadratic function?",
+        options: ["A straight line", "A parabola", "A circle", "A sine wave"],
+        answer: 1
+    },
+    {
+        question: "What is the value of cos(0)?",
+        options: ["0", "1", "-1", "Undefined"],
+        answer: 1
+    },
+    {
+        question: "Solve: ln(e⁵) = ?",
+        options: ["1", "e", "5", "Undefined"],
+        answer: 2 // ln(e⁵) = 5
+    },
+    {
+        question: "What is the solution to |x - 4| = 2?",
+        options: ["x = 6 only", "x = 2 only", "x = 2 or 6", "x = -2 or -6"],
+        answer: 2
+    },
+    {
+        question: "Find the area under f(x) = x from x = 0 to x = 3.",
+        options: ["3", "4.5", "6", "9"],
+        answer: 1 // ∫ x dx = x²/2 → (9/2 - 0) = 4.5
+    },
+    {
+        question: "If f(x) = x² + 4x + 4, what is the vertex?",
+        options: ["(0, 4)", "(-2, 0)", "(-4, 4)", "(2, 0)"],
+        answer: 1 // vertex: x = -b/2a = -4/2 = -2 → f(-2) = 0
+    },
+    {
+        question: "What is the derivative of f(x) = ln(x² + 1)?",
+        options: ["1/(x² + 1)", "2x/(x² + 1)", "ln(x²)", "x/(x² + 1)"],
+        answer: 1
+    },
+    {
+        question: "What is the inverse of the function f(x) = 2x + 3?",
+        options: ["f⁻¹(x) = x - 3 / 2", "f⁻¹(x) = (x - 3) / 2", "f⁻¹(x) = 2x - 3", "f⁻¹(x) = (x + 3) / 2"],
+        answer: 1
+    },
+    {
+        question: "What is the solution to 2log(x) = log(25)?",
+        options: ["x = 5", "x = 25", "x = √25", "x = 10"],
+        answer: 0
+    },
+    {
+        question: "Which function has a vertical asymptote at x = 0?",
+        options: ["f(x) = 1/x", "f(x) = x", "f(x) = ln(x)", "f(x) = e^x"],
+        answer: 0
+    },
+    {
+        question: "Find the sum of the first 5 terms of the arithmetic sequence: 3, 7, 11...",
+        options: ["35", "40", "45", "55"],
+        answer: 2 // 3 + 7 + 11 + 15 + 19 = 55
+    },
+    {
+        question: "What is the nth term of the geometric sequence: 2, 6, 18, ...?",
+        options: ["2 * 3^(n-1)", "6 * 2^(n-1)", "2 * n^3", "3 * 2^n"],
+        answer: 0
+    },
+    {
+        question: "What is sin²(x) + cos²(x) equal to?",
+        options: ["0", "1", "2", "sin(x)"],
+        answer: 1
+    },
+    {
+        question: "Solve for x: 4x² - 12x + 9 = 0",
+        options: ["x = 1.5", "x = 3", "x = 1.5 or 3", "x = 1.5 (double root)"],
+        answer: 3 // (2x - 3)² = 0
+    },
+    {
+        question: "What is the period of the function f(x) = sin(2x)?",
+        options: ["2π", "π", "π/2", "4π"],
+        answer: 1
+    },
+    {
+        question: "The function f(x) = |x - 2| has a minimum at:",
+        options: ["x = 2", "x = 0", "x = -2", "x = 1"],
+        answer: 0
+    },
+    {
+        question: "What is the volume of a cylinder with radius 3 and height 5?",
+        options: ["45π", "15π", "60π", "90π"],
+        answer: 0 // πr²h = π(9)(5) = 45π
+    },
+    {
+        question: "What is the derivative of tan(x)?",
+        options: ["sec²(x)", "cosec²(x)", "sec(x)", "cot(x)"],
+        answer: 0
+    },
+    {
+        question: "If f(x) = x² + 1, what is f⁻¹(x)?",
+        options: ["√(x - 1)", "x² - 1", "There is no inverse", "1/x²"],
+        answer: 2 // Not one-to-one
+    },
+    {
+        question: "What is the slope of the line perpendicular to y = 2x + 3?",
+        options: ["-2", "1/2", "-1/2", "-1/2x"],
+        answer: 2 // Perpendicular slope is negative reciprocal
+    },
+    {
+        question: "If a circle has circumference 2πr = 12π, what is r?",
+        options: ["6", "12", "3", "24"],
+        answer: 0 // r = 6
+    },
+    {
+        question: "What is the value of sin(30°)?",
+        options: ["1", "1/2", "√3/2", "0"],
+        answer: 1 // 1/2
+    },
+    {
+        question: "If log(x) = 2, what is the value of x?",
+        options: ["100", "10", "2", "20"],
+        answer: 0 // 100
+    }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;
+    </script>
+</body>
+</html>

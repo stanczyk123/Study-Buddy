@@ -1,0 +1,118 @@
+body{
+    background-color: rgba(93, 189, 245, 0.877);
+}
+
+#signup{
+    margin: auto;
+    text-align: center;
+    border: 2px rgb(255, 254, 254) solid;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(24, 24, 24);
+    position: relative;
+    left: 10px;
+    bottom: 50px;
+    box-shadow: 2px 2px 5px black;
+}
+
+
+#usernameid{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;    
+}
+
+#passwordid{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;
+    margin-top: 20px;    
+}
+
+
+#confirmpass{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+#dateid{
+    color: white;
+    margin: auto;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    border: 1px white solid;
+    border-radius: 7px;
+    margin-top: 65px; 
+}
+
+#signupTitle{
+    font-family: "press start 2p";
+}
+
+#cloud1{
+    width: 200px;
+}
+#cloud2{
+    width: 200px;
+    position: relative;
+    top: 360px;
+}
+#cloud3{
+    width: 200px;
+    position: relative;
+    top: 200px;
+}
+
+#cloud4{
+    width: 200px;
+    position: relative;
+    top: 600px;
+}
+#cloud5{
+    width: 200px;
+    position: relative;
+    top: 700px;
+}
+#cloud6{
+    width: 200px;
+    position: relative;
+    top: 100px;
+}
+#cloud7{
+    width: 200px;
+    position: relative;
+    top: 460px;
+}
+
+#cloud8{
+    width: 200px;
+    position: relative;
+    top: 260px;
+}
+
+#continuebtn{
+    font-family: "press start 2p";
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    background-color:rgb(0, 190, 0);
+    border: 2px solid white;
+}
+

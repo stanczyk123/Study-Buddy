@@ -1,0 +1,214 @@
+const chemistryTrueFalseQuiz = [
+  {
+    question: "Water (H₂O) is a compound.",
+    answer: true
+  },
+  {
+    question: "Atoms of the same element can have different numbers of neutrons.",
+    answer: true
+  },
+  {
+    question: "The atomic number represents the number of neutrons.",
+    answer: false
+  },
+  {
+    question: "Acids turn blue litmus paper red.",
+    answer: true
+  },
+  {
+    question: "NaCl is a molecular compound.",
+    answer: false
+  },
+  {
+    question: "The pH of pure water is 7.",
+    answer: true
+  },
+  {
+    question: "A catalyst increases the activation energy of a reaction.",
+    answer: false
+  },
+  {
+    question: "CO₂ is a greenhouse gas.",
+    answer: true
+  },
+  {
+    question: "All metals are good conductors of electricity.",
+    answer: true
+  },
+  {
+    question: "In a redox reaction, both reduction and oxidation occur.",
+    answer: true
+  },
+  {
+    question: "Hydrogen is a noble gas.",
+    answer: false
+  },
+  {
+    question: "The formula for sulfuric acid is H₂SO₄.",
+    answer: true
+  },
+  {
+    question: "Ionic bonds are formed between nonmetals only.",
+    answer: false
+  },
+  {
+    question: "Evaporation is a chemical change.",
+    answer: false
+  },
+  {
+    question: "The molar mass of oxygen (O₂) is 32 g/mol.",
+    answer: true
+  },
+  {
+    question: "Sodium reacts violently with water.",
+    answer: true
+  },
+  {
+    question: "Distillation separates substances based on boiling point.",
+    answer: true
+  },
+  {
+    question: "Aluminum is a non-metal.",
+    answer: false
+  },
+  {
+    question: "All organic compounds contain carbon.",
+    answer: true
+  },
+  {
+    question: "The nucleus of an atom contains protons and electrons.",
+    answer: false
+  },
+  {
+    question: "A base has a pH lower than 7.",
+    answer: false
+  },
+  {
+    question: "The atomic mass is the sum of protons and neutrons.",
+    answer: true
+  },
+  {
+    question: "Oxygen supports combustion.",
+    answer: true
+  },
+  {
+    question: "HCl is a weak acid.",
+    answer: false
+  },
+  {
+    question: "The chemical symbol for potassium is P.",
+    answer: false
+  },
+  {
+    question: "Electrons have a negative charge.",
+    answer: true
+  },
+  {
+    question: "Halogens are found in group 17 of the periodic table.",
+    answer: true
+  },
+  {
+    question: "Catalysts are used up during chemical reactions.",
+    answer: false
+  },
+  {
+    question: "Covalent bonds involve the sharing of electrons.",
+    answer: true
+  },
+  {
+    question: "Acetic acid is found in vinegar.",
+    answer: true
+  },
+  {
+    question: "H₂O is an example of an ionic compound.",
+    answer: false
+  },
+  {
+    question: "The periodic table is arranged by atomic mass.",
+    answer: false
+  },
+  {
+    question: "Endothermic reactions absorb heat.",
+    answer: true
+  },
+  {
+    question: "Boiling is an example of a physical change.",
+    answer: true
+  },
+  {
+    question: "Gold is more reactive than potassium.",
+    answer: false
+  },
+  {
+    question: "The chemical formula for ammonia is NH₃.",
+    answer: true
+  },
+  {
+    question: "NaOH is a base.",
+    answer: true
+  },
+  {
+    question: "CH₄ is an alkane.",
+    answer: true
+  },
+  {
+    question: "Electronegativity increases down a group.",
+    answer: false
+  },
+  {
+    question: "Iron (Fe) rusts in the presence of oxygen and water.",
+    answer: true
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = chemistryTrueFalseQuiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    // Clear selected radio buttons
+    const radios = document.querySelectorAll('input[name="answer"]');
+    radios.forEach(radio => radio.checked = false);
+}
+
+function submitAnswer() {
+    const selectedRadio = document.querySelector('input[name="answer"]:checked');
+    const feedbackDiv = document.getElementById("result");
+    feedbackDiv.style.display = "block";
+
+    if (!selectedRadio) {
+        alert("Please select True or False.");
+        return;
+    }
+
+    const selectedValue = selectedRadio.value === "true";
+    const correctAnswer = chemistryTrueFalseQuiz[currentQuestion].answer;
+
+    if (selectedValue === correctAnswer) {
+        score++;
+        feedbackDiv.innerHTML = `<p style="color: green;">✅ Correct!</p>`;
+    } else {
+        feedbackDiv.innerHTML = `<p style="color: red;">❌ Wrong!<br>The correct answer is: <strong>${correctAnswer ? "True" : "False"}</strong></p>`;
+    }
+
+    setTimeout(() => {
+        feedbackDiv.style.display = "none";
+        currentQuestion++;
+        if (currentQuestion < chemistryTrueFalseQuiz.length) {
+            showQuestion();
+        } else {
+            showFinalResult();
+        }
+    }, 1500);
+}
+
+function showFinalResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = `<h2>You got ${score} out of ${chemistryTrueFalseQuiz.length} questions right!</h2>`;
+}
+
+window.onload = showQuestion;

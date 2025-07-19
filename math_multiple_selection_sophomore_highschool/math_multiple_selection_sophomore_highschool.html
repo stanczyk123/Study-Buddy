@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Multiple Select Sophomore Highschool</title>
+    <link rel="stylesheet" href="math_multiple_selection_sophomore_highschool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+    <div id="question-container">
+        <h3 id="question"></h3>  
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h5 id="right-or-wrong"></h5>
+    </div>
+
+
+    
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+    
+
+    <script src="/math_multiple_selection_sophomore_highschool/math_multiple_selection_sophomore_highschool.js"></script>
+
+    <script>
+        const quiz = [
+  {
+    question: "Which of the following are prime numbers?",
+    options: ["2", "4", "5", "9"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which expressions are equivalent to (a + b)²?",
+    options: ["a² + 2ab + b²", "a² + b²", "a² - 2ab + b²", "(a + b)(a + b)"],
+    correctAnswers: [0, 3]
+  },
+  {
+    question: "Which of the following are linear equations?",
+    options: ["y = 2x + 3", "x² + y = 1", "y = 7", "3x - 2y = 6"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of these are properties of parallelograms?",
+    options: ["Opposite sides are equal", "Diagonals bisect each other", "All angles are right angles", "Opposite angles are equal"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which formulas are used to calculate the area of a triangle?",
+    options: ["1/2 × base × height", "base × height", "1/2 × a × b × sin(C)", "a² + b² = c²"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which numbers are irrational?",
+    options: ["√2", "π", "1.5", "3"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are factor pairs of 36?",
+    options: ["1 and 36", "6 and 6", "4 and 9", "2 and 20"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which functions represent quadratic equations?",
+    options: ["y = x²", "y = 2x + 1", "y = x² + 3x + 2", "y = √x"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of these are types of angles?",
+    options: ["Acute", "Reflex", "Obtuse", "Curved"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following represent geometric sequences?",
+    options: ["2, 4, 8, 16", "5, 10, 15, 20", "1, 3, 9, 27", "100, 90, 80, 70"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which are valid identities of trigonometric functions?",
+    options: ["sin²x + cos²x = 1", "1 + tan²x = sec²x", "cosx = 1/sinx", "tanx = sinx/cosx"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are properties of real numbers?",
+    options: ["Commutative property", "Distributive property", "Associative property", "Cumulative property"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are perfect squares?",
+    options: ["4", "16", "18", "36"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following sets are finite?",
+    options: ["Set of prime numbers", "Set of letters in the alphabet", "Set of whole numbers less than 100", "Set of even numbers"],
+    correctAnswers: [1, 2]
+  },
+  {
+    question: "Which of the following can be graphed as a straight line?",
+    options: ["y = 3x + 1", "y = x²", "y = 5", "y = √x"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which statements are true about a circle?",
+    options: ["All radii are equal", "The diameter is twice the radius", "The center lies on the circle", "The area is πr²"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are types of quadrilaterals?",
+    options: ["Square", "Triangle", "Rhombus", "Trapezium"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which are solutions of the equation x² - 9 = 0?",
+    options: ["x = 3", "x = -3", "x = 9", "x = 0"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following have slopes?",
+    options: ["A vertical line", "A horizontal line", "y = 3x - 5", "A point"],
+    correctAnswers: [1, 2]
+  },
+  {
+    question: "Which of these are measures of central tendency?",
+    options: ["Mean", "Median", "Range", "Mode"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are rational numbers?",
+    options: ["3/4", "0.25", "√2", "π"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which shapes have rotational symmetry?",
+    options: ["Circle", "Equilateral triangle", "Rectangle", "Irregular polygon"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are types of transformations?",
+    options: ["Translation", "Reflection", "Expansion", "Rotation"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following statements are true?",
+    options: ["Multiplying any number by 0 gives 0", "Adding 0 changes the value", "Dividing by 0 is undefined", "Subtracting 0 keeps the value the same"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of these have an infinite number of terms?",
+    options: ["Arithmetic sequence", "Geometric sequence", "Finite series", "Natural numbers"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these equations are identities?",
+    options: ["x + x = 2x", "x² = x", "a + b = b + a", "x - x = 0"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of these have only one solution?",
+    options: ["Linear equations", "Quadratic equations", "Equations with same terms on both sides", "Equations with no variables"],
+    correctAnswers: [0, 3]
+  },
+  {
+    question: "Which are composite numbers?",
+    options: ["4", "6", "9", "11"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are properties of similar triangles?",
+    options: ["Corresponding angles are equal", "Corresponding sides are equal", "Ratio of sides is the same", "Area is the same"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which formulas represent the Pythagorean Theorem?",
+    options: ["a² + b² = c²", "c² = a² + b²", "a² = b² + c²", "b² = a² + c²"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which operations are used in solving equations?",
+    options: ["Addition", "Multiplication", "Subtraction", "Exponentiation"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these values are solutions to the inequality x > 5?",
+    options: ["4", "6", "5", "7"],
+    correctAnswers: [1, 3]
+  },
+  {
+    question: "Which of the following are correct representations of 1/2?",
+    options: ["0.5", "2/4", "50%", "1.2"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following have a constant rate of change?",
+    options: ["y = 3x", "y = x²", "y = 5x - 2", "y = √x"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of these are methods of solving quadratic equations?",
+    options: ["Factoring", "Completing the square", "Using Pythagoras", "Quadratic formula"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are always even?",
+    options: ["2n where n is an integer", "n² where n is even", "n + 1 where n is even", "n - 2 where n is even"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are valid examples of proportions?",
+    options: ["2:4 = 1:2", "3:6 = 2:4", "5:10 = 1:2", "8:4 = 4:2"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which formulas are used to calculate the volume of 3D shapes?",
+    options: ["πr²h for cylinder", "1/3 × base area × height for cone", "length × width × height for cuboid", "πr² for sphere"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following describe probability values?",
+    options: ["Always between 0 and 1", "Cannot be negative", "Can be more than 1", "Can be a fraction"],
+    correctAnswers: [0, 1, 3]
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;
+    </script>
+</body>
+</html>

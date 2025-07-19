@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Multiple Choice Sophomore Highschool</title>
+    <link rel="stylesheet" href="physics_multiple_choice_sophomore_highschool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+    
+    <div id="question-container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h4 id="right-or-wrong"></h4>
+    </div>
+
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+
+
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+    
+
+    <script src="physics_multiple_choice_sophomore_highschool.js"></script>
+
+    <script>
+        const quiz = [
+  {
+    question: "Which of the following is a vector quantity?",
+    options: ["Mass", "Speed", "Temperature", "Velocity"],
+    answer: 3
+  },
+  {
+    question: "What is the unit of force in the SI system?",
+    options: ["Joule", "Pascal", "Newton", "Watt"],
+    answer: 2
+  },
+  {
+    question: "What is the acceleration due to gravity on Earth?",
+    options: ["10 m/s²", "9.8 m/s²", "8.9 m/s²", "9.2 m/s²"],
+    answer: 1
+  },
+  {
+    question: "Which law explains the relationship between force, mass, and acceleration?",
+    options: ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Law of Gravitation"],
+    answer: 1
+  },
+  {
+    question: "Work is equal to...",
+    options: ["Force × Distance", "Mass × Acceleration", "Power × Time", "Energy × Distance"],
+    answer: 0
+  },
+  {
+    question: "Kinetic energy depends on...",
+    options: ["Mass only", "Velocity only", "Mass and velocity", "Force and time"],
+    answer: 2
+  },
+  {
+    question: "The unit of power is...",
+    options: ["Newton", "Joule", "Watt", "Pascal"],
+    answer: 2
+  },
+  {
+    question: "Which of these is a renewable energy source?",
+    options: ["Coal", "Petroleum", "Solar", "Natural Gas"],
+    answer: 2
+  },
+  {
+    question: "Hooke's Law relates to...",
+    options: ["Gravity", "Motion", "Elasticity", "Magnetism"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is not a form of energy?",
+    options: ["Kinetic", "Potential", "Thermal", "Density"],
+    answer: 3
+  },
+  {
+    question: "The rate of change of velocity is called...",
+    options: ["Speed", "Acceleration", "Displacement", "Momentum"],
+    answer: 1
+  },
+  {
+    question: "What is the SI unit of pressure?",
+    options: ["Bar", "Pascal", "Torr", "Atm"],
+    answer: 1
+  },
+  {
+    question: "What is the speed of light in a vacuum?",
+    options: ["3 × 10⁸ m/s", "3 × 10⁶ m/s", "1.5 × 10⁸ m/s", "1.5 × 10⁶ m/s"],
+    answer: 0
+  },
+  {
+    question: "Which law explains the conservation of momentum?",
+    options: ["Newton's First Law", "Law of Conservation of Energy", "Law of Conservation of Momentum", "Ohm's Law"],
+    answer: 2
+  },
+  {
+    question: "A simple machine that consists of a wheel with a rope is a...",
+    options: ["Lever", "Pulley", "Inclined plane", "Screw"],
+    answer: 1
+  },
+  {
+    question: "The frequency of a wave is measured in...",
+    options: ["Hertz", "Meter", "Newton", "Joule"],
+    answer: 0
+  },
+  {
+    question: "Which color of light has the shortest wavelength?",
+    options: ["Red", "Green", "Blue", "Violet"],
+    answer: 3
+  },
+  {
+    question: "What type of lens is used to correct nearsightedness?",
+    options: ["Convex", "Concave", "Plane", "None"],
+    answer: 1
+  },
+  {
+    question: "Which instrument measures electric current?",
+    options: ["Voltmeter", "Ammeter", "Ohmmeter", "Barometer"],
+    answer: 1
+  },
+  {
+    question: "The resistance of a conductor depends on...",
+    options: ["Voltage", "Current", "Material and length", "Capacitance"],
+    answer: 2
+  },
+  {
+    question: "An electric circuit that has only one path is a...",
+    options: ["Series circuit", "Parallel circuit", "Open circuit", "Closed circuit"],
+    answer: 0
+  },
+  {
+    question: "What happens to current if resistance increases in a circuit with constant voltage?",
+    options: ["Increases", "Decreases", "Stays the same", "Becomes zero"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a conductor?",
+    options: ["Rubber", "Wood", "Glass", "Copper"],
+    answer: 3
+  },
+  {
+    question: "Which force keeps the planets in orbit around the sun?",
+    options: ["Magnetic force", "Electrostatic force", "Gravitational force", "Nuclear force"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is used to measure temperature?",
+    options: ["Barometer", "Thermometer", "Voltmeter", "Galvanometer"],
+    answer: 1
+  },
+  {
+    question: "What is the boiling point of water in Celsius?",
+    options: ["90°C", "100°C", "110°C", "120°C"],
+    answer: 1
+  },
+  {
+    question: "Which phenomenon explains the rainbow?",
+    options: ["Reflection", "Refraction", "Diffraction", "Dispersion"],
+    answer: 3
+  },
+  {
+    question: "Sound waves travel fastest in...",
+    options: ["Air", "Water", "Steel", "Vacuum"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a scalar quantity?",
+    options: ["Displacement", "Velocity", "Speed", "Acceleration"],
+    answer: 2
+  },
+  {
+    question: "Which principle explains how airplanes fly?",
+    options: ["Newton's Third Law", "Pascal's Principle", "Bernoulli's Principle", "Archimedes’ Principle"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is an example of Newton's Third Law?",
+    options: ["Car accelerating", "Ball falling", "Rocket launching", "Book resting on table"],
+    answer: 2
+  },
+  {
+    question: "What is measured in Coulombs?",
+    options: ["Voltage", "Resistance", "Charge", "Current"],
+    answer: 2
+  },
+  {
+    question: "Electric power is calculated by...",
+    options: ["P = I²/R", "P = V/I", "P = V × I", "P = V²/I"],
+    answer: 2
+  },
+  {
+    question: "The bending of light when it passes from one medium to another is called...",
+    options: ["Reflection", "Refraction", "Diffraction", "Scattering"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is NOT a type of heat transfer?",
+    options: ["Conduction", "Convection", "Radiation", "Compression"],
+    answer: 3
+  },
+  {
+    question: "Which of the following devices converts chemical energy to electrical energy?",
+    options: ["Bulb", "Battery", "Fan", "Transformer"],
+    answer: 1
+  },
+  {
+    question: "Which of these is an example of work being done?",
+    options: ["Holding a bag", "Standing still", "Pushing a box", "Sitting on a chair"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is measured in joules?",
+    options: ["Force", "Pressure", "Energy", "Acceleration"],
+    answer: 2
+  },
+  {
+    question: "Which is the correct unit for momentum?",
+    options: ["kg·m/s", "N·m", "m/s²", "kg/m³"],
+    answer: 0
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;
+
+    </script>
+</body>
+</html>

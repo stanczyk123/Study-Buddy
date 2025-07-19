@@ -1,0 +1,541 @@
+body{
+    background-color: rgb(24, 24, 24);
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+header{
+    background-color: rgb(18, 18, 18);
+    width: auto;
+    height: 100px;
+    border-radius: 12px;
+}
+
+#studybuddy{
+    width: 100px;
+}
+
+#studybuddyimg{
+    width: 60px;
+}
+
+#studybuddyText{
+    position: relative;
+    top: -80px;
+    left: 60px;
+    color: white;
+    font-family: "press start 2p";
+}
+
+.headerbtn{
+    margin: auto;
+    margin-top: -10px;
+    margin-left: 20px;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    background-color:rgb(18, 18, 18);
+    border: none;
+    font-size: larger;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.homeworkbtn{
+    position: relative;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.shopbtn{
+     position: relative;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.headerbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+
+}
+
+.homeworkbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.homeworkbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+}
+
+.shopbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;  
+}
+
+.shopbtn:hover{
+    background-color:rgb(35, 35, 35) ;    
+}
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+    bottom: 80px;
+}
+
+.dropdown button{
+    background-color:rgb(18, 18, 18);
+    color: white;
+    border: none;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown a{
+    display: block;
+    color:rgb(255, 255, 255)  ;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.dropdown .content{
+    display: none;
+    background-color: white;
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.dropdown :hover .content{
+    display: block;
+}
+
+.dropdown:hover{
+    color: black;
+}
+
+
+#coins{
+    width: 85px;
+    height: 30px;
+    border: 2px rgb(154, 154, 154) solid;
+    border-radius: 10px;
+    right: 30px;
+    position: fixed;
+    top: 60px;
+}
+
+#coinsimg{
+    width: 30px;
+}
+
+#coinsamount{
+    color: white;
+    position:relative ;
+    bottom: 49px;
+    left:30px;
+    font-family: "press start 2p";
+}
+
+
+#profilename{
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+#profileContainer{
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+
+}
+
+#profilepic{
+    width: 40px;
+    border-radius: 70px;
+    margin: 0;
+}
+
+
+#pastpapper{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    top: 150px;
+    right: 250px;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    color: white;
+}
+
+#pastpapperText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top:-3px;
+}
+
+#pastpapperdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -85px;
+    font-size: medium;    
+}
+
+a, a * {
+    text-decoration: none;
+    color: white;
+}
+
+#notes{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    left: 250px;
+    top: 7px;
+}
+
+#notesText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-left: 30px;    
+}
+
+#notesdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -70px;
+    font-size: medium;
+}
+
+#quiz{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    left: 250px;
+    top: 100px;
+}
+
+#quizText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;     
+}
+
+#quizdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -50px;
+    font-size: medium;    
+}
+
+#timer{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    margin-right: 910px;
+    top: -44px;
+}
+
+#timerText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    
+}
+
+#timerdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -70px;
+    font-size: medium;
+}
+
+#quests{
+    width: 100px;
+    margin-top: 100px;
+    border: 2px solid black;
+    border-radius:10px ;
+}
+
+#profilepic{
+    width: 40px;
+    border-radius: 70px;
+    margin-left: 1450px;
+    position: relative;
+    top: -180px;
+}
+
+#quest-notification{
+    color: black;
+    margin-left: 1260px;
+    position: relative;
+    bottom: 100px;
+    font-family: "press start 2p";
+    width: 400px;
+    border: 2px solid black;
+    height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    display: none;
+}
+
+#gotoquestsbtn{
+    color: white;
+    margin-left: 300px;
+    background-color:rgb(24, 24, 24) ;
+    border: 1px solid white;
+    border-radius: 10px;
+    position:relative ;
+    top: 20px;
+    cursor: pointer;
+}
+
+#notestitle{
+    margin-top: 80px;
+    color: white;
+    font-family: "press start 2p";
+}
+
+#divsavetitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#savecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 250px;
+}
+
+a, a * {
+    text-decoration: none;
+    color: white;
+}
+
+#saveyournotes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    font-family: "press start 2p";
+    color: white;
+    margin-top: 80px;
+}
+
+#titledesc{
+    font-family: "press start 2p";
+    color: white;
+       
+}
+
+#notesrow{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 250px;
+}
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    width: 800px;
+    border-radius: 20px;
+}
+
+.custom-file-button{
+    background-color: rgb(3, 63, 166);
+    font-family: "press start 2p";
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.custom-file-button:hover{
+    background-color: rgb(2, 95, 255);
+    
+}
+
+.saveFile{
+    background-color: rgb(0, 104, 0);
+    font-family: "press start 2p";
+    width: 200px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.saveFile:hover{
+    background-color: rgb(0, 201, 0);    
+    border: 2px solid white;
+}
+
+.file-name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  color: #ccc;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#fileList{
+    width: 600px;
+    
+}
+
+.deleteFile{
+    font-family: "press start 2p";
+    background-color: rgb(164, 0, 0);
+    border-radius: 15px;
+    margin-top: 30px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.deleteFile:hover{
+    background-color: red;
+}
+
+
+
+
+.notes, #fileList0,#fileList1, #fileList2,#fileList3,#fileList4,#fileList5, #fileList6,#fileList7,#fileList8,#fileList9, #fileList10,#fileList11,#fileList12,#fileList13, #fileList14,#fileList15,#fileList16,#fileList17, #fileList18,#fileList19,#fileList20,#fileList21, #fileList22,#fileList23,#fileList24,#fileList25, #fileList26,#fileList27,#fileList28,#fileList29, #fileList30,#fileList31,#fileList32,#fileList33, #fileList34,#fileList35,#fileList36,#fileList37, #fileList38,#fileList39 {
+  width: 600px;
+  max-width: 600px;
+  position: relative;
+  right: 3px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "press start 2p";
+}
+
+#savetitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "press start 2p";
+    color: white;
+}
+
+.file-name {
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  margin: 10px 0;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+
+.file-name-input {
+  font-family: 'Press Start 2P', monospace;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 6px;
+  width: 90%;
+  margin: 8px 0;
+  text-align: center;
+}

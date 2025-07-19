@@ -1,0 +1,271 @@
+const quiz = [
+  {
+    question: "Which of the following are scalar quantities?",
+    options: ["Speed", "Distance", "Displacement", "Velocity"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are vector quantities?",
+    options: ["Acceleration", "Force", "Mass", "Time"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which factors affect gravitational potential energy?",
+    options: ["Mass", "Height", "Velocity", "Gravitational acceleration"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following quantities have units of Newton?",
+    options: ["Force", "Weight", "Pressure", "Energy"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which are forms of energy?",
+    options: ["Kinetic energy", "Potential energy", "Friction", "Thermal energy"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following can be considered simple machines?",
+    options: ["Lever", "Pulley", "Wheel and axle", "Spring"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are effects of force?",
+    options: ["Change in motion", "Change in shape", "Change in mass", "Change in direction"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these quantities are conserved in an isolated system?",
+    options: ["Energy", "Momentum", "Force", "Velocity"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are units of power?",
+    options: ["Watt", "Kilowatt", "Joule/second", "Newton-meter"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of renewable energy sources?",
+    options: ["Solar energy", "Wind energy", "Fossil fuel", "Hydroelectric energy"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following affect the speed of sound in a medium?",
+    options: ["Temperature", "Density", "Pressure", "Medium type"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are true for light waves?",
+    options: ["They can travel in vacuum", "They are transverse waves", "They need a medium", "They have constant speed in all media"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following phenomena involve light refraction?",
+    options: ["Rainbow", "Mirage", "Shadow", "Lens focusing"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are examples of reflection?",
+    options: ["Echo", "Mirror image", "Refraction", "Shadow"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which devices are used to measure electric current?",
+    options: ["Ammeter", "Voltmeter", "Galvanometer", "Wattmeter"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are conductors?",
+    options: ["Copper", "Aluminum", "Glass", "Rubber"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these materials are insulators?",
+    options: ["Rubber", "Plastic", "Wood", "Silver"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following obey Ohm's Law?",
+    options: ["Resistor", "Copper wire", "Filament bulb", "Diode"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these are electromagnetic waves?",
+    options: ["Radio waves", "X-rays", "Sound waves", "Microwaves"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are types of mirrors?",
+    options: ["Concave", "Convex", "Plane", "Transparent"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following factors affect resistance of a wire?",
+    options: ["Length", "Cross-sectional area", "Material", "Color"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are effects of heat?",
+    options: ["Expansion", "Change of state", "Electric shock", "Temperature increase"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are forms of heat transfer?",
+    options: ["Conduction", "Convection", "Radiation", "Refraction"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which quantities are measured in meters?",
+    options: ["Length", "Height", "Speed", "Distance"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following affect pressure in a fluid?",
+    options: ["Depth", "Density", "Gravity", "Volume of container"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following instruments are used to measure temperature?",
+    options: ["Thermometer", "Manometer", "Thermocouple", "Barometer"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are base units in SI?",
+    options: ["Meter", "Second", "Kilogram", "Newton"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which quantities are derived from base SI units?",
+    options: ["Velocity", "Acceleration", "Mass", "Force"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following can cause a change in motion?",
+    options: ["Friction", "Gravity", "Inertia", "Applied force"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following forces are contact forces?",
+    options: ["Friction", "Tension", "Magnetism", "Normal force"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which laws are related to motion?",
+    options: ["Newton’s Laws", "Archimedes’ Law", "Pascal’s Law", "Boyle’s Law"],
+    correctAnswers: [0]
+  },
+  {
+    question: "Which of these are safety devices using electricity?",
+    options: ["Fuse", "Circuit breaker", "Transformer", "Relay"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following can cause refraction of light?",
+    options: ["Water", "Glass", "Mirror", "Air"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which instruments use lenses?",
+    options: ["Telescope", "Microscope", "Periscope", "Thermometer"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are units of force?",
+    options: ["Newton", "Dyne", "Pascal", "Joule"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are examples of electromagnetic radiation?",
+    options: ["Infrared", "Visible light", "Ultraviolet", "Sound"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are sources of sound?",
+    options: ["Vibrating string", "Buzzer", "Flashlight", "Drum"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following describe elastic potential energy?",
+    options: ["Stored in stretched spring", "Depends on deformation", "Kinetic energy", "Stored in compressed object"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are valid units of energy?",
+    options: ["Joule", "Calorie", "Watt", "Kilowatt-hour"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following cause magnetic fields?",
+    options: ["Moving charges", "Current", "Static charges", "Magnets"],
+    correctAnswers: [0, 1, 3]
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;

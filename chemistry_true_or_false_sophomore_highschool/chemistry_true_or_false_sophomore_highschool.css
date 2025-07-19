@@ -1,0 +1,164 @@
+body{
+    background-color:rgba(93, 189, 245, 0.877) ;
+}
+
+#question-container{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#question{
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 100px;
+    font-size: x-large;
+}
+
+
+label {
+    font-family: 'Press Start 2P', cursive;
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+input[type="radio"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+    accent-color: #00ffcc;
+}
+
+#falsebtn{
+    position: relative;
+    left: 630px;
+    border: 3px solid black;
+    width: 140px;
+    border-radius: 10px;
+    background-color: red;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#truebtn{
+    position: relative;
+    left: 830px;
+    bottom: 125px;
+    border: 3px black solid;
+    width: 140px;
+    border-radius: 10px;
+    background-color: green;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#falseText{
+    margin-top: 30px;
+}
+
+#trueText{
+    margin-top: 30px;
+}
+
+#submitbtn{
+    margin-top: 160px;
+    margin-left: 1400px;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    font-family: "press start 2p";
+    cursor: pointer;
+    font-size: larger;
+    background-color: rgb(32, 140, 218);
+    color: white;
+}
+
+#submitbtn:hover{
+    background-color:rgb(28, 110, 168);
+}
+
+#homebtn{
+    position: relative;
+    bottom: 60px;
+    right: 700px;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    font-family: "press start 2p";
+    cursor: pointer;
+    font-size: larger;
+    background-color: rgb(32, 140, 218);
+    color: white;   
+}
+
+#homebtn:hover{
+    background-color: rgb(22, 101, 158);
+}
+
+#cloud1{
+    width: 200px;
+    position: relative;
+    bottom: 400px;
+}
+#cloud2{
+    width: 200px;
+    position: relative;
+    bottom: 600px;
+}
+#cloud3{
+    width: 200px;
+    position: relative;
+    bottom: 360px;
+}
+
+#cloud4{
+    width: 200px;
+    position: relative;
+    bottom: 920px;
+}
+#cloud5{
+    width: 200px;
+    position: relative;
+    bottom: 400px;
+}
+#cloud6{
+    width: 200px;
+    position: relative;
+    bottom: 600px;
+}
+#cloud7{
+    width: 200px;
+    position: relative;
+    bottom: 760px;
+}
+
+#cloud8{
+    width: 200px;
+    position: relative;
+    bottom: 460px;
+}
+
+#result{
+    color: white;
+    font-family: "press start 2p";
+}
+
+#finalresult{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 300px;
+}
+
+#result p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    bottom: 400px;
+}

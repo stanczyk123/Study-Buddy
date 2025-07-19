@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study-Buddy/Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/logo.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/coin.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/profile_pic_deffault.png" type="image/png">
+
+</head>
+<header>
+    
+    <div id="studybuddy" onclick="main()">
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html">
+            <img src="https://stanczyk123.github.io/Study-Buddy//favicons/logo.png" id="studybuddyimg">
+            <h2 id="studybuddyText">Study Buddy</h2>
+        </a>
+        
+    </div>
+
+
+
+    <div id="coins">
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/coin.png" id="coinsimg">
+        <h4 id="coinsamount">0</h4>
+    </div>
+
+    <a id="profilename"></a>
+</header>
+<body>
+    <img src="https://stanczyk123.github.io/Study-Buddy//favicons/profile_pic_deffault.png" id="profilepic">
+    <h2 id="profilename"></h2>
+    <a href="https://stanczyk123.github.io/Study-Buddy//sign_up/sign_up.html">
+        <button id="personalbtn">Sign Up</button>
+    </a>
+
+    <h1 id="history">Study History</h1>
+
+    <div id="studyhistory">
+        <div id="dailystudytime">
+            <h3 id="dailystudytimeText">Daily study time:</h3>
+            <h4 id="dailystudytimeNum"></h4>
+        </div>
+
+        <div id="weeklystudytime">
+            <h3>Weekly study time:</h3>
+            <h4 id="weeklystudytimeNum"></h4>
+        </div> 
+
+        <div id="monthlystudytime">
+            <h3>Monthly study time:</h3>
+            <h4 id="monthlystudytimeNum"></h4>
+        </div>
+
+        <div id="yearlystudytime">
+            <h3>Yearly study time:</h3>
+            <h4 id="yearlystudytimeNum"></h4>
+        </div>
+
+        <div id="totalstudytime">
+            <h3>Total study time:</h3>
+            <h4 id="totalstudytimeNum"></h4>
+        </div>
+    </div>
+
+    
+    </div>
+    <script src="/sign_up/sign_up.js"></script>
+    <script src="/quests/quests.js"></script>
+    <script>
+        const username = localStorage.getItem("username");
+        const password = localStorage.getItem("password")
+
+        if (username) {
+        document.getElementById("profilename").textContent = username;
+        } else {
+         document.getElementById("profilename").textContent = "Guest";
+        }
+
+        if(password){
+            document.getElementById("passwordname").textContent = password;
+        } else{
+            document.getElementById("passwordname").textContent = "No password"
+        }
+        
+    </script>
+    <script src="/profile/profile.js"></script>
+</body>
+</html>

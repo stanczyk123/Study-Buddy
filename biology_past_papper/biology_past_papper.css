@@ -1,0 +1,1017 @@
+body{
+    background-color: rgb(24, 24, 24);
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+header{
+    background-color: rgb(18, 18, 18);
+    width: auto;
+    height: 100px;
+    border-radius: 12px;
+}
+
+#studybuddy{
+    width: 100px;
+}
+
+#studybuddyimg{
+    width: 60px;
+}
+
+#studybuddyText{
+    position: relative;
+    top: -80px;
+    left: 60px;
+    color: white;
+    font-family: "press start 2p";
+}
+
+.headerbtn{
+    margin: auto;
+    margin-top: -10px;
+    margin-left: 20px;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    background-color:rgb(18, 18, 18);
+    border: none;
+    font-size: larger;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.homeworkbtn{
+    position: relative;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.shopbtn{
+     position: relative;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.headerbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+
+}
+
+.homeworkbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.homeworkbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+}
+
+.shopbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;  
+}
+
+.shopbtn:hover{
+    background-color:rgb(35, 35, 35) ;    
+}
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+    bottom: 80px;
+}
+
+.dropdown button{
+    background-color:rgb(18, 18, 18);
+    color: white;
+    border: none;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown a{
+    display: block;
+    color:rgb(255, 255, 255)  ;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.dropdown .content{
+    display: none;
+    background-color: white;
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.dropdown :hover .content{
+    display: block;
+}
+
+.dropdown:hover{
+    color: black;
+}
+
+
+#coins{
+    width: 85px;
+    height: 30px;
+    border: 2px rgb(154, 154, 154) solid;
+    border-radius: 10px;
+    margin-left: 1580px;
+    position: relative;
+    bottom: 100px;
+}
+
+#coinsimg{
+    width: 30px;
+}
+
+#coinsamount{
+    color: white;
+    position:relative ;
+    bottom: 49px;
+    left:30px;
+    font-family: "press start 2p";
+}
+
+#profilename{
+    margin-left: 90%;
+    position: relative;
+    bottom: 226px;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#pastpapper{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    top: 150px;
+    right: 250px;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    color: white;
+}
+
+#pastpapperText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top:-3px;
+}
+
+#pastpapperdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -85px;
+    font-size: medium;    
+}
+
+a, a * {
+    text-decoration: none;
+    color: white;
+}
+
+#notes{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    left: 250px;
+    top: 7px;
+}
+
+#notesText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-left: 30px;    
+}
+
+#notesdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -70px;
+    font-size: medium;
+}
+
+#quiz{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    left: 250px;
+    top: 100px;
+}
+
+#quizText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;     
+}
+
+#quizdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -50px;
+    font-size: medium;    
+}
+
+#timer{
+    width: 320px;
+    height: 120px;
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+    text-decoration: none;
+    text-decoration-line: none;
+    margin-right: 910px;
+    top: -44px;
+}
+
+#timerText{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    
+}
+
+#timerdesc{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: none;
+    text-decoration-line: none;
+    margin-top: 60px;
+    position: relative;
+    left: -70px;
+    font-size: medium;
+}
+
+#quests{
+    width: 100px;
+    margin-top: 100px;
+    border: 2px solid black;
+    border-radius:10px ;
+}
+
+#profilepic{
+    width: 40px;
+    border-radius: 70px;
+    margin-left: 1450px;
+    position: relative;
+    top: -180px;
+}
+
+#quest-notification{
+    color: black;
+    margin-left: 1260px;
+    position: relative;
+    bottom: 100px;
+    font-family: "press start 2p";
+    width: 400px;
+    border: 2px solid black;
+    height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    display: none;
+}
+
+#gotoquestsbtn{
+    color: white;
+    margin-left: 300px;
+    background-color:rgb(24, 24, 24) ;
+    border: 1px solid white;
+    border-radius: 10px;
+    position:relative ;
+    top: 20px;
+    cursor: pointer;
+}
+
+#title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#savetitle{
+    font-family: "press start 2p";
+    color: white;
+}
+
+#imageInput1{
+    display: none;
+}
+
+#imageInput2{
+    display: none;
+}
+
+
+#imageInput3{
+    display: none;
+}
+
+
+.custom-file-button{
+    background-color: rgb(0, 108, 196);
+    font-family: "press start 2p";
+    border: 1px solid white;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.custom-file-button:hover{
+    background-color: rgb(0, 132, 240);
+    border: 2px solid white;
+}
+
+#display1{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+    position: absolute;
+    top: 110px;
+}
+
+#display1:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+#display2{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display2:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+#display3{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display3:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+#display4{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display4:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display5{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display5:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display6{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display6:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display7{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display7:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display8{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display8:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display9{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display9:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display10{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display10:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display11{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display11:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display12{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display12:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display13{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display13:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display14{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display14:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display15{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display15:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display16{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display16:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display17{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display17:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display18{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display18:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display19{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display19:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display20{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display20:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display21{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display21:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display22{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display22:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display23{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display23:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display24{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display24:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display25{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display25:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display26{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display26:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display27{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display27:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display28{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display28:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display29{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display29:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+#display30{
+    max-width: 300px;
+    display: none;
+    cursor: pointer;
+    transition: 2s ease;
+}
+
+#display30:hover{
+    opacity:.9; 
+    transform:scale(1.02); 
+    box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+
+
+#saveimgbtn1{
+    position: relative;
+    top: 490px;
+    background-color: rgb(1, 161, 1);
+    border: 1px solid white;
+    width: 200px;
+    font-family: "press start 2p";
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#saveimgbtn1:hover{
+    border: 3px solid white;
+}
+
+#saveimgbtn2{
+    position: relative;
+    top: 490px;
+    background-color: rgb(1, 161, 1);
+    border: 1px solid white;
+    width: 200px;
+    font-family: "press start 2p";
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#saveimgbtn2:hover{
+    border: 3px solid white;
+}
+
+#saveimgbtn3{
+    position: relative;
+    top: 490px;
+    background-color: rgb(1, 161, 1);
+    border: 1px solid white;
+    width: 200px;
+    font-family: "press start 2p";
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#saveimgbtn3:hover{
+    border: 3px solid white;
+}
+
+#loadsavebtn1{
+    position: relative;
+    top: 520px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    width: 230px;
+    font-family: "press start 2p";
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 2s ease;
+}
+    
+#loadsavebtn1:hover{
+    width: 250px;
+    height:35px ;
+}
+
+#loadsavebtn2{
+    position: relative;
+    top: 520px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    width: 230px;
+    font-family: "press start 2p";
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 2s ease;
+}
+    
+#loadsavebtn2:hover{
+    width: 250px;
+    height:35px ;
+}
+
+#loadsavebtn3{
+    position: relative;
+    top: 520px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    width: 230px;
+    font-family: "press start 2p";
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 2s ease;
+}
+    
+#loadsavebtn3:hover{
+    width: 250px;
+    height:35px ;
+}
+
+#deleteimgbtn1{
+    background-color: rgb(169, 4, 4);
+    font-family:"press start 2p";
+    color: black;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+#deleteimgbtn1:hover{
+    background-color: red;
+    border: 2px solid black;
+}
+
+#deleteimgbtn2{
+    background-color: rgb(169, 4, 4);
+    font-family:"press start 2p";
+    color: black;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+#deleteimgbtn2:hover{
+    background-color: red;
+    border: 2px solid black;
+}
+
+#deleteimgbtn3{
+    background-color: rgb(169, 4, 4);
+    font-family:"press start 2p";
+    color: black;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+
+#deleteimgbtn3:hover{
+    background-color: red;
+    border: 2px solid black;
+}
+
+#savecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 250px;
+}
+
+#saveimg1,
+#saveimg2,
+#saveimg3,
+#saveimg4,
+#saveimg5,
+#saveimg6,
+#saveimg7,
+#saveimg8,
+#saveimg9,
+#saveimg10,
+#saveimg11,
+#saveimg12,
+#saveimg13,
+#saveimg14,
+#saveimg15,
+#saveimg16,
+#saveimg17,
+#saveimg18,
+#saveimg19,
+#saveimg20,
+#saveimg21,
+#saveimg22,
+#saveimg23,
+#saveimg24,
+#saveimg25,
+#saveimg26,
+#saveimg27,
+#saveimg28,
+#saveimg29,
+#saveimg30{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; 
+  margin: 0;  
+  border: 1px solid rgb(104, 103, 103);  
+  height: 650px; 
+  width: 400px;
+  border-radius: 20px;      
+}
+
+
+#saveimg1 button,
+#saveimg2 button,
+#saveimg3 button,
+#saveimg4 button,
+#saveimg5 button,
+#saveimg6 button,
+#saveimg7 button,
+#saveimg8 button,
+#saveimg9, button
+#saveimg10 button,
+#savimg11 button,
+#saveimg12 button,
+#saveimg13 button,
+#saveimg14 button,
+#saveimg15 button,
+#saveimg16 button,
+#saveimg17 button,
+#saveimg18 button,
+#saveimg19 button,
+#saveimg20 button,
+#saveimg21 button,
+#saveimg22 button,
+#saveimg23 button,
+#savimg24 button,
+#saveimg25 button,
+#saveimg26 button,
+#saveimg27 button,
+#saveimg28 button,
+#saveimg29 button,
+#saveimg30 button {
+  z-index: 2;
+  position: relative;
+}
+.custom-file-button {
+  z-index: 2;
+  position: relative;
+  margin-top: 30px;
+}
+
+#pdfName1,#pdfName2,#pdfName3,#pdfName4,#pdfName5,#pdfName6,#pdfName7,#pdfName8,#pdfName9,#pdfName10,#pdfName11,#pdfName12,#pdfName13,#pdfName14,#pdfName15,#pdfName16,#pdfName17,#pdfName18,#pdfName19,#pdfName20,#pdfName21,#pdfName22,#pdfName23,#pdfName24,#pdfName25,#pdfName26,#pdfName27,#pdfName28,#pdfName29,#pdfName30{
+    color: white;
+    font-size: large;
+    font-family: "press start 2p";
+    display: none;
+}
+
+#pdfDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

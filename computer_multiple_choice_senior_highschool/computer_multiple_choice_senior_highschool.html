@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Multiple Choice Senior Highschool</title>
+    <link rel="stylesheet" href="computer_multiple_choice_senior_highschool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+    <div id="question-container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h4 id="right-or-wrong"></h4>
+    </div>
+
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+
+
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+        
+    <script src="/computer_multiple_choice_senior_highschool/computer_multiple_choice_senior_highschool.js"></script>
+
+    <script>
+        const quiz = [
+  {
+    question: "Which of the following is an input device?",
+    options: ["Monitor", "Keyboard", "Speaker", "Printer"],
+    answer: 1
+  },
+  {
+    question: "What does CPU stand for?",
+    options: ["Central Process Unit", "Computer Processing Unit", "Central Processing Unit", "Core Processing Utility"],
+    answer: 2
+  },
+  {
+    question: "Which of these is an example of software?",
+    options: ["Mouse", "Operating System", "Hard Disk", "Router"],
+    answer: 1
+  },
+  {
+    question: "Which type of memory is volatile?",
+    options: ["ROM", "SSD", "HDD", "RAM"],
+    answer: 3
+  },
+  {
+    question: "What is the binary equivalent of the decimal number 10?",
+    options: ["1010", "1100", "1001", "1110"],
+    answer: 0
+  },
+  {
+    question: "Which programming language is commonly taught in Indonesian high schools?",
+    options: ["Python", "Pascal", "JavaScript", "Ruby"],
+    answer: 1
+  },
+  {
+    question: "Which device connects a computer to a network?",
+    options: ["RAM", "Modem", "Mouse", "CPU"],
+    answer: 1
+  },
+  {
+    question: "What is the main function of an operating system?",
+    options: [
+      "To compile programs",
+      "To manage computer hardware and software resources",
+      "To browse the internet",
+      "To protect the computer from viruses"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is an input device?",
+    options: [
+      "Monitor",
+      "Speaker",
+      "Keyboard",
+      "Printer"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which programming language is mainly used for web development?",
+    options: [
+      "HTML",
+      "C++",
+      "Python",
+      "Java"
+    ],
+    answer: 0
+  },
+  {
+    question: "What does 'CPU' stand for?",
+    options: [
+      "Central Performance Unit",
+      "Central Processing Unit",
+      "Computer Power Unit",
+      "Control Processing Unit"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of these is a type of software?",
+    options: [
+      "RAM",
+      "SSD",
+      "Operating System",
+      "Mouse"
+    ],
+    answer: 2
+  },
+  {
+    question: "What does HTML stand for?",
+    options: [
+      "HyperText Markup Language",
+      "HyperTool Machine Language",
+      "HighText Machine Language",
+      "None of the above"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which device is used to store data permanently?",
+    options: [
+      "RAM",
+      "Cache",
+      "Hard Disk",
+      "Registers"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which number system is used by computers?",
+    options: [
+      "Decimal",
+      "Octal",
+      "Binary",
+      "Hexadecimal"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT an operating system?",
+    options: [
+      "Windows",
+      "Linux",
+      "Photoshop",
+      "macOS"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which protocol is used to transfer web pages?",
+    options: [
+      "FTP",
+      "HTTP",
+      "SMTP",
+      "IP"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which is a programming language?",
+    options: [
+      "Excel",
+      "Windows",
+      "Python",
+      "Photoshop"
+    ],
+    answer: 2
+  },
+  {
+    question: "In a flowchart, what symbol represents a decision?",
+    options: [
+      "Rectangle",
+      "Oval",
+      "Diamond",
+      "Parallelogram"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which part of a computer performs arithmetic operations?",
+    options: [
+      "ALU",
+      "RAM",
+      "ROM",
+      "Monitor"
+    ],
+    answer: 0
+  },
+  {
+    question: "What is the purpose of antivirus software?",
+    options: [
+      "Speed up the internet",
+      "Create spreadsheets",
+      "Protect against malware",
+      "Install hardware"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following is an example of application software?",
+    options: [
+      "Windows 10",
+      "MS Word",
+      "Linux",
+      "BIOS"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of these is a search engine?",
+    options: [
+      "Chrome",
+      "Google",
+      "Facebook",
+      "WhatsApp"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which key is used to refresh a web page?",
+    options: [
+      "F2",
+      "F5",
+      "F8",
+      "F12"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which language is used to style web pages?",
+    options: [
+      "HTML",
+      "CSS",
+      "Python",
+      "Java"
+    ],
+    answer: 1
+  },
+  {
+    question: "What does URL stand for?",
+    options: [
+      "Uniform Resource Locator",
+      "User Resource Link",
+      "Universal Reference Location",
+      "Unified Reference Language"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which of the following is a programming paradigm?",
+    options: [
+      "Functional",
+      "Object-Oriented",
+      "Procedural",
+      "All of the above"
+    ],
+    answer: 3
+  },
+  {
+    question: "What is the function of a router?",
+    options: [
+      "Store files",
+      "Display web pages",
+      "Connect networks",
+      "Compile programs"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of these is an example of an email protocol?",
+    options: [
+      "FTP",
+      "SMTP",
+      "IP",
+      "DNS"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the brain of the computer?",
+    options: [
+      "RAM",
+      "Motherboard",
+      "CPU",
+      "Monitor"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following stores data temporarily?",
+    options: [
+      "ROM",
+      "SSD",
+      "RAM",
+      "HDD"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of these is NOT a programming language?",
+    options: [
+      "C++",
+      "Java",
+      "Linux",
+      "Python"
+    ],
+    answer: 2
+  },
+  {
+    question: "What type of device is a scanner?",
+    options: [
+      "Output device",
+      "Input device",
+      "Storage device",
+      "Processing device"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of these is a high-level programming language?",
+    options: [
+      "Assembly",
+      "Machine code",
+      "Python",
+      "Binary"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which part of the CPU carries out instructions?",
+    options: [
+      "ALU",
+      "Control Unit",
+      "RAM",
+      "Cache"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which language is used to create database queries?",
+    options: [
+      "HTML",
+      "SQL",
+      "CSS",
+      "XML"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which one is NOT a type of computer network?",
+    options: [
+      "LAN",
+      "WAN",
+      "PAN",
+      "CANON"
+    ],
+    answer: 3
+  },
+  {
+    question: "What is open-source software?",
+    options: [
+      "Software you pay for",
+      "Software developed by one company",
+      "Software with source code available to modify",
+      "Software that needs internet"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of these is used to compress files?",
+    options: [
+      "WinRAR",
+      "Notepad",
+      "Paint",
+      "Excel"
+    ],
+    answer: 0
+  },
+  {
+    question: "Which of the following is NOT a storage device?",
+    options: [
+      "Hard Drive",
+      "RAM",
+      "USB Flash Drive",
+      "Mouse"
+    ],
+    answer: 3
+  },
+  {
+    question: "Which port is commonly used for internet connection?",
+    options: [
+      "USB",
+      "HDMI",
+      "Ethernet",
+      "VGA"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of these represents machine language?",
+    options: [
+      "Binary code",
+      "Assembly code",
+      "HTML",
+      "Python"
+    ],
+    answer: 0
+  }
+]
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;
+    </script>
+</body>
+</html>

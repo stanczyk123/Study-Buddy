@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/logo.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/coin.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/profile_pic_deffault.png" type="image/png">
+
+</head>
+<header>
+    
+    <div id="studybuddy" onclick="main()">
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html">
+            <img src="https://stanczyk123.github.io/Study-Buddy//favicons/logo.png" id="studybuddyimg">
+            <h2 id="studybuddyText">Study Buddy</h2>
+        </a>
+        
+    </div>
+
+    <div id="coins">
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/coin.png" id="coinsimg">
+        <h4 id="coinsamount">0</h4>
+    </div>
+
+    <div id="profileContainer">
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/profile_pic_deffault.png" id="profilepic">
+        <a id="profilename" href="https://stanczyk123.github.io/Study-Buddy//profile/profile.html"></a>
+    </div>
+</header>
+
+<body>
+
+    <h2 id="selectgrade">Select Your Grade</h2>
+
+    <div id="highschool">
+        <h3 id="highschoolText">Highschool</h3>
+        <div id="seniorText"><a href="https://stanczyk123.github.io/Study-Buddy//senior/senior.html">Senior</a></div>
+        <div id="sophomoreText" ><a href="https://stanczyk123.github.io/Study-Buddy//sophomore/sophomore.html">Sophomore</a></div>
+        <div id="juniorText"><a href="https://stanczyk123.github.io/Study-Buddy//junior/junior.html">Junior</a></div>
+    </div>
+
+     <script src="/sign_up/sign_up.js"></script>
+    <script src="/quests/quests.js"></script>
+    <script>
+
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
+
+<script src="/quests/quests.js"></script>   
+</body>
+</html>

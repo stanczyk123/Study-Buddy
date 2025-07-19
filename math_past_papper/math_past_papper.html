@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History Past Paper</title>
+  <link rel="stylesheet" href="math_past_papper.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/logo.png" type="image/png">
+  <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/coin.png" type="image/png">
+  <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/profile_pic_deffault.png" type="image/png">
+
+</head>
+
+<header>
+    
+    <div id="studybuddy" onclick="main()">
+        <a>
+            <img src="https://stanczyk123.github.io/Study-Buddy//favicons/logo.png" id="studybuddyimg">
+            <h2 id="studybuddyText"><a href="https://stanczyk123.github.io/Study-Buddy//index.html">Study Buddy</a></h2>
+        </a>
+        
+    </div>
+
+    <div id="coins">
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/coin.png" id="coinsimg">
+        <h4 id="coinsamount">0</h4>
+    </div>
+
+    <img src="https://stanczyk123.github.io/Study-Buddy//favicons/profile_pic_deffault.png" id="profilepic">
+    <a id="profilename" href="https://stanczyk123.github.io/Study-Buddy//profile/profile.html"></a>
+    
+</header>
+
+<body>
+
+    <div id="title">
+        <h2 id="savetitle">Saves your past exam here</h2>
+    </div>
+
+
+<div id="savecontainer">
+  <div id="saveimg1">
+    <input type="file" id="imageInput1" accept="image/*" style="display: none;">
+    <label for="imageInput1" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img1')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img1')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display1" onclick="openImageInNewTab('math-img1')" alt="exam preview">
+  </div>
+
+  <div id="saveimg2">
+    <input type="file" id="imageInput2" accept="image/*">
+    <label for="imageInput2" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img2')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img2')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display2" onclick="openImageInNewTab('math-img2')" alt="exam preview">
+  </div>
+
+  <div id="saveimg3">
+    <input type="file" id="imageInput3" accept="image/*">
+    <label for="imageInput3" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img3')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img3')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display3" onclick="openImageInNewTab('math-img3')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg4">
+    <input type="file" id="imageInput4" accept="image/*" style="display: none;">
+    <label for="imageInput4" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img4')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img4')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display4" onclick="openImageInNewTab('math-img4')" alt="exam preview">
+  </div>
+
+  <div id="saveimg5">
+    <input type="file" id="imageInput5" accept="image/*" style="display: none;">
+    <label for="imageInput5" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img5')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img5')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display5" onclick="openImageInNewTab('math-img5')" alt="exam preview">
+  </div>
+
+  <div id="saveimg6">
+    <input type="file" id="imageInput6" accept="image/*" style="display: none;">
+    <label for="imageInput6" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img6')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img6')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display6" onclick="openImageInNewTab('math-img6')" alt="exam preview">
+  </div>
+</div>
+
+
+<div id="savecontainer">
+  <div id="saveimg7">
+    <input type="file" id="imageInput7" accept="image/*" style="display: none;">
+    <label for="imageInput7" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img7')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img7')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display7" onclick="openImageInNewTab('math-img7')" alt="exam preview">
+  </div>
+
+  <div id="saveimg8">
+    <input type="file" id="imageInput8" accept="image/*" style="display: none;">
+    <label for="imageInput8" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img8')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img8')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display8" onclick="openImageInNewTab('math-img8')" alt="exam preview">
+  </div>
+
+  <div id="saveimg9">
+    <input type="file" id="imageInput9" accept="image/*" style="display: none;">
+    <label for="imageInput9" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img9')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img9')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display9" onclick="openImageInNewTab('math-img9')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg10">
+    <input type="file" id="imageInput10" accept="image/*" style="display: none;">
+    <label for="imageInput10" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img10')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img10')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display10" onclick="openImageInNewTab('math-img10')" alt="exam preview">
+  </div>
+
+  <div id="saveimg11">
+    <input type="file" id="imageInput11" accept="image/*" style="display: none;">
+    <label for="imageInput11" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img11')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img11')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display11" onclick="openImageInNewTab('math-img11')" alt="exam preview">
+  </div>
+
+  <div id="saveimg12">
+    <input type="file" id="imageInput12" accept="image/*" style="display: none;">
+    <label for="imageInput12" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img12')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img12')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display12" onclick="openImageInNewTab('math-img12')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg13">
+    <input type="file" id="imageInput13" accept="image/*" style="display: none;">
+    <label for="imageInput13" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img13')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img13')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display13" onclick="openImageInNewTab('math-img13')" alt="exam preview">
+  </div>
+
+  <div id="saveimg14">
+    <input type="file" id="imageInput14" accept="image/*" style="display: none;">
+    <label for="imageInput14" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img14')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img14')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display14" onclick="openImageInNewTab('math-img14')" alt="exam preview">
+  </div>
+
+  <div id="saveimg15">
+    <input type="file" id="imageInput15" accept="image/*" style="display: none;">
+    <label for="imageInput15" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img15')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img15')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display15" onclick="openImageInNewTab('math-img15')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg16">
+    <input type="file" id="imageInput16" accept="image/*" style="display: none;">
+    <label for="imageInput16" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img16')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img16')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display16" onclick="openImageInNewTab('math-img16')" alt="exam preview">
+  </div>
+
+  <div id="saveimg17">
+    <input type="file" id="imageInput17" accept="image/*" style="display: none;">
+    <label for="imageInput17" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img17')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img17')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display17" onclick="openImageInNewTab('math-img17')" alt="exam preview">
+  </div>
+
+  <div id="saveimg18">
+    <input type="file" id="imageInput18" accept="image/*" style="display: none;">
+    <label for="imageInput18" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img18')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img18')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display18" onclick="openImageInNewTab('math-img18')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg19">
+    <input type="file" id="imageInput19" accept="image/*" style="display: none;">
+    <label for="imageInput19" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img19')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img19')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display19" onclick="openImageInNewTab('math-img19')" alt="exam preview">
+  </div>
+
+  <div id="saveimg20">
+    <input type="file" id="imageInput20" accept="image/*" style="display: none;">
+    <label for="imageInput20" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img20')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img20')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display20" onclick="openImageInNewTab('math-img20')" alt="exam preview">
+  </div>
+
+  <div id="saveimg21">
+    <input type="file" id="imageInput21" accept="image/*" style="display: none;">
+    <label for="imageInput21" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img21')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img21')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display21" onclick="openImageInNewTab('math-img21')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg22">
+    <input type="file" id="imageInput22" accept="image/*" style="display: none;">
+    <label for="imageInput22" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img22')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('hist-img22')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display22" onclick="openImageInNewTab('math-img22')" alt="exam preview">
+  </div>
+
+  <div id="saveimg23">
+    <input type="file" id="imageInput23" accept="image/*" style="display: none;">
+    <label for="imageInput23" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img23')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img23')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display23" onclick="openImageInNewTab('math-img23')" alt="exam preview">
+  </div>
+
+  <div id="saveimg24">
+    <input type="file" id="imageInput24" accept="image/*" style="display: none;">
+    <label for="imageInput24" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img24')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img24')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display24" onclick="openImageInNewTab('math-img24')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg25">
+    <input type="file" id="imageInput25" accept="image/*" style="display: none;">
+    <label for="imageInput25" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img25')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img25')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display25" onclick="openImageInNewTab('math-img25')" alt="exam preview">
+  </div>
+
+  <div id="saveimg26">
+    <input type="file" id="imageInput26" accept="image/*" style="display: none;">
+    <label for="imageInput26" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img26')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img26')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display26" onclick="openImageInNewTab('math-img26')" alt="exam preview">
+  </div>
+
+  <div id="saveimg27">
+    <input type="file" id="imageInput27" accept="image/*" style="display: none;">
+    <label for="imageInput27" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img27')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img27')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display27" onclick="openImageInNewTab('math-img27')" alt="exam preview">
+  </div>
+</div>
+
+<div id="savecontainer">
+  <div id="saveimg28">
+    <input type="file" id="imageInput28" accept="image/*" style="display: none;">
+    <label for="imageInput28" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img28')" id="saveimgbtn1">Save Image</button>
+    <button onclick="deleteImage('math-img28')" id="deleteimgbtn1">Delete Image</button>
+    <img id="display28" onclick="openImageInNewTab('math-img28')" alt="exam preview">
+  </div>
+
+  <div id="saveimg29">
+    <input type="file" id="imageInput29" accept="image/*" style="display: none;">
+    <label for="imageInput29" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img29')" id="saveimgbtn2">Save Image</button>
+    <button onclick="deleteImage('math-img29')" id="deleteimgbtn2">Delete Image</button>
+    <img id="display29" onclick="openImageInNewTab('math-img29')" alt="exam preview">
+  </div>
+
+  <div id="saveimg30">
+    <input type="file" id="imageInput30" accept="image/*" style="display: none;">
+    <label for="imageInput30" class="custom-file-button">Choose your file</label>
+    <button onclick="saveImage('math-img30')" id="saveimgbtn3">Save Image</button>
+    <button onclick="deleteImage('math-img30')" id="deleteimgbtn3">Delete Image</button>
+    <img id="display30" onclick="openImageInNewTab('math-img30')" alt="exam preview">
+  </div>
+</div>
+
+
+
+
+        <script src="/sign_up/sign_up.js"></script>
+    <script src="/quests/quests.js"></script>
+    <script>
+
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
+
+<script src="/quests/quests.js"></script>
+<script>
+let db;
+let dbReady = false;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const request = indexedDB.open("ExamImageDB", 1);
+
+  request.onerror = e => console.error("IndexedDB error:", e.target.error);
+
+  request.onupgradeneeded = e => {
+    db = e.target.result;
+    db.createObjectStore("images", { keyPath: "id" });
+  };
+
+  request.onsuccess = e => {
+    db = e.target.result;
+    dbReady = true;
+
+    document.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    
+    for (let i = 1; i <= 30; i++) {
+        loadImage(`math-img${i}`);
+    }
+  };
+
+  ['1', '2', '3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30'].forEach(i => {
+    document.getElementById('imageInput' + i).addEventListener("change", () => {
+      const file = document.getElementById('imageInput' + i).files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = document.getElementById('display' + i);
+        img.src = e.target.result;
+        img.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+});
+
+function saveImage(id) {
+  if (!dbReady) return alert("Database not ready yet. Try again in a moment.");
+  const num = id.match(/\d+/)[0];
+  const input = document.getElementById('imageInput' + num);
+  const file = input.files[0];
+  if (!file) return alert("Please choose a file.");
+
+  const reader = new FileReader();
+  reader.onload = e => {
+    const tx = db.transaction("images", "readwrite");
+    const store = tx.objectStore("images");
+    store.put({ id: id, image: e.target.result, name: file.name });
+
+    tx.oncomplete = () => alert("Image saved!");
+    tx.onerror = () => alert("Failed to save.");
+  };
+  reader.readAsDataURL(file);
+}
+
+function loadImage(id) {
+  if (!dbReady) return;
+  const tx = db.transaction("images", "readonly");
+  const store = tx.objectStore("images");
+  const req = store.get(id);
+
+  req.onsuccess = e => {
+    const result = e.target.result;
+    const num = id.match(/\d+/)[0];
+    const img = document.getElementById('display' + num);
+    if (result) {
+      img.src = result.image;
+      img.style.display = "block";
+      name = document.getElementById('pdfName' + num);
+      name.textContent = result.name; //kasih nama buat file pdfnya
+    }
+  };
+}
+
+function deleteImage(id) {
+  if (!dbReady) return alert("Database not ready yet. Try again in a moment.");
+  const tx = db.transaction("images", "readwrite");
+  const store = tx.objectStore("images");
+  const req = store.delete(id);
+
+  req.onsuccess = () => {
+    const num = id.match(/\d+/)[0];
+    const img = document.getElementById('display' + num);
+    img.src = "";
+    img.style.display = "none";
+    alert("Image deleted.");
+  };
+
+  req.onerror = () => alert("Failed to delete image.");
+}
+
+function openImageInNewTab(id) {
+  if (!dbReady) return alert("Database not ready yet.");
+  const tx = db.transaction("images", "readonly");
+  const store = tx.objectStore("images");
+  const req = store.get(id);
+
+  req.onsuccess = e => {
+    const result = e.target.result;
+    if (!result) return alert("No saved image found.");
+    const tab = window.open();
+    tab.document.write(`
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: black">
+        <img src="${result.image}" style="width:55%;">
+      </div>
+    `);
+  };
+}
+</script>
+
+
+</body>
+</html>

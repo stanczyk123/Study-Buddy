@@ -1,0 +1,338 @@
+body{
+    background-color: rgb(24, 24, 24);
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+header{
+    background-color: rgb(18, 18, 18);
+    width: auto;
+    height: 100px;
+    border-radius: 12px;
+}
+
+#studybuddy{
+    width: 100px;
+}
+
+#studybuddyimg{
+    width: 60px;
+}
+
+#studybuddyText{
+    position: relative;
+    top: -80px;
+    left: 60px;
+    color: white;
+    font-family: "press start 2p";
+}
+
+.headerbtn{
+    margin: auto;
+    margin-top: -10px;
+    margin-left: 20px;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    background-color:rgb(18, 18, 18);
+    border: none;
+    font-size: larger;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.homeworkbtn{
+    position: relative;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.shopbtn{
+     position: relative;
+    bottom: 80px;
+    text-decoration: none;
+}
+
+.headerbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+
+}
+
+.homeworkbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.homeworkbtn:hover{
+    background-color:rgb(35, 35, 35) ;
+}
+
+.shopbtn{
+    margin: auto;
+    background-color: rgb(18, 18, 18);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;  
+}
+
+.shopbtn:hover{
+    background-color:rgb(35, 35, 35) ;    
+}
+
+.dropdown{
+    display: inline-block;
+    position: relative;
+    bottom: 80px;
+}
+
+.dropdown button{
+    background-color:rgb(18, 18, 18);
+    color: white;
+    border: none;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown a{
+    display: block;
+    color:rgb(255, 255, 255)  ;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.dropdown .content{
+    display: none;
+    background-color: white;
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.dropdown :hover .content{
+    display: block;
+}
+
+.dropdown:hover{
+    color: black;
+}
+
+
+#coins{
+    width: 85px;
+    height: 30px;
+    border: 2px rgb(154, 154, 154) solid;
+    border-radius: 10px;
+    margin-left: 1580px;
+    position: relative;
+    bottom: 100px;
+}
+
+#coinsimg{
+    width: 30px;
+}
+
+#coinsamount{
+    color: white;
+    position:relative ;
+    bottom: 49px;
+    left:30px;
+    font-family: "press start 2p";
+}
+
+#profilename{
+    margin-left: 90%;
+    position: relative;
+    bottom: 226px;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#profilepic{
+    width: 40px;
+    border-radius: 70px;
+    margin-left: 1450px;
+    position: relative;
+    top: -180px;
+}
+
+a, a * {
+    text-decoration: none;
+    color: white;
+}
+
+#subject{
+    display: flex;
+    margin-top: 100px;
+}
+
+#math{
+    font-family:"press start 2p";
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 180px;
+}
+
+#mathText{
+    margin-top: 10px;
+}
+
+#mathimg{
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+#physics{
+    font-family:"press start 2p";
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;  
+    position: relative;
+    bottom: 15px;  
+}
+
+#physicsimg{
+    width: 130px;
+    margin-top: 10px;
+    border-radius: 4px;
+    
+}
+
+#biologyimg{
+    width: 130px;
+    margin-top: 10px;
+    border-radius: 4px; 
+    position: relative;
+    right: 10px;   
+}
+
+#biology{
+    font-family:"press start 2p";
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;  
+    position: relative;
+    bottom: 15px;     
+}
+
+
+#chemistryimg{
+    width: 130px;
+    margin-top: 10px;
+    border-radius: 4px; 
+    position: relative;
+    left: 5px;     
+}
+
+#chemistry{
+    font-family:"press start 2p";
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;  
+    position: relative;
+    bottom: 15px;    
+}
+
+#computerimg{
+    width: 130px;
+    margin-top: 10px;
+    border-radius: 4px; 
+    position: relative;
+    left: -1px; 
+}
+
+#computer{
+    font-family:"press start 2p";
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;  
+    position: relative;
+    bottom: 15px;    
+}
+
+#historyimg{
+    width: 130px;
+    margin-top: 10px;
+    border-radius: 4px; 
+    position: relative;
+    left: -11px;     
+}
+
+#history{
+    font-family:"press start 2p";
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;  
+    position: relative;
+    bottom: 15px;    
+}
+
+#englishimg{
+    width: 130px;
+    margin-top: 10px;
+    border-radius: 4px; 
+    position: relative;
+    left: -11px;
+}
+
+#english{
+    font-family:"press start 2p";
+    width: 140px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;  
+    position: relative;
+    bottom: 15px;      
+}

@@ -1,0 +1,267 @@
+const quiz = [
+  {
+    question: "What is the value of 2² + 3²?",
+    options: ["13", "10", "12", "11"],
+    answer: 0
+  },
+  {
+    question: "What is the square root of 144?",
+    options: ["10", "11", "12", "13"],
+    answer: 2
+  },
+  {
+    question: "If f(x) = 2x + 1, what is f(3)?",
+    options: ["5", "6", "7", "8"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a factor of x² - 5x + 6?",
+    options: ["x + 3", "x + 2", "x - 2", "x - 3"],
+    answer: 3
+  },
+  {
+    question: "What is the result of (x + 2)(x - 3)?",
+    options: ["x² - x - 6", "x² + 5x - 6", "x² - x + 6", "x² + x - 6"],
+    answer: 0
+  },
+  {
+    question: "Solve: 2x - 3 = 7",
+    options: ["5", "6", "4", "3"],
+    answer: 0
+  },
+  {
+    question: "What is the slope of the line y = 3x - 4?",
+    options: ["3", "-4", "-3", "4"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is a linear equation?",
+    options: ["x² + 2x = 3", "x + y = 5", "x³ = 8", "y = 2x² + 1"],
+    answer: 1
+  },
+  {
+    question: "What is the area of a triangle with base 6 and height 4?",
+    options: ["10", "12", "14", "24"],
+    answer: 1
+  },
+  {
+    question: "What is the result of 3³?",
+    options: ["6", "9", "27", "81"],
+    answer: 2
+  },
+  {
+    question: "What is the mean of the numbers 2, 4, 6, 8, 10?",
+    options: ["5", "6", "7", "8"],
+    answer: 1
+  },
+  {
+    question: "Which number is irrational?",
+    options: ["3", "√2", "0.5", "1/4"],
+    answer: 1
+  },
+  {
+    question: "If sin θ = 0.5, what is θ in degrees?",
+    options: ["30°", "45°", "60°", "90°"],
+    answer: 0
+  },
+  {
+    question: "Convert 0.75 into a fraction.",
+    options: ["1/2", "3/4", "2/3", "5/6"],
+    answer: 1
+  },
+  {
+    question: "Solve: (x + 3)² = 16",
+    options: ["x = 1 or -7", "x = 4 or -4", "x = 1 or -1", "x = -1 or -5"],
+    answer: 0
+  },
+  {
+    question: "The graph of y = x² is a:",
+    options: ["line", "circle", "parabola", "ellipse"],
+    answer: 2
+  },
+  {
+    question: "What is the value of log₁₀(100)?",
+    options: ["1", "10", "100", "2"],
+    answer: 3
+  },
+  {
+    question: "Which of the following is a prime number?",
+    options: ["4", "6", "9", "7"],
+    answer: 3
+  },
+  {
+    question: "The volume of a cube with side 3 cm is:",
+    options: ["27 cm³", "18 cm³", "9 cm³", "81 cm³"],
+    answer: 0
+  },
+  {
+    question: "Simplify: (x²)³",
+    options: ["x⁵", "x⁶", "x³", "x⁴"],
+    answer: 1
+  },
+  {
+    question: "If A = {1, 2, 3} and B = {2, 3, 4}, then A ∩ B is:",
+    options: ["{1}", "{2, 3}", "{1, 4}", "{1, 2, 3, 4}"],
+    answer: 1
+  },
+  {
+    question: "What is the determinant of the matrix [[2, 3], [1, 4]]?",
+    options: ["5", "8", "7", "3"],
+    answer: 2
+  },
+  {
+    question: "The value of cos(60°) is:",
+    options: ["1", "0", "0.5", "√3/2"],
+    answer: 2
+  },
+  {
+    question: "Solve: |x - 2| = 5",
+    options: ["x = 3 or -3", "x = 5 or -5", "x = 7 or -3", "x = 2 or -2"],
+    answer: 2
+  },
+  {
+    question: "What is the area of a circle with radius 7 cm (π = 22/7)?",
+    options: ["154 cm²", "49 cm²", "77 cm²", "314 cm²"],
+    answer: 0
+  },
+  {
+    question: "Find the next term: 2, 4, 8, 16, ...",
+    options: ["24", "30", "32", "36"],
+    answer: 2
+  },
+  {
+    question: "A line parallel to y = 2x + 1 has slope:",
+    options: ["2", "-2", "0.5", "1"],
+    answer: 0
+  },
+  {
+    question: "The hypotenuse of a right triangle with legs 3 and 4 is:",
+    options: ["5", "6", "7", "4"],
+    answer: 0
+  },
+  {
+    question: "The range of function f(x) = x² for real x is:",
+    options: ["x ≥ 0", "x ≤ 0", "all real numbers", "x > 1"],
+    answer: 0
+  },
+  {
+    question: "Find x if 3x + 2 = 14",
+    options: ["4", "5", "3", "6"],
+    answer: 0
+  },
+  {
+    question: "Simplify: 2(x + 3) - x",
+    options: ["x + 3", "x + 6", "2x + 3", "x + 9"],
+    answer: 1
+  },
+  {
+    question: "How many degrees are in the sum of interior angles of a triangle?",
+    options: ["360°", "180°", "90°", "270°"],
+    answer: 1
+  },
+  {
+    question: "If a = 2 and b = 3, find the value of a² + b².",
+    options: ["13", "11", "12", "9"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is equivalent to (a + b)²?",
+    options: ["a² + b²", "a² + 2ab + b²", "a² + ab + b²", "2a² + b²"],
+    answer: 1
+  },
+  {
+    question: "Solve: x² = 36",
+    options: ["x = 6", "x = -6", "x = ±6", "x = 0"],
+    answer: 2
+  },
+  {
+    question: "The HCF of 18 and 24 is:",
+    options: ["6", "12", "3", "9"],
+    answer: 0
+  },
+  {
+    question: "Convert 3/4 to decimal.",
+    options: ["0.25", "0.75", "0.5", "0.33"],
+    answer: 1
+  },
+  {
+    question: "What is the equation of a line perpendicular to y = -1/2x + 3?",
+    options: ["y = 2x + 1", "y = -2x + 1", "y = 1/2x - 3", "y = -1/2x - 3"],
+    answer: 0
+  },
+  {
+    question: "Which of the following represents a quadratic function?",
+    options: ["y = 3x", "y = 2x² + 1", "y = x + 1", "y = √x"],
+    answer: 1
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;

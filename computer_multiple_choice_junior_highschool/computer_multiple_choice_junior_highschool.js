@@ -1,0 +1,273 @@
+const quiz = [
+  {
+    question: "What does CPU stand for?",
+    options: ["Central Process Unit", "Central Processing Unit", "Computer Personal Unit", "Central Programming Unit"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is an input device?",
+    options: ["Monitor", "Printer", "Keyboard", "Speaker"],
+    answer: 2
+  },
+  {
+    question: "What is the function of a mouse?",
+    options: ["Input device", "Output device", "Storage device", "Power supply"],
+    answer: 0
+  },
+  {
+    question: "Which device is used to store data permanently?",
+    options: ["RAM", "Hard Disk", "Cache", "ROM"],
+    answer: 1
+  },
+  {
+    question: "Which software is used to create documents?",
+    options: ["Microsoft Excel", "Microsoft Word", "Google Chrome", "Adobe Photoshop"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a programming language?",
+    options: ["Java", "Google", "Facebook", "Internet"],
+    answer: 0
+  },
+  {
+    question: "What does URL stand for?",
+    options: ["Universal Resource Locator", "Uniform Resource Locator", "United Resource Locator", "Universal Routing Link"],
+    answer: 1
+  },
+  {
+    question: "What is the purpose of antivirus software?",
+    options: ["Create documents", "Design websites", "Protect computer from viruses", "Install applications"],
+    answer: 2
+  },
+  {
+    question: "Which one is not an operating system?",
+    options: ["Windows", "Linux", "Android", "Photoshop"],
+    answer: 3
+  },
+  {
+    question: "Which device connects computers to the internet?",
+    options: ["Monitor", "Keyboard", "Modem", "Scanner"],
+    answer: 2
+  },
+  {
+    question: "Which of these is used to store temporary memory?",
+    options: ["ROM", "RAM", "Hard Drive", "SSD"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a web browser?",
+    options: ["Microsoft Word", "Google Chrome", "Excel", "PowerPoint"],
+    answer: 1
+  },
+  {
+    question: "Which symbol is used to start a formula in Excel?",
+    options: ["=", "+", "-", "/"],
+    answer: 0
+  },
+  {
+    question: "What is phishing?",
+    options: ["A game", "A photo editor", "An online scam", "A type of virus"],
+    answer: 2
+  },
+  {
+    question: "Which application is used for presentations?",
+    options: ["PowerPoint", "Excel", "Paint", "Word"],
+    answer: 0
+  },
+  {
+    question: "What is the function of a printer?",
+    options: ["Input", "Storage", "Output", "Internet"],
+    answer: 2
+  },
+  {
+    question: "Which key is used to delete characters to the left of the cursor?",
+    options: ["Enter", "Shift", "Backspace", "Tab"],
+    answer: 2
+  },
+  {
+    question: "Which shortcut is used to copy text?",
+    options: ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + Z"],
+    answer: 0
+  },
+  {
+    question: "Which part of the computer shows visual output?",
+    options: ["Keyboard", "CPU", "Monitor", "Mouse"],
+    answer: 2
+  },
+  {
+    question: "Which one is a search engine?",
+    options: ["Chrome", "Google", "YouTube", "Gmail"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a social media platform?",
+    options: ["Windows", "Photoshop", "Facebook", "Excel"],
+    answer: 2
+  },
+  {
+    question: "Which file extension is used for Word documents?",
+    options: [".docx", ".xlsx", ".pptx", ".jpg"],
+    answer: 0
+  },
+  {
+    question: "Which device captures photos or videos into a computer?",
+    options: ["Printer", "Webcam", "Speaker", "Monitor"],
+    answer: 1
+  },
+  {
+    question: "What does HTML stand for?",
+    options: ["HighText Machine Language", "HyperText Markup Language", "HyperText Markdown Language", "HyperTool Machine Language"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a cloud storage service?",
+    options: ["Dropbox", "Google Docs", "Notepad", "Excel"],
+    answer: 0
+  },
+  {
+    question: "Which device can project visuals to a screen or wall?",
+    options: ["Projector", "Scanner", "Speaker", "CPU"],
+    answer: 0
+  },
+  {
+    question: "Which key is used to enter a new line in a document?",
+    options: ["Esc", "Shift", "Enter", "Alt"],
+    answer: 2
+  },
+  {
+    question: "Which icon is typically used to save a file?",
+    options: ["Scissors", "Floppy Disk", "Camera", "Globe"],
+    answer: 1
+  },
+  {
+    question: "What is the main function of a spreadsheet?",
+    options: ["Typing documents", "Making calculations", "Sending emails", "Watching videos"],
+    answer: 1
+  },
+  {
+    question: "What does Ctrl + Z do?",
+    options: ["Paste", "Undo", "Redo", "Copy"],
+    answer: 1
+  },
+  {
+    question: "Which software can be used to edit photos?",
+    options: ["Photoshop", "Word", "Excel", "PowerPoint"],
+    answer: 0
+  },
+  {
+    question: "Which of the following stores information long term?",
+    options: ["RAM", "Hard Disk", "Cache", "Clipboard"],
+    answer: 1
+  },
+  {
+    question: "What is a virus in computing?",
+    options: ["A type of software", "A type of hardware", "A harmful program", "A keyboard shortcut"],
+    answer: 2
+  },
+  {
+    question: "What is the purpose of a firewall?",
+    options: ["Speed up the PC", "Block unauthorized access", "Fix hardware", "Print documents"],
+    answer: 1
+  },
+  {
+    question: "Which device lets you hear sounds from a computer?",
+    options: ["Speaker", "Monitor", "Keyboard", "Mouse"],
+    answer: 0
+  },
+  {
+    question: "What is the function of Ctrl + P?",
+    options: ["Print", "Paste", "Pause", "Paint"],
+    answer: 0
+  },
+  {
+    question: "Which one is a feature of email?",
+    options: ["Send messages", "Play music", "Create videos", "Edit images"],
+    answer: 0
+  },
+  {
+    question: "Which is an example of a multimedia element?",
+    options: ["Text", "Image", "Video", "All of the above"],
+    answer: 3
+  },
+  {
+    question: "Which of the following is a mobile operating system?",
+    options: ["Windows", "Linux", "Android", "macOS"],
+    answer: 2
+  },
+  {
+    question: "What is an icon?",
+    options: ["A type of virus", "A small picture representing a program", "A keyboard", "A website"],
+    answer: 1
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;

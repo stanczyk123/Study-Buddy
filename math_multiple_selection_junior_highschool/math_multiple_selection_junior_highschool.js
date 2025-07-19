@@ -1,0 +1,272 @@
+const quiz = [
+  {
+    question: "Which of the following are prime numbers?",
+    options: ["2", "4", "7", "9"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of these are factors of 24?",
+    options: ["2", "3", "5", "8"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which shapes have four sides?",
+    options: ["Triangle", "Rectangle", "Square", "Circle"],
+    correctAnswers: [1, 2]
+  },
+  {
+    question: "Which operations are used in order of operations (PEMDAS)?",
+    options: ["Parentheses", "Exponents", "Multiplication", "Division"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which of the following are even numbers?",
+    options: ["1", "2", "4", "5"],
+    correctAnswers: [1, 2]
+  },
+  {
+    question: "Which of these numbers are divisible by 3?",
+    options: ["6", "9", "11", "12"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these shapes are polygons?",
+    options: ["Circle", "Triangle", "Hexagon", "Oval"],
+    correctAnswers: [1, 2]
+  },
+  {
+    question: "Which of these fractions are equivalent to 1/2?",
+    options: ["2/4", "3/6", "4/8", "5/10"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which numbers are perfect squares?",
+    options: ["4", "9", "10", "16"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these angles are acute?",
+    options: ["30°", "60°", "90°", "120°"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which units measure length?",
+    options: ["Kilogram", "Meter", "Centimeter", "Liter"],
+    correctAnswers: [1, 2]
+  },
+  {
+    question: "Which of these are types of triangles?",
+    options: ["Isosceles", "Equilateral", "Scalene", "Circular"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which numbers are multiples of 5?",
+    options: ["10", "15", "21", "30"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are 3D shapes?",
+    options: ["Sphere", "Cube", "Rectangle", "Cylinder"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these represent data types?",
+    options: ["Bar graph", "Pie chart", "Pyramid", "Line graph"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which numbers are odd?",
+    options: ["1", "2", "3", "4"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which operations are inverse of each other?",
+    options: ["Addition and subtraction", "Multiplication and division", "Addition and multiplication", "Exponent and square root"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which statements about a square are true?",
+    options: ["All sides are equal", "It has 4 right angles", "It has curved sides", "It is a polygon"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these values are positive integers?",
+    options: ["-1", "0", "2", "5"],
+    correctAnswers: [2, 3]
+  },
+  {
+    question: "Which numbers are between 1 and 10?",
+    options: ["0", "3", "10", "7"],
+    correctAnswers: [1, 2, 3]
+  },
+  {
+    question: "Which of these are units of area?",
+    options: ["cm²", "m²", "kg", "mm²"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these operations are commutative?",
+    options: ["Addition", "Subtraction", "Multiplication", "Division"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are base-10 digits?",
+    options: ["0", "5", "10", "9"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which shapes have right angles?",
+    options: ["Square", "Rectangle", "Triangle", "Circle"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which values are solutions of x² = 9?",
+    options: ["-3", "0", "3", "9"],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following are statistics concepts?",
+    options: ["Mean", "Median", "Mode", "Mass"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which numbers are less than 0?",
+    options: ["-5", "-1", "0", "1"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are coordinate plane quadrants?",
+    options: ["I", "II", "III", "IV"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which of these operations will decrease a number?",
+    options: ["Subtracting", "Multiplying by a number less than 1", "Adding", "Dividing by a number greater than 1"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which formulas are used to find area?",
+    options: ["Length × Width", "πr²", "2πr", "1/2 × base × height"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are examples of irrational numbers?",
+    options: ["π", "√2", "2", "1.414..."],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these are properties of multiplication?",
+    options: ["Associative", "Distributive", "Subtractive", "Commutative"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are examples of algebraic expressions?",
+    options: ["x + 3", "5y", "7", "x² - 4"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which shapes have no straight sides?",
+    options: ["Circle", "Oval", "Hexagon", "Cylinder"],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are examples of linear equations?",
+    options: ["y = 2x + 1", "x² + 2x = 0", "3x = 9", "x + 5 = 0"],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of these are examples of angles?",
+    options: ["45°", "90°", "135°", "270°"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which of these are examples of symmetry?",
+    options: ["Vertical line in a square", "Horizontal line in a rectangle", "Diagonal line in a rhombus", "Circle’s diameter"],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which of these are polygon names?",
+    options: ["Triangle", "Quadrilateral", "Pentagon", "Ellipse"],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are properties of parallelograms?",
+    options: ["Opposite sides are parallel", "Opposite angles are equal", "All sides are equal", "Diagonals bisect each other"],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following can represent probability values?",
+    options: ["0", "1/2", "1", "2"],
+    correctAnswers: [0, 1, 2]
+  }
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;

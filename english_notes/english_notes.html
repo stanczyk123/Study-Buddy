@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="english_notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/logo.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/coin.png" type="image/png">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/profile_pic_deffault.png" type="image/png">
+
+</head>
+<header>
+    
+    <div id="studybuddy" onclick="main()">
+        <a>
+            <img src="https://stanczyk123.github.io/Study-Buddy//favicons/logo.png" id="studybuddyimg">
+            <h2 id="studybuddyText"><a href="https://stanczyk123.github.io/Study-Buddy//index.html">Study Buddy</a></h2>
+        </a>
+        
+    </div>
+
+
+    <div id="coins">
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/coin.png" id="coinsimg">
+        <h4 id="coinsamount">0</h4>
+    </div>
+
+    <img src="https://stanczyk123.github.io/Study-Buddy//favicons/profile_pic_deffault.png" id="profilepic">
+    <a id="profilename" href="https://stanczyk123.github.io/Study-Buddy//profile/profile.html"></a>
+    
+</header>
+<body>
+
+    <div id="savetitles">
+        <h2>Save your Notes here</h2>
+        <h3>Dont forget to save your notes</h3>
+    </div>
+
+<div id="notesrow">
+
+    <div class="notes" id="noteBox0">
+        <label for="fileInput0" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput0" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(0)">
+
+        <div id="fileList0"></div>
+        <button onclick="saveFile(0)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(0)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox1">
+        <label for="fileInput1" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput1" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(1)">
+
+        <div id="fileList1"></div>
+        <button onclick="saveFile(1)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(1)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox2">
+        <label for="fileInput2" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput2" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(2)">
+
+        <div id="fileList2"></div>
+        <button onclick="saveFile(2)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(2)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox3">
+        <label for="fileInput3" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput3" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(3)">
+
+        <div id="fileList3"></div>
+        <button onclick="saveFile(3)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(3)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox4">
+        <label for="fileInput4" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput4" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(4)">
+
+        <div id="fileList4"></div>
+        <button onclick="saveFile(4)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(4)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox5">
+        <label for="fileInput5" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput5" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(5)">
+
+        <div id="fileList5"></div>
+        <button onclick="saveFile(5)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(5)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox6">
+        <label for="fileInput6" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput6" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(6)">
+
+        <div id="fileList6"></div>
+        <button onclick="saveFile(6)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(6)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox7">
+        <label for="fileInput7" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput7" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(7)">
+
+        <div id="fileList7"></div>
+        <button onclick="saveFile(7)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(7)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox8">
+        <label for="fileInput8" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput8" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(8)">
+
+        <div id="fileList8"></div>
+        <button onclick="saveFile(8)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(8)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox9">
+        <label for="fileInput9" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput9" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(9)">
+
+        <div id="fileList9"></div>
+        <button onclick="saveFile(9)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(9)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox10">
+        <label for="fileInput10" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput10" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(10)">
+
+        <div id="fileList10"></div>
+        <button onclick="saveFile(10)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(10)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox11">
+        <label for="fileInput11" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput11" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(11)">
+
+        <div id="fileList11"></div>
+        <button onclick="saveFile(11)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(11)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox12">
+        <label for="fileInput12" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput12" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(12)">
+
+        <div id="fileList12"></div>
+        <button onclick="saveFile(12)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(12)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox13">
+        <label for="fileInput13" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput13" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(13)">
+
+        <div id="fileList13"></div>
+        <button onclick="saveFile(13)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(13)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox14">
+        <label for="fileInput14" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput14" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(14)">
+
+        <div id="fileList14"></div>
+        <button onclick="saveFile(14)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(14)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox15">
+        <label for="fileInput15" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput15" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(15)">
+
+        <div id="fileList15"></div>
+        <button onclick="saveFile(15)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(15)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox16">
+        <label for="fileInput16" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput16" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(16)">
+
+        <div id="fileList16"></div>
+        <button onclick="saveFile(16)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(16)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox17">
+        <label for="fileInput17" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput17" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(17)">
+
+        <div id="fileList17"></div>
+        <button onclick="saveFile(17)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(17)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox18">
+        <label for="fileInput18" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput18" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(18)">
+
+        <div id="fileList18"></div>
+        <button onclick="saveFile(18)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(18)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox19">
+        <label for="fileInput19" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput19" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(19)">
+
+        <div id="fileList19"></div>
+        <button onclick="saveFile(19)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(19)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox20">
+        <label for="fileInput20" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput20" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(20)">
+
+        <div id="fileList20"></div>
+        <button onclick="saveFile(20)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(20)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox21">
+        <label for="fileInput21" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput21" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(21)">
+
+        <div id="fileList21"></div>
+        <button onclick="saveFile(21)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(21)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox22">
+        <label for="fileInput22" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput22" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(22)">
+
+        <div id="fileList22"></div>
+        <button onclick="saveFile(22)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(22)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox23">
+        <label for="fileInput23" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput23" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(23)">
+
+        <div id="fileList23"></div>
+        <button onclick="saveFile(23)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(23)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox24">
+        <label for="fileInput24" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput24" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(24)">
+
+        <div id="fileList24"></div>
+        <button onclick="saveFile(24)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(24)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox25">
+        <label for="fileInput25" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput25" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(25)">
+
+        <div id="fileList25"></div>
+        <button onclick="saveFile(25)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(25)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox26">
+        <label for="fileInput26" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput26" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(26)">
+
+        <div id="fileList26"></div>
+        <button onclick="saveFile(26)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(26)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox27">
+        <label for="fileInput27" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput27" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(27)">
+
+        <div id="fileList27"></div>
+        <button onclick="saveFile(27)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(27)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox28">
+        <label for="fileInput28" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput28" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(28)">
+
+        <div id="fileList28"></div>
+        <button onclick="saveFile(28)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(28)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox29">
+        <label for="fileInput29" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput29" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(29)">
+
+        <div id="fileList29"></div>
+        <button onclick="saveFile(29)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(29)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox30">
+        <label for="fileInput30" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput30" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(30)">
+
+        <div id="fileList30"></div>
+        <button onclick="saveFile(30)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(30)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox31">
+        <label for="fileInput31" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput31" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(31)">
+
+        <div id="fileList31"></div>
+        <button onclick="saveFile(31)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(31)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox32">
+        <label for="fileInput32" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput32" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(32)">
+
+        <div id="fileList32"></div>
+        <button onclick="saveFile(32)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(32)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox33">
+        <label for="fileInput33" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput33" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(33)">
+
+        <div id="fileList33"></div>
+        <button onclick="saveFile(33)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(33)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox34">
+        <label for="fileInput34" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput34" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(34)">
+
+        <div id="fileList34"></div>
+        <button onclick="saveFile(34)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(34)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox35">
+        <label for="fileInput35" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput35" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(35)">
+
+        <div id="fileList35"></div>
+        <button onclick="saveFile(35)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(35)" class="deleteFile">Delete</button>
+    </div>
+
+        <div class="notes" id="noteBox36">
+        <label for="fileInput36" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput36" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(36)">
+
+        <div id="fileList36"></div>
+        <button onclick="saveFile(36)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(36)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox37">
+        <label for="fileInput37" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput37" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(37)">
+
+        <div id="fileList37"></div>
+        <button onclick="saveFile(37)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(37)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox38">
+        <label for="fileInput38" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput38" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(38)">
+
+        <div id="fileList38"></div>
+        <button onclick="saveFile(38)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(38)" class="deleteFile">Delete</button>
+    </div>
+
+    <div class="notes" id="noteBox39">
+        <label for="fileInput39" class="custom-file-button">Choose File</label>
+        <input type="file" id="fileInput39" accept=".txt,.pdf,.doc,.docx" style="display: none;" onchange="previewFile(39)">
+
+        <div id="fileList39"></div>
+        <button onclick="saveFile(39)" class="saveFile">Save File</button>
+        <button onclick="clearPreview(39)" class="deleteFile">Delete</button>
+    </div>
+
+
+
+</div>
+
+
+<script>
+let db;
+
+window.onload = () => {
+  const request = indexedDB.open("EnglishNotesDB", 1); 
+
+  request.onerror = e => console.error("IndexedDB error:", e.target.error);
+
+  request.onupgradeneeded = e => {
+    db = e.target.result;
+    db.createObjectStore("files", { keyPath: "id", autoIncrement: true });
+  };
+
+  request.onsuccess = e => {
+    db = e.target.result;
+    loadAllFiles();
+  };
+};
+
+function previewFile(index) {
+  const input = document.getElementById(`fileInput${index}`);
+  const file = input.files[0];
+  const list = document.getElementById(`fileList${index}`);
+  list.innerHTML = "";
+
+  if (file) {
+    const blob = new Blob([file], { type: file.type });
+    const url = URL.createObjectURL(blob);
+
+    list.innerHTML = `
+      <p><strong>${file.name}</strong></p>
+      ${
+        file.type === 'application/pdf'
+          ? `<iframe src="${url}" width="100%" height="400px"></iframe>`
+          : `<a href="${url}" target="_blank">Download File</a>`
+      }
+    `;
+  }
+}
+
+function saveFile(index) {
+  const input = document.getElementById(`fileInput${index}`);
+  const file = input.files[0];
+  if (!file) {
+    alert("Please choose a file.");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const transaction = db.transaction(["files"], "readwrite");
+    const store = transaction.objectStore("files");
+    const data = {
+      box: index,
+      name: file.name,
+      type: file.type,
+      content: e.target.result
+    };
+    store.add(data);
+    transaction.oncomplete = () => {
+      loadAllFiles();
+    };
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function clearPreview(index) {
+  document.getElementById(`fileInput${index}`).value = "";
+  document.getElementById(`fileList${index}`).innerHTML = "";
+}
+
+function loadAllFiles() {
+  const transaction = db.transaction(["files"], "readonly");
+  const store = transaction.objectStore("files");
+  const request = store.openCursor();
+
+  request.onsuccess = e => {
+    const cursor = e.target.result;
+    if (cursor) {
+      const file = cursor.value;
+      const list = document.getElementById(`fileList${file.box}`);
+      if (list) {
+        const blob = new Blob([file.content], { type: file.type });
+        const url = URL.createObjectURL(blob);
+
+        list.innerHTML = `
+          <p><strong>${file.name}</strong></p>
+          ${
+            file.type === 'application/pdf'
+              ? `<iframe src="${url}" width="100%" height="400px"></iframe>`
+              : `<a href="${url}" target="_blank">Download File</a>`
+          }
+        `;
+      }
+      cursor.continue();
+    }
+  };
+}
+</script>
+
+
+
+
+    <script src="/sign_up/sign_up.js"></script>
+    
+    <script src="/quests/quests.js"></script>
+    <script>
+
+  const username = localStorage.getItem("username");
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
+
+<script src="/quests/quests.js"></script>
+
+<script src="math_notes.js"></script>
+
+
+</body>
+</html>

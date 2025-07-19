@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Multiple Question Senior Highschool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="physics_multiple_question_senior_highschool.css">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+    <div id="question-container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h4 id="right-or-wrong"></h4>
+    </div>
+
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+    
+
+    <script src="/physics_multiple_question_senior_highschool/physics_multiple_question_senior_highschool.js"></script>
+
+    <script>
+        const quiz = [
+  {
+    question: "What is the unit of force in the SI system?",
+    options: ["Joule", "Watt", "Newton", "Pascal"],
+    answer: 2
+  },
+  {
+    question: "What quantity is defined as mass times acceleration?",
+    options: ["Energy", "Momentum", "Force", "Power"],
+    answer: 2
+  },
+  {
+    question: "Which law explains why we feel a push back when pushing a wall?",
+    options: ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Law of Conservation of Energy"],
+    answer: 2
+  },
+  {
+    question: "Which of these is a vector quantity?",
+    options: ["Speed", "Distance", "Work", "Displacement"],
+    answer: 3
+  },
+  {
+    question: "What is the speed of light in a vacuum?",
+    options: ["3 × 10⁸ m/s", "1.5 × 10⁸ m/s", "9.8 m/s²", "300,000 m/s"],
+    answer: 0
+  },
+  {
+    question: "What is the potential energy formula near Earth's surface?",
+    options: ["PE = mv²", "PE = mgh", "PE = ½mv²", "PE = Fd"],
+    answer: 1
+  },
+  {
+    question: "Which of the following has the smallest wavelength?",
+    options: ["Radio waves", "Microwaves", "Visible light", "Gamma rays"],
+    answer: 3
+  },
+  {
+    question: "What does Ohm’s Law state?",
+    options: ["V = IR", "P = IV", "F = ma", "E = mc²"],
+    answer: 0
+  },
+  {
+    question: "In which medium does sound travel fastest?",
+    options: ["Air", "Water", "Vacuum", "Steel"],
+    answer: 3
+  },
+  {
+    question: "Which type of lens converges light rays?",
+    options: ["Concave", "Convex", "Flat", "Prism"],
+    answer: 1
+  },
+  {
+    question: "What is the SI unit of work?",
+    options: ["Joule", "Newton", "Watt", "Pascal"],
+    answer: 0
+  },
+  {
+    question: "What is the frequency of a wave with a period of 0.01 seconds?",
+    options: ["100 Hz", "10 Hz", "1 Hz", "0.1 Hz"],
+    answer: 0
+  },
+  {
+    question: "Which physical quantity is conserved in an elastic collision?",
+    options: ["Momentum", "Kinetic energy", "Both", "Neither"],
+    answer: 2
+  },
+  {
+    question: "Which instrument measures electric current?",
+    options: ["Voltmeter", "Ammeter", "Galvanometer", "Thermometer"],
+    answer: 1
+  },
+  {
+    question: "What kind of image is formed by a plane mirror?",
+    options: ["Real and inverted", "Virtual and upright", "Real and upright", "Virtual and inverted"],
+    answer: 1
+  },
+  {
+    question: "What is the resistance of a 2 ohm and 4 ohm resistor in series?",
+    options: ["2 Ω", "4 Ω", "6 Ω", "8 Ω"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a unit of pressure?",
+    options: ["Newton", "Joule", "Pascal", "Ohm"],
+    answer: 2
+  },
+  {
+    question: "What is the acceleration due to gravity on Earth?",
+    options: ["10 m/s²", "9.8 m/s²", "9.6 m/s²", "9.2 m/s²"],
+    answer: 1
+  },
+  {
+    question: "What is the SI unit of power?",
+    options: ["Joule", "Newton", "Watt", "Ampere"],
+    answer: 2
+  },
+  {
+    question: "What is the energy possessed by a moving object?",
+    options: ["Potential energy", "Kinetic energy", "Thermal energy", "Nuclear energy"],
+    answer: 1
+  },
+  {
+    question: "What type of mirror is used in car headlights?",
+    options: ["Plane", "Concave", "Convex", "Spherical"],
+    answer: 1
+  },
+  {
+    question: "Which of the following quantities has both magnitude and direction?",
+    options: ["Speed", "Temperature", "Force", "Energy"],
+    answer: 2
+  },
+  {
+    question: "What is the principle of conservation of momentum?",
+    options: ["Momentum is always constant", "Momentum can be created", "Total momentum is conserved in a closed system", "None"],
+    answer: 2
+  },
+  {
+    question: "Which one is not a form of energy?",
+    options: ["Light", "Sound", "Heat", "Friction"],
+    answer: 3
+  },
+  {
+    question: "What does a voltmeter measure?",
+    options: ["Current", "Resistance", "Voltage", "Charge"],
+    answer: 2
+  },
+  {
+    question: "Which electromagnetic wave has the highest frequency?",
+    options: ["Gamma rays", "X-rays", "Ultraviolet", "Microwaves"],
+    answer: 0
+  },
+  {
+    question: "Which law explains buoyancy?",
+    options: ["Newton's Law", "Pascal's Law", "Archimedes' Principle", "Hooke's Law"],
+    answer: 2
+  },
+  {
+    question: "What is the relation between frequency and wavelength?",
+    options: ["Direct", "No relation", "Inverse", "Exponential"],
+    answer: 2
+  },
+  {
+    question: "What is the SI unit of electric charge?",
+    options: ["Ampere", "Coulomb", "Volt", "Ohm"],
+    answer: 1
+  },
+  {
+    question: "Which is a non-renewable source of energy?",
+    options: ["Wind", "Solar", "Coal", "Geothermal"],
+    answer: 2
+  },
+  {
+    question: "What is the basic unit of temperature in SI?",
+    options: ["Celsius", "Kelvin", "Fahrenheit", "Degree"],
+    answer: 1
+  },
+  {
+    question: "What is Hooke's Law?",
+    options: ["F = ma", "V = IR", "F = -kx", "P = F/A"],
+    answer: 2
+  },
+  {
+    question: "Which force causes objects to fall to Earth?",
+    options: ["Magnetic", "Gravitational", "Electrostatic", "Frictional"],
+    answer: 1
+  },
+  {
+    question: "Which wave property determines pitch?",
+    options: ["Amplitude", "Wavelength", "Frequency", "Speed"],
+    answer: 2
+  },
+  {
+    question: "Which of these materials is a good conductor of electricity?",
+    options: ["Plastic", "Glass", "Rubber", "Copper"],
+    answer: 3
+  },
+  {
+    question: "What is the unit of electric current?",
+    options: ["Volt", "Ampere", "Ohm", "Watt"],
+    answer: 1
+  },
+  {
+    question: "Which device is used to convert AC to DC?",
+    options: ["Rectifier", "Transistor", "Transformer", "Inductor"],
+    answer: 0
+  },
+  {
+    question: "Which law relates pressure and volume of a gas?",
+    options: ["Boyle's Law", "Charles's Law", "Ohm's Law", "Hooke's Law"],
+    answer: 0
+  },
+  {
+    question: "What is the acceleration of a free-falling object (ignoring air resistance)?",
+    options: ["0 m/s²", "9.8 m/s²", "1.6 m/s²", "10.2 m/s²"],
+    answer: 1
+  },
+  {
+    question: "Which of the following best defines power?",
+    options: ["Force over time", "Work done per unit time", "Energy stored", "Voltage times current"],
+    answer: 1
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+    const q = quiz[currentQuestion];
+    document.getElementById("question").innerText = q.question;
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((option, index) => {
+        const label = document.createElement("label");
+        label.style.display = "block";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "option";
+        radio.value = index;
+
+        label.appendChild(radio);
+        label.appendChild(document.createTextNode(option));
+        optionsDiv.appendChild(label);
+    });
+}
+
+function submitAnswer() {
+    const selected = document.querySelector('input[name="option"]:checked');
+    const feedback = document.getElementById("right-or-wrong");
+
+    if (!selected) {
+        alert("Please select an answer!");
+        return;
+    }
+
+    const answerIndex = parseInt(selected.value);
+    const correctIndex = quiz[currentQuestion].answer;
+    const correctText = quiz[currentQuestion].options[correctIndex];
+
+    if (answerIndex === correctIndex) {
+        score++;
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = `❌ Wrong! Correct answer: ${correctText}`;
+        feedback.style.color = "red";
+    }
+
+    // Move to next question after a short delay
+    setTimeout(() => {
+        currentQuestion++;
+        feedback.innerText = ""; // clear message
+        if (currentQuestion < quiz.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }, 1500); // 1.5 seconds pause
+}
+
+
+function showResult() {
+    document.getElementById("question-container").style.display = "none";
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerText = `You scored ${score} out of ${quiz.length}`;
+}
+
+// Start quiz when page loads
+window.onload = showQuestion;
+    </script>
+</body>
+</html>

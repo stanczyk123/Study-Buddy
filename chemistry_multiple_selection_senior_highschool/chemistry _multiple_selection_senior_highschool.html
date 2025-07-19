@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Multiple Selection Senior Highschool</title>
+    <link rel="stylesheet" href="chemistry_multiple_selection_senior_highschool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+
+</head>
+<body>
+    <div id="question-container">
+        <h3 id="question"></h3>  
+        <div id="options"></div>
+        <button onclick="submitAnswer()" id="submitbtn">Submit</button>
+        <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
+        <h5 id="right-or-wrong"></h5>
+    </div>
+
+
+    
+    <div id="finalresult">
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
+        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+    
+
+    <script src="/chemistry_multiple_selection_senior_highschool/chemistry _multiple_selection_senior_highschool.js"></script>
+
+    <script>
+        const quiz = [
+  {
+    question: "Which of the following are examples of chemical changes?",
+    options: [
+      "Rusting of iron",
+      "Melting of ice",
+      "Burning of wood",
+      "Boiling of water"
+    ],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which elements are noble gases?",
+    options: [
+      "Helium",
+      "Neon",
+      "Oxygen",
+      "Argon"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are diatomic molecules?",
+    options: [
+      "O₂",
+      "N₂",
+      "CO₂",
+      "Cl₂"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are physical properties of matter?",
+    options: [
+      "Melting point",
+      "Color",
+      "Flammability",
+      "Boiling point"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are acids?",
+    options: [
+      "HCl",
+      "NaOH",
+      "H₂SO₄",
+      "CH₃COOH"
+    ],
+    correctAnswers: [0, 2, 3]
+  },
+  {
+    question: "Which of these are examples of bases?",
+    options: [
+      "NaOH",
+      "KOH",
+      "NH₃",
+      "H₂SO₄"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are indicators?",
+    options: [
+      "Litmus paper",
+      "Phenolphthalein",
+      "Water",
+      "Methyl orange"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which substances are involved in redox reactions?",
+    options: [
+      "O₂",
+      "Fe",
+      "CO₂",
+      "H₂"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following compounds are salts?",
+    options: [
+      "NaCl",
+      "KNO₃",
+      "HCl",
+      "CaSO₄"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are greenhouse gases?",
+    options: [
+      "CO₂",
+      "CH₄",
+      "O₂",
+      "N₂O"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are types of chemical bonds?",
+    options: [
+      "Ionic bond",
+      "Covalent bond",
+      "Hydrogen bond",
+      "Magnetic bond"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are allotropes of carbon?",
+    options: [
+      "Diamond",
+      "Graphite",
+      "Carbon dioxide",
+      "Fullerene"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are endothermic processes?",
+    options: [
+      "Melting",
+      "Boiling",
+      "Condensation",
+      "Sublimation"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these affect the rate of a chemical reaction?",
+    options: [
+      "Temperature",
+      "Concentration",
+      "Pressure",
+      "Surface area"
+    ],
+    correctAnswers: [0, 1, 2, 3]
+  },
+  {
+    question: "Which substances conduct electricity in solution?",
+    options: [
+      "NaCl",
+      "HCl",
+      "Sugar",
+      "NaOH"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are periodic trends?",
+    options: [
+      "Electronegativity",
+      "Atomic radius",
+      "Ionization energy",
+      "Density"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are components of an atom’s nucleus?",
+    options: [
+      "Protons",
+      "Neutrons",
+      "Electrons",
+      "Quarks"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of these compounds contain covalent bonds?",
+    options: [
+      "H₂O",
+      "CH₄",
+      "O₂",
+      "NaCl"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which elements are halogens?",
+    options: [
+      "Fluorine",
+      "Chlorine",
+      "Iodine",
+      "Calcium"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which processes are physical changes?",
+    options: [
+      "Boiling",
+      "Melting",
+      "Rusting",
+      "Freezing"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+    {
+    question: "Which of the following are separation techniques?",
+    options: [
+      "Filtration",
+      "Distillation",
+      "Crystallization",
+      "Oxidation"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which compounds are hydrocarbons?",
+    options: [
+      "CH₄",
+      "C₂H₆",
+      "C₆H₆",
+      "H₂O"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are examples of polymers?",
+    options: [
+      "Polythene",
+      "PVC",
+      "Nylon",
+      "Methane"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which compounds are esters?",
+    options: [
+      "CH₃COOCH₃",
+      "CH₃COOH",
+      "C₂H₅COOCH₃",
+      "HCOOH"
+    ],
+    correctAnswers: [0, 2]
+  },
+  {
+    question: "Which of the following factors increase gas pressure in a container?",
+    options: [
+      "Increase in temperature",
+      "Decrease in volume",
+      "Adding more gas particles",
+      "Cooling the gas"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of these are strong acids?",
+    options: [
+      "HCl",
+      "H₂SO₄",
+      "HNO₃",
+      "CH₃COOH"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which of the following are units of concentration?",
+    options: [
+      "mol/L",
+      "g/L",
+      "mol/kg",
+      "Joule"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are characteristics of transition metals?",
+    options: [
+      "Variable oxidation states",
+      "Form colored compounds",
+      "Poor conductors",
+      "Often act as catalysts"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these metals can displace hydrogen from acids?",
+    options: [
+      "Zinc",
+      "Iron",
+      "Copper",
+      "Magnesium"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are amphoteric substances?",
+    options: [
+      "Al(OH)₃",
+      "ZnO",
+      "NaOH",
+      "H₂O"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which are oxidizing agents?",
+    options: [
+      "O₂",
+      "Cl₂",
+      "H₂",
+      "KMnO₄"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which reactions release energy to the surroundings?",
+    options: [
+      "Combustion",
+      "Neutralization",
+      "Photosynthesis",
+      "Respiration"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which are characteristics of ionic compounds?",
+    options: [
+      "High melting points",
+      "Conduct electricity when molten",
+      "Soluble in water",
+      "Soft and flexible"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are examples of strong bases?",
+    options: [
+      "NaOH",
+      "KOH",
+      "NH₄OH",
+      "Ca(OH)₂"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of the following are units of energy?",
+    options: [
+      "Joule",
+      "Calorie",
+      "Kilojoule",
+      "Kelvin"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which are ways to increase the solubility of a solid in water?",
+    options: [
+      "Stirring",
+      "Heating the solution",
+      "Using a smaller container",
+      "Crushing the solid"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which compounds are organic compounds?",
+    options: [
+      "CH₄",
+      "C₂H₅OH",
+      "H₂O",
+      "C₆H₁₂O₆"
+    ],
+    correctAnswers: [0, 1, 3]
+  },
+  {
+    question: "Which of these are exothermic processes?",
+    options: [
+      "Combustion",
+      "Condensation",
+      "Freezing",
+      "Boiling"
+    ],
+    correctAnswers: [0, 1, 2]
+  },
+  {
+    question: "Which gases are involved in acid rain formation?",
+    options: [
+      "SO₂",
+      "NO₂",
+      "CO₂",
+      "O₂"
+    ],
+    correctAnswers: [0, 1]
+  },
+  {
+    question: "Which of the following are characteristics of metals?",
+    options: [
+      "Good electrical conductors",
+      "Malleable",
+      "Low melting point",
+      "Ductile"
+    ],
+    correctAnswers: [0, 1, 3]
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function showQuestion() {
+  const q = quiz[currentQuestion];
+  document.getElementById("question").innerText = q.question;
+
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const label = document.createElement("label");
+    label.style.display = "block";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "option";
+    checkbox.value = index;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + option));
+    optionsDiv.appendChild(label);
+  });
+
+  document.getElementById("right-or-wrong").innerText = "";
+}
+
+function submitAnswer() {
+  const selectedCheckboxes = document.querySelectorAll('input[name="option"]:checked');
+  const selectedValues = Array.from(selectedCheckboxes).map(cb => parseInt(cb.value)).sort();
+  const correctAnswers = quiz[currentQuestion].correctAnswers.slice().sort();
+
+  const feedback = document.getElementById("right-or-wrong");
+
+  const isCorrect = selectedValues.length === correctAnswers.length &&
+    selectedValues.every((val, index) => val === correctAnswers[index]);
+
+  // Convert correct answer indexes to text (e.g., "2", "3", "5")
+  const correctText = correctAnswers.map(i => quiz[currentQuestion].options[i]).join(", ");
+
+  if (isCorrect) {
+    score++;
+    feedback.innerText = `✅ Correct!`;
+    feedback.style.color = "green";
+  } else {
+    feedback.innerText = `❌ Wrong!\nCorrect answer: ${correctText}`;
+    feedback.style.color = "red";
+  }
+
+  // Move to next question after 1.5s
+  setTimeout(() => {
+    currentQuestion++;
+    if (currentQuestion < quiz.length) {
+      showQuestion();
+    } else {
+      showResult();
+    }
+  }, 1500);
+}
+
+function showResult() {
+  document.getElementById("question-container").style.display = "none";
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h2>You scored ${score} out of ${quiz.length}</h2>`;
+}
+
+window.onload = showQuestion;
+
+    </script>
+</body>
+</html>
