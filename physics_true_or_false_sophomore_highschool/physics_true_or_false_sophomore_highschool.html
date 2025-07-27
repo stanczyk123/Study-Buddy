@@ -1,266 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics True or False Sophomore highschool</title>
-    <link rel="stylesheet" href="physics_true_or_false_sophomore_highschool.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics True or False Sophomore highschool</title>
+  <link rel="stylesheet" href="physics_true_or_false_sophomore_highschool.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicons/cloud.png" type="image/png">
 </head>
 <body>
-<div id="question-container">
+  <div id="question-container">
     <h3 id="question"></h3>
     <form id="quiz-form">
-        <div id="falsebtn">
-            <label>
-                <input type="radio" name="answer" value="false" id="falseText"> False
-            </label>
-        </div>
-        <br>
-        <div id="truebtn">
-            <label>
-                <input type="radio" name="answer" value="true" id="trueText"> True
-            </label>
-        </div>
-        <br>
-        <button type="button" onclick="submitAnswer()" id="submitbtn">Submit</button>
+      <div id="falsebtn">
+        <label>
+          <input type="radio" name="answer" value="false" id="falseText"> False
+        </label>
+      </div>
+      <br>
+      <div id="truebtn">
+        <label>
+          <input type="radio" name="answer" value="true" id="trueText"> True
+        </label>
+      </div>
+      <br>
+      <button type="button" onclick="submitAnswer()" id="submitbtn">Submit</button>
     </form>
-    <a href="https://stanczyk123.github.io/Study-Buddy//main/main.html"><button id="homebtn">Home</button></a>
-</div>
+    <a href="/main/main.html"><button id="homebtn">Home</button></a>
+  </div>
 
-    <div id="finalresult">
-        <div id="result" style="display: none;"></div>
-    </div>
+  <div id="finalresult">
+    <div id="result" style="display: none;"></div>
+  </div>
 
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+  <img src="/favicons/cloud.png" id="cloud1" />
+  <img src="/favicons/cloud.png" id="cloud2" />
+  <img src="/favicons/cloud.png" id="cloud3" />
+  <img src="/favicons/cloud.png" id="cloud4" />
+  <img src="/favicons/cloud.png" id="cloud5" />
+  <img src="/favicons/cloud.png" id="cloud6" />
+  <img src="/favicons/cloud.png" id="cloud7" />
+  <img src="/favicons/cloud.png" id="cloud8" />
 
+  <script src="/physics_true_or_false_sophomore_highschool/physics_true_or_false_sophomore_highschool.js"></script>
 
-    <script src="/physics_true_or_false_sophomore_highschool/physics_true_or_false_sophomore_highschool.js"></script>
+  <script>
+    const quiz = [
+      { question: "Speed is a scalar quantity.", answer: true },
+      { question: "Acceleration is defined as the change in speed per unit time.", answer: false },
+      { question: "Velocity includes direction, while speed does not.", answer: true },
+      { question: "Newton's First Law is also known as the Law of Inertia.", answer: true },
+      { question: "A balanced force causes a change in motion.", answer: false },
+      { question: "Work is done when there is no displacement.", answer: false },
+      { question: "The unit of work is the joule (J).", answer: true },
+      { question: "Gravitational potential energy depends on mass, height, and gravity.", answer: true },
+      { question: "The formula for kinetic energy is ½mv².", answer: true },
+      { question: "Power is the rate of doing work.", answer: true },
+      { question: "Friction always acts in the direction of motion.", answer: false },
+      { question: "Weight is mass times gravity.", answer: true },
+      { question: "Mass changes depending on location.", answer: false },
+      { question: "An object at rest has zero momentum.", answer: true },
+      { question: "Momentum is conserved in a closed system.", answer: true },
+      { question: "Pascal’s law is about the behavior of gases.", answer: false },
+      { question: "Archimedes’ principle explains buoyant force.", answer: true },
+      { question: "An ideal machine has 100% efficiency.", answer: true },
+      { question: "A pulley is a type of simple machine.", answer: true },
+      { question: "Sound cannot travel through a vacuum.", answer: true },
+      { question: "Light travels faster in glass than in air.", answer: false },
+      { question: "The unit of frequency is hertz (Hz).", answer: true },
+      { question: "Red light has a shorter wavelength than blue light.", answer: false },
+      { question: "Concave lenses always converge light rays.", answer: false },
+      { question: "Convex mirrors always form virtual images.", answer: true },
+      { question: "The law of reflection states that the angle of incidence equals the angle of reflection.", answer: true },
+      { question: "Refraction occurs when light changes speed between two media.", answer: true },
+      { question: "Electric current is measured in volts.", answer: false },
+      { question: "Ohm’s law relates voltage, current, and resistance.", answer: true },
+      { question: "A series circuit has more than one path for current.", answer: false },
+      { question: "An ammeter is connected in parallel in a circuit.", answer: false },
+      { question: "Current is the flow of electrons.", answer: true },
+      { question: "Insulators allow current to flow easily.", answer: false },
+      { question: "Magnetic field lines around a bar magnet form closed loops.", answer: true },
+      { question: "Earth’s magnetic field is strongest at the equator.", answer: false },
+      { question: "Acceleration due to gravity on Earth is approximately 9.8 m/s².", answer: true },
+      { question: "Work and energy have the same unit: joule.", answer: true },
+      { question: "Hydroelectric power uses the energy of moving water to generate electricity.", answer: true },
+      { question: "Heat always flows from a colder object to a hotter object.", answer: false },
+      { question: "Conduction requires a medium to transfer heat.", answer: true }
+    ];
 
-    <script>
-        const quiz = [
-  {
-    question: "Speed is a scalar quantity.",
-    answer: true
-  },
-  {
-    question: "Acceleration is defined as the change in speed per unit time.",
-    answer: false
-  },
-  {
-    question: "Velocity includes direction, while speed does not.",
-    answer: true
-  },
-  {
-    question: "Newton's First Law is also known as the Law of Inertia.",
-    answer: true
-  },
-  {
-    question: "A balanced force causes a change in motion.",
-    answer: false
-  },
-  {
-    question: "Work is done when there is no displacement.",
-    answer: false
-  },
-  {
-    question: "The unit of work is the joule (J).",
-    answer: true
-  },
-  {
-    question: "Gravitational potential energy depends on mass, height, and gravity.",
-    answer: true
-  },
-  {
-    question: "The formula for kinetic energy is ½mv².",
-    answer: true
-  },
-  {
-    question: "Power is the rate of doing work.",
-    answer: true
-  },
-  {
-    question: "Friction always acts in the direction of motion.",
-    answer: false
-  },
-  {
-    question: "Weight is mass times gravity.",
-    answer: true
-  },
-  {
-    question: "Mass changes depending on location.",
-    answer: false
-  },
-  {
-    question: "An object at rest has zero momentum.",
-    answer: true
-  },
-  {
-    question: "Momentum is conserved in a closed system.",
-    answer: true
-  },
-  {
-    question: "Pascal’s law is about the behavior of gases.",
-    answer: false
-  },
-  {
-    question: "Archimedes’ principle explains buoyant force.",
-    answer: true
-  },
-  {
-    question: "An ideal machine has 100% efficiency.",
-    answer: true
-  },
-  {
-    question: "A pulley is a type of simple machine.",
-    answer: true
-  },
-  {
-    question: "Sound cannot travel through a vacuum.",
-    answer: true
-  },
-  {
-    question: "Light travels faster in glass than in air.",
-    answer: false
-  },
-  {
-    question: "The unit of frequency is hertz (Hz).",
-    answer: true
-  },
-  {
-    question: "Red light has a shorter wavelength than blue light.",
-    answer: false
-  },
-  {
-    question: "Concave lenses always converge light rays.",
-    answer: false
-  },
-  {
-    question: "Convex mirrors always form virtual images.",
-    answer: true
-  },
-  {
-    question: "The law of reflection states that the angle of incidence equals the angle of reflection.",
-    answer: true
-  },
-  {
-    question: "Refraction occurs when light changes speed between two media.",
-    answer: true
-  },
-  {
-    question: "Electric current is measured in volts.",
-    answer: false
-  },
-  {
-    question: "Ohm’s law relates voltage, current, and resistance.",
-    answer: true
-  },
-  {
-    question: "A series circuit has more than one path for current.",
-    answer: false
-  },
-  {
-    question: "An ammeter is connected in parallel in a circuit.",
-    answer: false
-  },
-  {
-    question: "Current is the flow of electrons.",
-    answer: true
-  },
-  {
-    question: "Insulators allow current to flow easily.",
-    answer: false
-  },
-  {
-    question: "Magnetic field lines around a bar magnet form closed loops.",
-    answer: true
-  },
-  {
-    question: "Earth’s magnetic field is strongest at the equator.",
-    answer: false
-  },
-  {
-    question: "Acceleration due to gravity on Earth is approximately 9.8 m/s².",
-    answer: true
-  },
-  {
-    question: "Work and energy have the same unit: joule.",
-    answer: true
-  },
-  {
-    question: "Hydroelectric power uses the energy of moving water to generate electricity.",
-    answer: true
-  },
-  {
-    question: "Heat always flows from a colder object to a hotter object.",
-    answer: false
-  },
-  {
-    question: "Conduction requires a medium to transfer heat.",
-    answer: true
-  }
-];
+    let currentQuestion = 0;
+    let score = 0;
 
+    function showQuestion() {
+      const q = quiz[currentQuestion];
+      document.getElementById("question").innerText = q.question;
 
-let currentQuestion = 0;
-let score = 0;
+      const radios = document.querySelectorAll('input[name="answer"]');
+      radios.forEach(radio => radio.checked = false);
+    }
 
-function showQuestion() {
-    const q = quiz[currentQuestion];
-    document.getElementById("question").innerText = q.question;
+    function submitAnswer() {
+      const selectedRadio = document.querySelector('input[name="answer"]:checked');
+      const feedbackDiv = document.getElementById("result");
+      feedbackDiv.style.display = "block";
 
-    // Clear selected radio buttons
-    const radios = document.querySelectorAll('input[name="answer"]');
-    radios.forEach(radio => radio.checked = false);
-}
-
-function submitAnswer() {
-    const selectedRadio = document.querySelector('input[name="answer"]:checked');
-    const feedbackDiv = document.getElementById("result");
-    feedbackDiv.style.display = "block";
-
-    if (!selectedRadio) {
+      if (!selectedRadio) {
         alert("Please select True or False.");
         return;
-    }
+      }
 
-    const selectedValue = selectedRadio.value === "true";
-    const correctAnswer = quiz[currentQuestion].answer;
+      const selectedValue = selectedRadio.value === "true";
+      const correctAnswer = quiz[currentQuestion].answer;
 
-    if (selectedValue === correctAnswer) {
+      if (selectedValue === correctAnswer) {
         score++;
         feedbackDiv.innerHTML = `<p style="color: green;">✅ Correct!</p>`;
-    } else {
+      } else {
         feedbackDiv.innerHTML = `<p style="color: red;">❌ Wrong!<br>The correct answer is: <strong>${correctAnswer ? "True" : "False"}</strong></p>`;
+      }
     }
 
-    setTimeout(() => {
+      setTimeout(() => {
         feedbackDiv.style.display = "none";
         currentQuestion++;
         if (currentQuestion < quiz.length) {
-            showQuestion();
-        } else {
-            showFinalResult();
-        }
-    }, 1500);
-}
-
-function showFinalResult() {
-    document.getElementById("question-container").style.display = "none";
-    const resultDiv = document.getElementById("result");
-    resultDiv.style.display = "block";
-    resultDiv.innerHTML = `<h2>You got ${score} out of ${quiz.length} questions right!</h2>`;
-}
-
-window.onload = showQuestion;
-    </script>
-</body>
-</html>
+          showQuestion();
+        } el
+      }
+    )

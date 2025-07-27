@@ -1,146 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History True or False Senior Highschool</title>
-    <link rel="stylesheet" href="history_true_or_false_senior_highschool.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/cloud.png" type="image/png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History True or False Senior Highschool</title>
+  <link rel="stylesheet" href="history_true_or_false_senior_highschool.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicons/cloud.png" type="image/png">
 </head>
+
 <body>
-<div id="question-container">
+  <div id="question-container">
     <h3 id="question"></h3>
     <form id="quiz-form">
-        <div id="falsebtn">
-            <label>
-                <input type="radio" name="answer" value="false" id="falseText"> False
-            </label>
-        </div>
-        <br>
-        <div id="truebtn">
-            <label>
-                <input type="radio" name="answer" value="true" id="trueText"> True
-            </label>
-        </div>
-        <br>
-        <button type="button" onclick="submitAnswer()" id="submitbtn">Submit</button>
+      <div id="falsebtn">
+        <label>
+          <input type="radio" name="answer" value="false" id="falseText"> False
+        </label>
+      </div>
+      <br>
+      <div id="truebtn">
+        <label>
+          <input type="radio" name="answer" value="true" id="trueText"> True
+        </label>
+      </div>
+      <br>
+      <button type="button" onclick="submitAnswer()" id="submitbtn">Submit</button>
     </form>
-    <a href="https://stanczyk123.github.io/Study-Buddy//index.html"><button id="homebtn">Home</button></a>
-</div>
+    <a href="/index.html"><button id="homebtn">Home</button></a>
+  </div>
 
-    <div id="finalresult">
-        <div id="result" style="display: none;"></div>
-    </div>
+  <div id="finalresult">
+    <div id="result" style="display: none;"></div>
+  </div>
 
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud1" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud2" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud3" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud4" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud5" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud6" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud7" />
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/cloud.png" id="cloud8" />
+  <img src="/favicons/cloud.png" id="cloud1" />
+  <img src="/favicons/cloud.png" id="cloud2" />
+  <img src="/favicons/cloud.png" id="cloud3" />
+  <img src="/favicons/cloud.png" id="cloud4" />
+  <img src="/favicons/cloud.png" id="cloud5" />
+  <img src="/favicons/cloud.png" id="cloud6" />
+  <img src="/favicons/cloud.png" id="cloud7" />
+  <img src="/favicons/cloud.png" id="cloud8" />
 
-    <script src="/history_true_or_false_senior_highschool/history_true_or_false_senior_highschool.js"></script>
+  <script src="/history_true_or_false_senior_highschool/history_true_or_false_senior_highschool.js"></script>
 
-    <script>
-        const quiz = [
-  { question: "Indonesia declared its independence on August 17, 1945.", answer: true },
-  { question: "Pancasila was first introduced by Soekarno in his speech on June 1, 1945.", answer: true },
-  { question: "The VOC was established by the Dutch to avoid competition among traders.", answer: true },
-  { question: "The Linggarjati Agreement was signed in 1947.", answer: false },
-  { question: "Tuanku Imam Bonjol was a key figure in the Padri War.", answer: true },
-  { question: "The Youth Pledge (Sumpah Pemuda) took place on October 28, 1928.", answer: true },
-  { question: "The G30S/PKI incident occurred in 1966.", answer: false },
-  { question: "The New Order regime began after President Soekarno stepped down.", answer: true },
-  { question: "The Diponegoro War lasted from 1825 to 1830.", answer: true },
-  { question: "The text of the proclamation was written at Admiral Maeda’s house.", answer: true },
-  { question: "The Dutch surrendered to Japan in March 1942.", answer: true },
-  { question: "Sultan Hamengkubuwono IX played a vital role in maintaining Yogyakarta as the temporary capital.", answer: true },
-  { question: "The Indonesian Reform Era began in 1998.", answer: true },
-  { question: "Supersemar strengthened Soekarno’s authority.", answer: false },
-  { question: "Three key figures in drafting the state foundation were Soekarno, Mohammad Yamin, and Supomo.", answer: true },
-  { question: "BPUPKI was formed by Japan to establish a new colonial government.", answer: false },
-  { question: "World War II greatly influenced Indonesia’s path to independence.", answer: true },
-  { question: "The Cultivation System (cultuurstelsel) was introduced by Governor General Daendels.", answer: false },
-  { question: "The March 1, 1949 General Offensive was led by Soeharto.", answer: true },
-  { question: "The Jakarta Charter was drafted by the Nine Committee (Panitia Sembilan).", answer: true },
-  { question: "The Asian-African Conference was held in Bandung in 1955.", answer: true },
-  { question: "The Dual Function of the Armed Forces was a policy during the Old Order era.", answer: false },
-  { question: "The Guided Democracy began in 1959.", answer: true },
-  { question: "The DI/TII rebellion was led by Kartosuwiryo.", answer: true },
-  { question: "The power transfer to the New Order was carried out through armed revolution.", answer: false },
-  { question: "Soekarno and Hatta were kidnapped to Rengasdengklok before the proclamation.", answer: true },
-  { question: "Indonesia became a member of the United Nations in 1945.", answer: false },
-  { question: "The Roem-Royen Agreement was signed during the independence revolution.", answer: true },
-  { question: "Indonesia once withdrew from the United Nations.", answer: true },
-  { question: "Indonesia’s third president was B.J. Habibie.", answer: true },
-  { question: "PETA was a military organization created by Japan.", answer: true },
-  { question: "Soekarno founded Boedi Oetomo.", answer: false },
-  { question: "The Dutch Military Aggression II occurred in 1948.", answer: true },
-  { question: "Gus Dur was president after Megawati.", answer: false },
-  { question: "The Industrial Revolution occurred in Indonesia in the early 20th century.", answer: false },
-  { question: "The Japanese occupation of Indonesia was shorter than the Dutch occupation.", answer: true },
-  { question: "National hero Cut Nyak Dien came from Aceh.", answer: true },
-  { question: "Indonesia applied a parliamentary system during the early independence period.", answer: true },
-  { question: "The RIS Constitution was applied before returning to the 1945 Constitution.", answer: true },
-  { question: "The Malari incident happened during Soekarno’s presidency.", answer: false }
-];
+  <script>
+    const quiz = [
+      { question: "Indonesia declared its independence on August 17, 1945.", answer: true },
+      { question: "Pancasila was first introduced by Soekarno in his speech on June 1, 1945.", answer: true },
+      { question: "The VOC was established by the Dutch to avoid competition among traders.", answer: true },
+      { question: "The Linggarjati Agreement was signed in 1947.", answer: false },
+      { question: "Tuanku Imam Bonjol was a key figure in the Padri War.", answer: true },
+      { question: "The Youth Pledge (Sumpah Pemuda) took place on October 28, 1928.", answer: true },
+      { question: "The G30S/PKI incident occurred in 1966.", answer: false },
+      { question: "The New Order regime began after President Soekarno stepped down.", answer: true },
+      { question: "The Diponegoro War lasted from 1825 to 1830.", answer: true },
+      { question: "The text of the proclamation was written at Admiral Maeda’s house.", answer: true },
+      { question: "The Dutch surrendered to Japan in March 1942.", answer: true },
+      { question: "Sultan Hamengkubuwono IX played a vital role in maintaining Yogyakarta as the temporary capital.", answer: true },
+      { question: "The Indonesian Reform Era began in 1998.", answer: true },
+      { question: "Supersemar strengthened Soekarno’s authority.", answer: false },
+      { question: "Three key figures in drafting the state foundation were Soekarno, Mohammad Yamin, and Supomo.", answer: true },
+      { question: "BPUPKI was formed by Japan to establish a new colonial government.", answer: false },
+      { question: "World War II greatly influenced Indonesia’s path to independence.", answer: true },
+      { question: "The Cultivation System (cultuurstelsel) was introduced by Governor General Daendels.", answer: false },
+      { question: "The March 1, 1949 General Offensive was led by Soeharto.", answer: true },
+      { question: "The Jakarta Charter was drafted by the Nine Committee (Panitia Sembilan).", answer: true },
+      { question: "The Asian-African Conference was held in Bandung in 1955.", answer: true },
+      { question: "The Dual Function of the Armed Forces was a policy during the Old Order era.", answer: false },
+      { question: "The Guided Democracy began in 1959.", answer: true },
+      { question: "The DI/TII rebellion was led by Kartosuwiryo.", answer: true },
+      { question: "The power transfer to the New Order was carried out through armed revolution.", answer: false },
+      { question: "Soekarno and Hatta were kidnapped to Rengasdengklok before the proclamation.", answer: true },
+      { question: "Indonesia became a member of the United Nations in 1945.", answer: false },
+      { question: "The Roem-Royen Agreement was signed during the independence revolution.", answer: true },
+      { question: "Indonesia once withdrew from the United Nations.", answer: true },
+      { question: "Indonesia’s third president was B.J. Habibie.", answer: true },
+      { question: "PETA was a military organization created by Japan.", answer: true },
+      { question: "Soekarno founded Boedi Oetomo.", answer: false },
+      { question: "The Dutch Military Aggression II occurred in 1948.", answer: true },
+      { question: "Gus Dur was president after Megawati.", answer: false },
+      { question: "The Industrial Revolution occurred in Indonesia in the early 20th century.", answer: false },
+      { question: "The Japanese occupation of Indonesia was shorter than the Dutch occupation.", answer: true },
+      { question: "National hero Cut Nyak Dien came from Aceh.", answer: true },
+      { question: "Indonesia applied a parliamentary system during the early independence period.", answer: true },
+      { question: "The RIS Constitution was applied before returning to the 1945 Constitution.", answer: true },
+      { question: "The Malari incident happened during Soekarno’s presidency.", answer: false }
+    ];
 
-let currentQuestion = 0;
-let score = 0;
+    let currentQuestion = 0;
+    let score = 0;
 
-function showQuestion() {
-    const q = quiz[currentQuestion];
-    document.getElementById("question").innerText = q.question;
+    function showQuestion() {
+      const q = quiz[currentQuestion];
+      document.getElementById("question").innerText = q.question;
 
-    // Clear selected radio buttons
-    const radios = document.querySelectorAll('input[name="answer"]');
-    radios.forEach(radio => radio.checked = false);
-}
+      // Clear selected radio buttons
+      const radios = document.querySelectorAll('input[name="answer"]');
+      radios.forEach(radio => radio.checked = false);
+    }
 
-function submitAnswer() {
-    const selectedRadio = document.querySelector('input[name="answer"]:checked');
-    const feedbackDiv = document.getElementById("result");
-    feedbackDiv.style.display = "block";
+    function submitAnswer() {
+      const selectedRadio = document.querySelector('input[name="answer"]:checked');
+      const feedbackDiv = document.getElementById("result");
+      feedbackDiv.style.display = "block";
 
-    if (!selectedRadio) {
+      if (!selectedRadio) {
         alert("Please select True or False.");
         return;
-    }
+      }
 
-    const selectedValue = selectedRadio.value === "true";
-    const correctAnswer = quiz[currentQuestion].answer;
+      const selectedValue = selectedRadio.value === "true";
+      const correctAnswer = quiz[currentQuestion].answer;
 
-    if (selectedValue === correctAnswer) {
+      if (selectedValue === correctAnswer) {
         score++;
         feedbackDiv.innerHTML = `<p style="color: green;">✅ Correct!</p>`;
-    } else {
+      } else {
         feedbackDiv.innerHTML = `<p style="color: red;">❌ Wrong!<br>The correct answer is: <strong>${correctAnswer ? "True" : "False"}</strong></p>`;
-    }
+      }
 
-    setTimeout(() => {
+      setTimeout(() => {
         feedbackDiv.style.display = "none";
         currentQuestion++;
         if (currentQuestion < quiz.length) {
-            showQuestion();
+          showQuestion();
         } else {
-            showFinalResult();
+          showFinalResult();
         }
-    }, 1500);
-}
+      }, 1500);
+    }
 
-function showFinalResult() {
-    document.getElementById("question-container").style.display = "none";
-    const resultDiv = document.getElementById("result");
-    resultDiv.style.display = "block";
-    resultDiv.innerHTML = `<h2>You got ${score} out of ${quiz.length} questions right!</h2>`;
-}
+    function showFinalResult() {
+      document.getElementById("question-container").style.display = "none";
+      const resultDiv = document.getElementById("result");
+      resultDiv.style.display = "block";
+      resultDiv.innerHTML = `<h2>You got ${score} out of ${quiz.length} questions right!</h2>`;
+    }
 
-window.onload = showQuestion;
-    </script>
+    window.onload = showQuestion;
+  </script>
 </body>
 </html>

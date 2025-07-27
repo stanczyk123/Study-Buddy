@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Senior Highschool</title>
-    <link rel="stylesheet" href="math_senior_highschool.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/logo.png" type="image/png">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/coin.png" type="image/png">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/profile_pic_deffault.png" type="image/png">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/multiple_choice.png" type="image/png">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/true_or_false_favicon.png" type="image/png">
-    <link rel="icon" href="https://stanczyk123.github.io/Study-Buddy/favicons/multiple_selection.png" type="image/png">
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Senior Highschool</title>
+  <link rel="stylesheet" href="math_senior_highschool.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicons/logo.png" type="image/png">
+  <link rel="icon" href="/favicons/coin.png" type="image/png">
+  <link rel="icon" href="/favicons/profile_pic_deffault.png" type="image/png">
+  <link rel="icon" href="/favicons/multiple_choice.png" type="image/png">
+  <link rel="icon" href="/favicons/true_or_false_favicon.png" type="image/png">
+  <link rel="icon" href="/favicons/multiple_selection.png" type="image/png">
 </head>
 
 <header>
-    
-    <div id="studybuddy" onclick="main()">
-        <a>
-            <img src="https://stanczyk123.github.io/Study-Buddy//favicons/logo.png" id="studybuddyimg">
-            <h2 id="studybuddyText"><a href="https://stanczyk123.github.io/Study-Buddy//index.html">Study Buddy</a></h2>
-        </a>
-        
-    </div>
+  <div id="studybuddy" onclick="main()">
+    <a href="/index.html">
+      <img src="/favicons/logo.png" id="studybuddyimg">
+      <h2 id="studybuddyText">Study Buddy</h2>
+    </a>
+  </div>
 
-    <div id="coins">
-        <img src="https://stanczyk123.github.io/Study-Buddy//favicons/coin.png" id="coinsimg">
-        <h4 id="coinsamount">0</h4>
-    </div>
+  <div id="coins">
+    <img src="/favicons/coin.png" id="coinsimg">
+    <h4 id="coinsamount">0</h4>
+  </div>
 
-    <img src="https://stanczyk123.github.io/Study-Buddy//favicons/profile_pic_deffault.png" id="profilepic">
-    <a id="profilename" href="https://stanczyk123.github.io/Study-Buddy//profile/profile.html"></a>
-    
+  <img src="/favicons/profile_pic_deffault.png" id="profilepic">
+  <a id="profilename" href="/profile/profile.html"></a>
 </header>
 
 <body>
+  <h2 id="title1">Select Mode</h2>
+  <div id="subjects">
+    <a href="/math_multiple_question_highschool_senior/math_multiple_question_highschool_senior.html">
+      <div id="multiple-choice" class="quiz-item">
+        <h3 id="multiplechoiceText">Multiple choice</h3>
+        <img src="/favicons/multiple_choice.png" style="width: 200px;">
+      </div>
+    </a>
 
-    <h2 id="title1">Select Mode</h2>
-    <div id="subjects">
-        <a href="https://stanczyk123.github.io/Study-Buddy//math_multiple_question_highschool_senior/math_multiple_question_highschool_senior.html">
-            <div id="multiple-choice" class="quiz-item">
-                <h3 id="multiplechoiceText">Multiple choice</h3>
-                <img src="https://stanczyk123.github.io/Study-Buddy//favicons/multiple_choice.png" style="width: 200px;">
-            </div>
-        </a>
+    <a href="/true_or_false_highschool_senior/true_or_false_highschool_senior.html">
+      <div id="true-or-false" class="quiz-item">
+        <h3 id="trueorfalseText">True or False</h3>
+        <img src="/favicons/true_or_false_favicon.png" style="width: 200px;">
+      </div>
+    </a>
 
-        <a href="https://stanczyk123.github.io/Study-Buddy//true_or_false_highschool_senior/true_or_false_highschool_senior.html">
-            <div id="true-or-false" class="quiz-item">
-                <h3 id="trueorfalseText">True or False</h3>
-                <img src="https://stanczyk123.github.io/Study-Buddy//favicons/true_or_false_favicon.png" style="width: 200px;">
-            </div>
-        </a>
+    <a href="/math_multiple_selection_highschool_senior/math_multiple_selection_highschool_senior.html">
+      <div id="multiple-selection" class="quiz-item">
+        <h3 id="multipleselectionText">Multiple Selection</h3>
+        <img src="/favicons/multiple_selection.png" style="width: 200px;">
+      </div>
+    </a>
+  </div>
 
-        <a href="https://stanczyk123.github.io/Study-Buddy//math_multiple_selection_highschool_senior/math_multiple_selection_highschool_senior.html">
-            <div id="multiple-selection" class="quiz-item">
-                <h3 id="multipleselectionText">Multiple Selection</h3>
-                <img src="https://stanczyk123.github.io/Study-Buddy//favicons/multiple_selection.png" style="width: 200px;">
-            </div>
-        </a>
-    </div>
+  <script>
+    const username = localStorage.getItem("username");
+    document.getElementById("profilename").textContent = username ? username : "Guest";
+  </script>
 
-    <script>
-
-  const username = localStorage.getItem("username");
-
-  if (username) {
-    document.getElementById("profilename").textContent = username;
-  } else {
-    document.getElementById("profilename").textContent = "Guest";
-  }
-</script>
-
-    <script src="/quests/quests.js"></script>
-    <script src="/sign_up/sign_up.js"></script>
+  <script src="/quests/quests.js"></script>
+  <script src="/sign_up/sign_up.js"></script>
 </body>
 </html>
