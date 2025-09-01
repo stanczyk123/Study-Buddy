@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="timer_mode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<header>
+    
+    <div id="studybuddy" onclick="main()">
+        <a href="/index.html">
+            <img src="/favicons/logo.png" id="studybuddyimg">
+            <h2 id="studybuddyText">Study Buddy</h2>
+        </a>   
+    </div>
+
+    <div id="coins">
+        <img src="/favicons/coin.png" id="coinsimg">
+        <h4 id="coinsamount">0</h4>
+    </div>
+
+    <div id="profileContainer">
+        <img src="/favicons/profile_pic_deffault.png" id="profilepic">
+        <a id="profilename" href="/profile/profile.html"></a>
+    </div>
+
+</header>
+<body>
+    <div id="buttonContainer">
+        <div id="1a">
+            <button id="red"></button>
+            <button id="yellow"></button>
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="sign_up/sign_up.js"></script>
+
+        <script>
+  const username = localStorage.getItem("username"); 
+
+  if (username) {
+    document.getElementById("profilename").textContent = username;
+  } else {
+    document.getElementById("profilename").textContent = "Guest";
+  }
+</script>
+</body>
+</html>
